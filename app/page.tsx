@@ -162,7 +162,7 @@ export default function Home() {
 
           {/* MOBILE FIX: Text size 4xl for mobile, 6xl for desktop to prevent wrapping */}
           <h1 className="mb-4 text-4xl md:text-6xl font-black uppercase tracking-widest text-slate-900 leading-tight">
-            MICHAEL FIGUEROA ACOSTA
+            MICHAEL FIGUEROA ACOSTA/TEST
           </h1>
           {/* MOBILE FIX: Flex-wrap allows tags to stack on small screens */}
           <div className="mb-8 flex flex-wrap justify-center gap-2 md:gap-4 text-xs md:text-sm font-bold uppercase tracking-[0.2em] text-cyan-600">
