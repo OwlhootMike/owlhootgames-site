@@ -158,8 +158,14 @@ return (
           <div className="absolute bottom-0 right-0 h-4 w-4 border-r-2 border-b-2 border-cyan-500"></div>
 
           <h1 className="mb-4 text-6xl font-black uppercase tracking-widest text-slate-900 md:text-5xl">
-            MICHAEL FIGUEROA Acosta
+            MICHAEL FIGUEROA ACOSTA
           </h1>
+          {/* --- PASTE TEST HERE --- */}
+          <div className="bg-red-500 p-4 z-50 relative">
+             <p className="text-white font-bold">TESTING IMAGE:</p>
+             <img src="/images/img-nightclub.png" alt="Test" width="200" height="100" />
+          </div>
+          {/* ----------------------- */}
           <div className="mb-8 flex justify-center gap-4 text-sm font-bold uppercase tracking-[0.2em] text-cyan-600">
             <span>Dev_Ops</span>
             <span>//</span>
