@@ -3,6 +3,9 @@
 import { motion } from "framer-motion"; 
 import Image from "next/image";
 import { useState, useEffect } from "react";
+
+// --- IMAGE IMPORTS ---
+// These look for files inside the 'app' folder
 import nightclubImg from './img-nightclub.png';
 import novaImg from './img-nova.jpg';
 import janeImg from './img-jane2.png';
@@ -66,17 +69,14 @@ const itemVariants = {
 };
 
 // --- CUSTOM CLIP PATHS ---
-// Large panels (20px cut)
 const techPanelStyle = {
   clipPath: "polygon(20px 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0 20px)"
 };
 
-// Buttons (10px cut)
 const techButtonStyle = {
   clipPath: "polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px)"
 };
 
-// Small Labels (5px cut)
 const smallTechCut = {
   clipPath: "polygon(5px 0, 100% 0, 100% calc(100% - 5px), calc(100% - 5px) 100%, 0 100%, 0 5px)"
 };
@@ -90,14 +90,12 @@ export default function Home() {
     setBottomRow(shuffleArray(screenshots));
   }, []);
 
-return (
-    // 1. CHANGED: bg-slate-50 -> bg-slate-200 (More Silver)
+  return (
     <div className="flex min-h-screen flex-col bg-slate-200 text-slate-800 font-sans selection:bg-cyan-400 selection:text-white">
       
-      {/* 2. CHANGED: Octagon Panel Pattern */}
+      {/* Octagon Background Grid */}
       <div className="fixed inset-0 z-0 pointer-events-none" 
            style={{ 
-             // This draws a repeating Octagon grid using an encoded SVG
              backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18 0 h24 l18 18 v24 l-18 18 h-24 l-18 -18 v-24 z' fill='none' stroke='%2394a3b8' stroke-width='1' opacity='0.4'/%3E%3C/svg%3E")`,
              backgroundSize: '60px 60px'
            }}
@@ -106,7 +104,7 @@ return (
       {/* --- HERO SECTION --- */}
       <section className="relative flex min-h-[90vh] flex-col items-center justify-center overflow-hidden p-6 text-center">
         
-        {/* --- BACKGROUND MARQUEE --- */}
+        {/* BACKGROUND MARQUEE */}
         <div className="absolute inset-0 z-0 flex items-center justify-center opacity-30 pointer-events-none">
            <div className="flex w-full -rotate-12 scale-125 flex-col gap-4">
              {/* Top Row */}
