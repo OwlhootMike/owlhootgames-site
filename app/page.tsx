@@ -14,14 +14,14 @@ const projects = [
   {
     title: "Nightclubs: PRSM",
     description: "A simulation game focused on nightlife management and social dynamics.",
-    tech: "Unity // C#", 
+    tech: "Unity, 
     image: nightclubImg,
     link: "/games/nightclubs" 
   },
   {
     title: "Nova Galactica",
     description: "A sci-fi adventure exploring the depths of space and futuristic combat.",
-    tech: "RPG Maker // JavaScript",
+    tech: "RPG Maker MZ",
     image: novaImg,
     link: "/games/nova-galactica"
   },
