@@ -290,7 +290,7 @@ export default function Home() {
              <div className="bg-white p-6 md:p-8 border-l-4 border-cyan-500 shadow-lg relative" style={techPanelStyle}>
                <h3 className="mb-2 md:mb-4 text-2xl md:text-4xl font-black uppercase text-slate-800">Legacy</h3>
                <p className="text-base md:text-lg leading-relaxed text-slate-600">
-                 Journalist for <em>Yo Soy Un Gamer</em>. First 5 Game Jams: <strong>3 Podiums</strong> (1st, 2nd, 3rd).
+                 Ex Indie Jourlanist for <em>Yo Soy Un Gamer</em> and current Webmaster, VP and Journalist for <em>Tu Zona Gamer</em>. First 5 Game Jams: <strong>3 Podiums</strong> (1st, 2nd, 3rd).
                  Internship: Space Rhino Games. Testing: Degica Games.
                </p>
              </div>
