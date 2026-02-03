@@ -14,7 +14,7 @@ const projects = [
   {
     title: "Nightclubs: PRSM",
     description: "A simulation game focused on nightlife management and social dynamics.",
-    tech: "Unity, 
+    tech: "Unity", 
     image: nightclubImg,
     link: "/games/nightclubs" 
   },
