@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import nightclubImg from './img-nightclub.png';
-import novaImg from './img-nova.png';
+import novaImg from './img-nova.jpg';
 import janeImg from './img-jane2.png';
 
 // --- DATA SOURCES ---
