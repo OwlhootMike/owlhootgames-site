@@ -10,29 +10,29 @@ const projects = [
     title: "Nightclubs: PRSM",
     description: "A simulation game focused on nightlife management and social dynamics.",
     tech: "Unity // C#", 
-    image: "/images/nightclub.png",
+    image: "/images/img-nightclub.png",
     link: "/games/nightclubs" 
   },
   {
     title: "Nova Galactica",
     description: "A sci-fi adventure exploring the depths of space and futuristic combat.",
     tech: "RPG Maker // JavaScript",
-    image: "/images/nova.jpg",
+    image: "/images/img-nova.jpg",
     link: "/games/nova-galactica"
   },
   {
     title: "Detective Jane",
     description: "A narrative-driven mystery game solving complex cases.",
     tech: "TBA",
-    image: "/images/jane2.png",
+    image: "/images/img-jane2.png",
     link: "/games/detective-jane"
   },
 ];
 
 const screenshots = [
-  { title: "Action Shot 1", image: "/images/nightclub.png" },
-  { title: "Space View",    image: "/images/nova.jpg" },
-  { title: "Mystery Scene", image: "/images/jane2.png" },
+  { title: "Action Shot 1", image: "/images/img-nightclub.png" },
+  { title: "Space View",    image: "/images/img-nova.jpg" },
+  { title: "Mystery Scene", image: "/images/img-jane2.png" },
 ];
 
 function shuffleArray(array: any[]) {
