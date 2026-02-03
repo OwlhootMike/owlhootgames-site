@@ -3,6 +3,9 @@
 import { motion } from "framer-motion"; 
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import nightclubImg from './img-nightclub.png';
+import novaImg from './img-nova.png';
+import janeImg from './img-jane2.png';
 
 // --- DATA SOURCES ---
 const projects = [
@@ -10,29 +13,29 @@ const projects = [
     title: "Nightclubs: PRSM",
     description: "A simulation game focused on nightlife management and social dynamics.",
     tech: "Unity // C#", 
-    image: "/images/img-nightclub.png",
+    image: nightclubImg,
     link: "/games/nightclubs" 
   },
   {
     title: "Nova Galactica",
     description: "A sci-fi adventure exploring the depths of space and futuristic combat.",
     tech: "RPG Maker // JavaScript",
-    image: "/images/img-nova.jpg",
+    image: novaImg,
     link: "/games/nova-galactica"
   },
   {
     title: "Detective Jane",
     description: "A narrative-driven mystery game solving complex cases.",
     tech: "TBA",
-    image: "/images/img-jane2.png",
+    image: janeImg,
     link: "/games/detective-jane"
   },
 ];
 
 const screenshots = [
-  { title: "Action Shot 1", image: "/images/img-nightclub.png" },
-  { title: "Space View",    image: "/images/img-nova.jpg" },
-  { title: "Mystery Scene", image: "/images/img-jane2.png" },
+  { title: "Action Shot 1", image: nightclubImg },
+  { title: "Space View",    image: novaImg },
+  { title: "Mystery Scene", image: janeImg },
 ];
 
 function shuffleArray(array: any[]) {
