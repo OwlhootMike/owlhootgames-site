@@ -16,14 +16,14 @@ const projects = [
   {
     title: "Nova Galactica",
     description: "A sci-fi adventure exploring the depths of space and futuristic combat.",
-    tech: "Unity // C#",
+    tech: "RPG Maker // JavaScript",
     image: "/images/nova.jpg",
     link: "/games/nova-galactica"
   },
   {
     title: "Detective Jane",
     description: "A narrative-driven mystery game solving complex cases.",
-    tech: "Unity // C#",
+    tech: "TBA",
     image: "/images/Jane2.png",
     link: "/games/detective-jane"
   },
