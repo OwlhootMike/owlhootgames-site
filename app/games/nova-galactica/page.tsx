@@ -22,22 +22,23 @@ export default function NovaPage() {
       {/* CRT Scanline Overlay - Gives it a retro-futuristic screen look */}
       <div className="fixed inset-0 z-50 pointer-events-none bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.1)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] bg-[length:100%_4px,6px_100%] opacity-20"></div>
 
-      {/* --- NAVIGATION --- */}
-      <nav className="fixed top-6 left-6 z-50">
-        <Link href="/" className="group flex items-center gap-2 bg-blue-950/30 border border-blue-500/50 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-blue-300 transition-all hover:bg-blue-900 hover:text-white">
-          <span className="transition-transform group-hover:-translate-x-1">◄</span>
-          <span>Abort / Return</span>
-        </Link>
-      </nav>
-
       {/* --- HERO HEADER --- */}
-      <header className="relative pt-32 pb-12 px-6 container mx-auto text-left z-10 flex flex-col md:flex-row gap-8 items-end border-b border-blue-900/30 mb-12">
+      {/* --- HERO HEADER --- */}
+      <header className="relative pt-24 pb-12 px-6 container mx-auto text-left z-10 flex flex-col md:flex-row gap-8 items-end border-b border-blue-900/30 mb-12">
+        
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
           className="flex-1"
         >
+          {/* MOVED NAVIGATION HERE - INLINE */}
+          <div className="mb-8">
+            <Link href="/" className="inline-flex items-center gap-2 text-blue-500 hover:text-white transition-colors text-xs font-bold uppercase tracking-[0.2em]">
+               <span>◄</span> <span>Abort / Return to Database</span>
+            </Link>
+          </div>
+
           <div className="flex items-center gap-4 mb-4">
              <span className="inline-block px-2 py-0.5 bg-blue-600 text-black text-xs font-black uppercase">Class: RPG</span>
              <span className="text-blue-500 text-xs uppercase tracking-widest">System: Sol-3</span>

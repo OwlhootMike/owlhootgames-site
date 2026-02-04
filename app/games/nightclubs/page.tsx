@@ -19,16 +19,18 @@ export default function NightclubsPage() {
       />
       <div className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-500 via-cyan-500 to-purple-500 z-50 shadow-[0_0_20px_rgba(168,85,247,0.5)]"></div>
 
-      {/* --- NAVIGATION --- */}
-      <nav className="fixed top-6 left-6 z-50">
-        <Link href="/" className="group flex items-center gap-2 bg-black/80 backdrop-blur-md border border-slate-800 px-4 py-2 text-sm font-bold uppercase tracking-widest text-slate-400 transition-all hover:border-cyan-500 hover:text-cyan-400">
-          <span className="transition-transform group-hover:-translate-x-1">◄</span>
-          <span>Return to Database</span>
-        </Link>
-      </nav>
-
       {/* --- HERO HEADER --- */}
-      <header className="relative pt-32 pb-12 px-6 container mx-auto text-center z-10">
+      {/* --- HERO HEADER --- */}
+      <header className="relative pt-24 pb-12 px-6 container mx-auto text-center z-10">
+        
+        {/* MOVED NAVIGATION HERE - INLINE */}
+        <div className="flex justify-center mb-8">
+           <Link href="/" className="group flex items-center gap-2 bg-black/50 backdrop-blur-md border border-slate-800 px-4 py-2 text-sm font-bold uppercase tracking-widest text-slate-400 transition-all hover:border-cyan-500 hover:text-cyan-400">
+             <span className="transition-transform group-hover:-translate-x-1">◄</span>
+             <span>Return to Database</span>
+           </Link>
+        </div>
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -46,7 +48,6 @@ export default function NightclubsPage() {
           </p>
         </motion.div>
       </header>
-
       {/* --- MAIN SHOWCASE --- */}
       <main className="container mx-auto px-6 pb-24 relative z-10">
         
