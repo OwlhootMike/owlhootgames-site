@@ -1,3 +1,14 @@
+// Webpage using Node.js and Tailwindcss
+// Site created by: Michael Figueroa Acosta
+// Date of Creation: February 1, 2026
+// Comment Final notes here of changes made, but also include summarized comment in the commit comment
+// ----------------------------------
+//
+// Changes were made to test out the latency of push changes. Changed the "/TEST" from the plaque name.
+// Also fixed a typo regarding the Journalist portion of Log 2
+//
+// ----------------------------------
+
 "use client"; 
 
 import { motion } from "framer-motion"; 
@@ -20,7 +31,7 @@ const projects = [
   },
   {
     title: "Nova Galactica",
-    description: "A sci-fi adventure exploring the depths of space and futuristic combat.",
+    description: "A sci-fi narrative game, filled with cosmic beauty, drama, and heatbreak.",
     tech: "RPG Maker MZ",
     image: novaImg,
     link: "/games/nova-galactica"
@@ -162,7 +173,7 @@ export default function Home() {
 
           {/* MOBILE FIX: Text size 4xl for mobile, 6xl for desktop to prevent wrapping */}
           <h1 className="mb-4 text-4xl md:text-6xl font-black uppercase tracking-widest text-slate-900 leading-tight">
-            MICHAEL FIGUEROA ACOSTA/TEST
+            MICHAEL FIGUEROA ACOSTA
           </h1>
           {/* MOBILE FIX: Flex-wrap allows tags to stack on small screens */}
           <div className="mb-8 flex flex-wrap justify-center gap-2 md:gap-4 text-xs md:text-sm font-bold uppercase tracking-[0.2em] text-cyan-600">
@@ -290,7 +301,7 @@ export default function Home() {
              <div className="bg-white p-6 md:p-8 border-l-4 border-cyan-500 shadow-lg relative" style={techPanelStyle}>
                <h3 className="mb-2 md:mb-4 text-2xl md:text-4xl font-black uppercase text-slate-800">Legacy</h3>
                <p className="text-base md:text-lg leading-relaxed text-slate-600">
-                 Ex Indie Jourlanist for <em>Yo Soy Un Gamer</em> and current Webmaster, VP and Journalist for <em>Tu Zona Gamer</em>. First 5 Game Jams: <strong>3 Podiums</strong> (1st, 2nd, 3rd).
+                 Ex Indie Journalist for <em>Yo Soy Un Gamer</em> and current Webmaster, VP and Journalist for <em>Tu Zona Gamer</em>. First 5 Game Jams: <strong>3 Podiums</strong> (1st, 2nd, 3rd).
                  Internship: Space Rhino Games. Testing: Degica Games.
                </p>
              </div>
