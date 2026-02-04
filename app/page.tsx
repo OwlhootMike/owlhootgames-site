@@ -1,13 +1,12 @@
-// Webpage using Node.js and Tailwindcss
-// Site created by: Michael Figueroa Acosta
-// Date of Creation: February 1, 2026
-// Comment Final notes here of changes made, but also include summarized comment in the commit comment
-// ----------------------------------
-//
-// Changes were made to test out the latency of push changes. Changed the "/TEST" from the plaque name.
-// Also fixed a typo regarding the Journalist portion of Log 2
-//
-// ----------------------------------
+/**
+ * @fileoverview Main Portfolio Homepage
+ * @author Michael Figueroa Acosta
+ * @stack Next.js, TailwindCSS, Framer Motion
+ * @created Feb 1, 2026
+ * * LATEST UPDATE:
+ * - Optimized mobile responsiveness (Breakpoints & Overflow fix)
+ * - Updated "Legacy" Log text for accuracy
+ */
 
 "use client"; 
 
