@@ -123,7 +123,7 @@ export default function NightclubsPage() {
                 three pillars: <span className="text-cyan-300">Music Intensity</span>, <span className="text-purple-300">Lighting Atmosphere</span>, and <span className="text-pink-300">Crowd Density</span>.
               </p>
               <p className="text-slate-400 text-lg leading-relaxed">
-                As the architect, you must adapt to procedural events. A fight breaks out? Cut the music. 
+                As the architect, you must adapt to procedural events. A fight breaks out? Kick out the aggressor. 
                 VIPs arriving? Switch the lighting rig to "Gold Mode." Every choice impacts the club's reputation meter in real-time.
               </p>
             </div>
