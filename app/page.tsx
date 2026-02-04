@@ -36,8 +36,8 @@ const projects = [
     link: "/games/nova-galactica"
   },
   {
-    title: "Detective Jane",
-    description: "A narrative-driven mystery game solving complex cases.",
+    title: "The Detective Jane Case Series",
+    description: "A narrative-driven mystery game solving complex cases revolving the life of Jane Davies, her sister Captain Jill Davies, and veteran and trainer officer Darren Mitts.",
     tech: "TBA",
     image: janeImg,
     link: "/games/detective-jane"
