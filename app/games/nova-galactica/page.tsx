@@ -3,161 +3,150 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-// We go up two levels to find the image. 
-// NOTE: We are looking for the .jpg version here based on previous fixes.
+// Ensure this path matches your file structure
 import novaImg from '../../img-nova.jpg';
 
 export default function NovaPage() {
   return (
-    <div className="min-h-screen bg-[#050b14] text-slate-200 font-sans selection:bg-cyan-500 selection:text-white overflow-x-hidden">
+    // Changed background to a distinct deep space indigo/blue
+    <div className="min-h-screen bg-black text-slate-200 font-mono selection:bg-blue-500 selection:text-white overflow-x-hidden">
       
-      {/* --- BACKGROUND FX --- */}
-      {/* Deep Space Gradient */}
-      <div className="fixed inset-0 z-0 pointer-events-none bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-900/40 via-[#050b14] to-[#050b14]"></div>
+      {/* --- DISTINCT BACKGROUND: PLANETARY HORIZON --- */}
+      <div className="fixed inset-0 z-0 pointer-events-none bg-[radial-gradient(circle_at_50%_-20%,#1e3a8a_0%,#000000_60%)]"></div>
       
-      {/* Starfield Noise */}
-      <div className="fixed inset-0 z-0 opacity-20 pointer-events-none mix-blend-screen"
+      {/* Moving Stars Effect */}
+      <div className="fixed inset-0 z-0 opacity-40 pointer-events-none"
            style={{ backgroundImage: "url('https://grainy-gradients.vercel.app/noise.svg')" }}
       />
       
-      {/* Tech Grid Overlay */}
-      <div className="fixed inset-0 z-0 opacity-10 pointer-events-none"
-           style={{ 
-             backgroundImage: "linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)",
-             backgroundSize: "40px 40px"
-           }}
-      />
+      {/* CRT Scanline Overlay - Gives it a retro-futuristic screen look */}
+      <div className="fixed inset-0 z-50 pointer-events-none bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.1)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] bg-[length:100%_4px,6px_100%] opacity-20"></div>
 
       {/* --- NAVIGATION --- */}
       <nav className="fixed top-6 left-6 z-50">
-        <Link href="/" className="group flex items-center gap-2 bg-slate-900/80 backdrop-blur-md border border-slate-700 px-4 py-2 text-sm font-bold uppercase tracking-widest text-slate-400 transition-all hover:border-blue-400 hover:text-blue-400">
+        <Link href="/" className="group flex items-center gap-2 bg-blue-950/30 border border-blue-500/50 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-blue-300 transition-all hover:bg-blue-900 hover:text-white">
           <span className="transition-transform group-hover:-translate-x-1">◄</span>
-          <span>Return to Database</span>
+          <span>Abort / Return</span>
         </Link>
       </nav>
 
       {/* --- HERO HEADER --- */}
-      <header className="relative pt-32 pb-12 px-6 container mx-auto text-center z-10">
+      <header className="relative pt-32 pb-12 px-6 container mx-auto text-left z-10 flex flex-col md:flex-row gap-8 items-end border-b border-blue-900/30 mb-12">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
+          className="flex-1"
         >
-          <span className="inline-block mb-4 px-3 py-1 bg-blue-900/30 border border-blue-500 text-blue-300 text-xs font-mono uppercase tracking-widest shadow-[0_0_15px_rgba(59,130,246,0.3)]">
-            Log Entry: Star Date 2026
-          </span>
-          <h1 className="text-5xl md:text-7xl font-black uppercase tracking-tighter text-white drop-shadow-[0_0_15px_rgba(59,130,246,0.8)] mb-6">
-            Nova Galactica
+          <div className="flex items-center gap-4 mb-4">
+             <span className="inline-block px-2 py-0.5 bg-blue-600 text-black text-xs font-black uppercase">Class: RPG</span>
+             <span className="text-blue-500 text-xs uppercase tracking-widest">System: Sol-3</span>
+          </div>
+          <h1 className="text-5xl md:text-8xl font-black uppercase tracking-tighter text-white mb-2 leading-none">
+            NOVA <span className="text-transparent bg-clip-text bg-gradient-to-b from-blue-400 to-transparent">GALACTICA</span>
           </h1>
-          <p className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
-            A sci-fi narrative RPG exploring the isolation of deep space.<br className="hidden md:block" />
-            Cosmic beauty, interstellar drama, and the cost of survival.
-          </p>
         </motion.div>
+        
+        <div className="w-full md:w-64 text-right">
+           <p className="text-xs text-blue-400 font-mono mb-1">STARDATE: 2026.11.04</p>
+           <div className="h-1 w-full bg-blue-900 relative overflow-hidden">
+             <div className="absolute inset-0 bg-blue-400 w-1/3 animate-pulse"></div>
+           </div>
+        </div>
       </header>
 
       {/* --- MAIN SHOWCASE --- */}
       <main className="container mx-auto px-6 pb-24 relative z-10">
         
-        {/* HERO IMAGE FRAME */}
+        {/* HERO IMAGE - CYBERPUNK FRAME */}
         <motion.div 
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.8 }}
-          className="relative w-full aspect-video md:aspect-[21/9] border-y border-blue-900/50 overflow-hidden mb-16 group bg-black"
+          className="relative w-full aspect-video md:aspect-[21/9] border-2 border-blue-600/30 bg-black/50 p-1 mb-16"
         >
-          <Image 
-            src={novaImg} 
-            alt="Nova Galactica Gameplay" 
-            fill 
-            className="object-cover opacity-90 transition-all duration-700 group-hover:scale-105 group-hover:opacity-100"
-          />
-          {/* Holographic Scanline */}
-          <div className="absolute inset-0 bg-[linear-gradient(transparent_50%,rgba(0,255,255,0.05)_50%)] bg-[length:100%_4px] pointer-events-none"></div>
+           {/* Corner Brackets */}
+           <div className="absolute top-0 left-0 w-4 h-4 border-l-2 border-t-2 border-blue-500 z-20"></div>
+           <div className="absolute top-0 right-0 w-4 h-4 border-r-2 border-t-2 border-blue-500 z-20"></div>
+           <div className="absolute bottom-0 left-0 w-4 h-4 border-l-2 border-b-2 border-blue-500 z-20"></div>
+           <div className="absolute bottom-0 right-0 w-4 h-4 border-r-2 border-b-2 border-blue-500 z-20"></div>
+
+          <div className="relative w-full h-full overflow-hidden">
+            <Image 
+                src={novaImg} 
+                alt="Nova Galactica Gameplay" 
+                fill 
+                className="object-cover opacity-80"
+            />
+          </div>
         </motion.div>
 
-        {/* --- GRID LAYOUT --- */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
+        {/* --- DATA TERMINAL LAYOUT --- */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           
-          {/* LEFT COLUMN: SPECS (4 Columns) */}
-          <div className="md:col-span-4 space-y-8">
-            {/* Tech Stack Box */}
-            <div className="bg-slate-900/60 border border-blue-900/50 p-6 backdrop-blur-sm relative overflow-hidden">
-               {/* Decorative corner */}
-               <div className="absolute top-0 left-0 w-2 h-2 bg-blue-500"></div>
-               <div className="absolute top-0 right-0 w-2 h-2 bg-blue-500"></div>
-               <div className="absolute bottom-0 left-0 w-2 h-2 bg-blue-500"></div>
-               <div className="absolute bottom-0 right-0 w-2 h-2 bg-blue-500"></div>
-
-               <h3 className="text-blue-400 font-bold uppercase tracking-widest mb-4 border-b border-blue-900/50 pb-2">Ship Specs</h3>
-               <ul className="space-y-3 font-mono text-sm text-slate-300">
-                 <li className="flex justify-between">
-                   <span className="text-slate-500">Engine</span>
-                   <span>RPG Maker MZ</span>
-                 </li>
-                 <li className="flex justify-between">
-                   <span className="text-slate-500">Scripting</span>
-                   <span>JavaScript (Plugins)</span>
-                 </li>
-                 <li className="flex justify-between">
-                   <span className="text-slate-500">Art Style</span>
-                   <span>Pixel / Digital Paint</span>
-                 </li>
-                 <li className="flex justify-between">
-                   <span className="text-slate-500">Status</span>
-                   <span className="text-green-400">In Development</span>
-                 </li>
-               </ul>
+          {/* COLUMN 1: NARRATIVE */}
+          <div className="md:col-span-2 space-y-8">
+            <div className="border-l-2 border-blue-500 pl-6">
+               <h2 className="text-2xl text-white font-bold uppercase mb-4">Mission Profile</h2>
+               <p className="text-blue-100/70 text-lg leading-relaxed mb-6 font-sans">
+                 <strong className="text-blue-400">Nova Galactica</strong> is a narrative-driven RPG set in the crushing isolation of deep space. 
+                 Unlike traditional space operas, there are no laser swords or chosen heroes. There is only the hull, the void, and the crew.
+               </p>
+               <p className="text-blue-100/70 text-lg leading-relaxed font-sans">
+                 The core loop forces players to manage <span className="text-white border-b border-blue-500">Fuel, Oxygen, and Morale</span>. 
+                 Every system jump is a calculation: Do you risk a nebula storm to save fuel, or burn precious reserves to go around?
+               </p>
             </div>
 
-            {/* My Role Box */}
-            <div className="bg-slate-900/60 border border-blue-900/50 p-6 backdrop-blur-sm relative">
-               <h3 className="text-cyan-400 font-bold uppercase tracking-widest mb-4 border-b border-blue-900/50 pb-2">Mission Parameters</h3>
-               <ul className="list-disc list-inside space-y-2 text-slate-300 text-sm leading-relaxed">
-                 <li>Wrote the branching narrative script (30k+ words).</li>
-                 <li>Designed custom <strong>Plugin Systems</strong> in JavaScript for unique combat mechanics.</li>
-                 <li>Created custom UI layouts breaking the standard RPG Maker mold.</li>
-               </ul>
+            {/* Feature Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="bg-blue-900/10 border border-blue-800 p-4 hover:bg-blue-900/20 transition-colors">
+                   <h3 className="text-blue-400 font-bold uppercase mb-2 text-sm">NON-LINEAR MAP</h3>
+                   <p className="text-xs text-slate-400">Star charts are procedurally generated. No two voyages share the same hazard layout.</p>
+                </div>
+                <div className="bg-blue-900/10 border border-blue-800 p-4 hover:bg-blue-900/20 transition-colors">
+                   <h3 className="text-blue-400 font-bold uppercase mb-2 text-sm">CREW PSYCHOLOGY</h3>
+                   <p className="text-xs text-slate-400">Stress levels affect combat performance. A panicked engineer repairs slower.</p>
+                </div>
             </div>
           </div>
 
-          {/* RIGHT COLUMN: DESCRIPTION (8 Columns) */}
-          <div className="md:col-span-8 space-y-12">
-            
-            {/* Narrative Section */}
-            <div>
-              <h2 className="text-3xl font-black text-white uppercase mb-6 flex items-center gap-3">
-                <span className="w-8 h-1 bg-blue-500"></span>
-                The Odyssey
-              </h2>
-              <p className="text-slate-400 text-lg leading-relaxed mb-6">
-                <strong>Nova Galactica</strong> moves away from traditional fantasy tropes to explore the cold, 
-                isolating beauty of space. It is a story about a crew trying to keep their ship—and their sanity—intact 
-                while traversing a hostile sector.
-              </p>
-              <p className="text-slate-400 text-lg leading-relaxed">
-                The gameplay blends classic turn-based combat with <span className="text-blue-300">resource management</span>. 
-                Every jump between star systems costs fuel and morale. Run out of either, and the void claims you.
-              </p>
-            </div>
+          {/* COLUMN 2: TECH READOUT (Sidebar) */}
+          <div className="md:col-span-1">
+             <div className="bg-black border border-blue-800 p-6 relative">
+                <div className="absolute -top-3 left-4 bg-black px-2 text-blue-500 text-xs font-bold uppercase tracking-widest">System Diagnostic</div>
+                
+                <div className="space-y-6">
+                   <div>
+                      <div className="text-xs text-slate-500 uppercase mb-1">Engine</div>
+                      <div className="text-white font-bold">RPG Maker MZ</div>
+                      <div className="w-full h-1 bg-gray-800 mt-1"><div className="w-full h-full bg-blue-500"></div></div>
+                   </div>
 
-            {/* Features Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-               <div className="p-6 border border-slate-800 hover:border-blue-500/50 transition-colors bg-gradient-to-br from-slate-900 to-transparent">
-                 <h4 className="text-xl font-bold text-white mb-2">Stellar Navigation</h4>
-                 <p className="text-slate-500 text-sm">Non-linear map exploration. Choose your route carefully to avoid patrols or anomalies.</p>
-               </div>
-               <div className="p-6 border border-slate-800 hover:border-cyan-500/50 transition-colors bg-gradient-to-br from-slate-900 to-transparent">
-                 <h4 className="text-xl font-bold text-white mb-2">Active Time Events</h4>
-                 <p className="text-slate-500 text-sm">Cinematic moments require player input during cutscenes to determine outcomes.</p>
-               </div>
-               <div className="p-6 border border-slate-800 hover:border-indigo-500/50 transition-colors bg-gradient-to-br from-slate-900 to-transparent">
-                 <h4 className="text-xl font-bold text-white mb-2">Crew Relationships</h4>
-                 <p className="text-slate-500 text-sm">Dialogue choices affect crew loyalty, unlocking special combat abilities or endings.</p>
-               </div>
-            </div>
+                   <div>
+                      <div className="text-xs text-slate-500 uppercase mb-1">Scripting</div>
+                      <div className="text-white font-bold">JavaScript (Custom Plugins)</div>
+                      <div className="w-full h-1 bg-gray-800 mt-1"><div className="w-3/4 h-full bg-blue-500"></div></div>
+                   </div>
 
+                   <div>
+                      <div className="text-xs text-slate-500 uppercase mb-1">Asset Pipeline</div>
+                      <div className="text-white font-bold">Aseprite / Photoshop</div>
+                      <div className="w-full h-1 bg-gray-800 mt-1"><div className="w-1/2 h-full bg-blue-500"></div></div>
+                   </div>
+
+                   <div className="pt-6 border-t border-gray-800">
+                      <div className="text-xs text-slate-500 uppercase mb-2">Dev Contributions</div>
+                      <ul className="text-sm text-blue-200 space-y-2">
+                         <li className="flex gap-2"><span className="text-blue-500">►</span> <span>30k+ Word Script</span></li>
+                         <li className="flex gap-2"><span className="text-blue-500">►</span> <span>Custom UI Implementation</span></li>
+                         <li className="flex gap-2"><span className="text-blue-500">►</span> <span>Plugin Architecture</span></li>
+                      </ul>
+                   </div>
+                </div>
+             </div>
           </div>
+
         </div>
       </main>
 
