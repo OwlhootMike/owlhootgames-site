@@ -24,12 +24,6 @@ export default function Navbar() {
           <Link href="/games/detective-jane" className="text-sm font-medium text-zinc-600 hover:text-amber-600 dark:text-zinc-400 dark:hover:text-amber-500">
             Detective Jane
           </Link>
-          <Link href="/past" className="text-sm font-medium text-zinc-600 hover:text-black dark:text-zinc-400 dark:hover:text-white">
-            Past Work
-          </Link>
-          <Link href="/about" className="text-sm font-medium text-zinc-600 hover:text-black dark:text-zinc-400 dark:hover:text-white">
-            About Me
-          </Link>
         </div>
 
         {/* Mobile Menu Placeholder (Simplified for now) */}
