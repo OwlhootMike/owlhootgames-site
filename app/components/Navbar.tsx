@@ -21,7 +21,7 @@ export default function Navbar() {
           <Link href="/games/nova-galactica" className="text-sm font-medium text-zinc-600 hover:text-blue-500 dark:text-zinc-400 dark:hover:text-blue-400">
             Nova Galactica
           </Link>
-          <Link href="/detective" className="text-sm font-medium text-zinc-600 hover:text-amber-600 dark:text-zinc-400 dark:hover:text-amber-500">
+          <Link href="/games/detective-jane" className="text-sm font-medium text-zinc-600 hover:text-amber-600 dark:text-zinc-400 dark:hover:text-amber-500">
             Detective Jane
           </Link>
           <Link href="/past" className="text-sm font-medium text-zinc-600 hover:text-black dark:text-zinc-400 dark:hover:text-white">
