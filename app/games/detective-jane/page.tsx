@@ -95,7 +95,7 @@ export default function DetectiveJanePage() {
                    Incident Report
                 </h2>
                 <p className="text-slate-400 leading-relaxed mb-4">
-                   Players take on the role of Jane, a private investigator with a unique talent for reconstructing crime scenes. 
+                   Players take on the role of Jane Davies, a woman in the force at the Precinct 13 with a unique talent for reconstructing crime scenes. 
                    The game focuses on <strong>deductive reasoning</strong> rather than combat.
                 </p>
                 <p className="text-slate-400 leading-relaxed">
@@ -125,11 +125,11 @@ export default function DetectiveJanePage() {
                 <ul className="space-y-4 font-mono text-sm">
                    <li>
                       <span className="block text-slate-500 text-xs">Engine</span>
-                      <span className="text-amber-500 font-bold">Unreal Engine 5? (TBA)</span>
+                      <span className="text-amber-500 font-bold">(TBA)</span>
                    </li>
                    <li>
                       <span className="block text-slate-500 text-xs">Genre</span>
-                      <span className="text-white">Point & Click / Mystery</span>
+                      <span className="text-white">Point & Click / Adventure / Mystery</span>
                    </li>
                    <li>
                       <span className="block text-slate-500 text-xs">Dev Status</span>
