@@ -90,24 +90,24 @@ export default function NovaPage() {
             <div className="border-l-2 border-blue-500 pl-6">
                <h2 className="text-2xl text-white font-bold uppercase mb-4">Mission Profile</h2>
                <p className="text-blue-100/70 text-lg leading-relaxed mb-6 font-sans">
-                 <strong className="text-blue-400">Nova Galactica</strong> is a narrative-driven RPG set in the crushing isolation of deep space. 
-                 Unlike traditional space operas, there are no laser swords or chosen heroes. There is only the hull, the void, and the crew.
+                 Humanity has traveled through space across the ages. In 2050, Humanity set sail to the stars, navigating the cosmos and viewing Pulsars across the galaxy.<strong className="text-blue-400">Engineer Edith Williams</strong> is an engineer that is stationed on a moon base that is established with one goal: watch the Eta Carinae and send the information back to the Humanity Centauri Spaceship floating back in the Sol system.
+                 Edith has 2 jobs: maintain the outpost and take care of her child.
                </p>
                <p className="text-blue-100/70 text-lg leading-relaxed font-sans">
-                 The core loop forces players to manage <span className="text-white border-b border-blue-500">Fuel, Oxygen, and Morale</span>. 
-                 Every system jump is a calculation: Do you risk a nebula storm to save fuel, or burn precious reserves to go around?
+                 Edith will uncover space marvel as well as maintian the <span className="text-white border-b border-blue-500">Fuel, Oxygen, and Morale</span> of the society established in the outpost. 
+                 What will she uncover?
                </p>
             </div>
 
             {/* Feature Cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="bg-blue-900/10 border border-blue-800 p-4 hover:bg-blue-900/20 transition-colors">
-                   <h3 className="text-blue-400 font-bold uppercase mb-2 text-sm">NON-LINEAR MAP</h3>
-                   <p className="text-xs text-slate-400">Star charts are procedurally generated. No two voyages share the same hazard layout.</p>
+                   <h3 className="text-blue-400 font-bold uppercase mb-2 text-sm">Outpost Map</h3>
+                   <p className="text-xs text-slate-400">The Outpost is divided into 5 sections: East/West/North/South Outpost Wings, and Central Hub acting as main hub for living, education, recreation and market.</p>
                 </div>
                 <div className="bg-blue-900/10 border border-blue-800 p-4 hover:bg-blue-900/20 transition-colors">
-                   <h3 className="text-blue-400 font-bold uppercase mb-2 text-sm">CREW PSYCHOLOGY</h3>
-                   <p className="text-xs text-slate-400">Stress levels affect combat performance. A panicked engineer repairs slower.</p>
+                   <h3 className="text-blue-400 font-bold uppercase mb-2 text-sm">Maintain, Fix and Care for Child</h3>
+                   <p className="text-xs text-slate-400">Being a mother is hard work. But everyone, including your child, depends on you.</p>
                 </div>
             </div>
           </div>
@@ -132,14 +132,13 @@ export default function NovaPage() {
 
                    <div>
                       <div className="text-xs text-slate-500 uppercase mb-1">Asset Pipeline</div>
-                      <div className="text-white font-bold">Aseprite / Photoshop</div>
+                      <div className="text-white font-bold">Aseprite / GraphicsGale</div>
                       <div className="w-full h-1 bg-gray-800 mt-1"><div className="w-1/2 h-full bg-blue-500"></div></div>
                    </div>
 
                    <div className="pt-6 border-t border-gray-800">
                       <div className="text-xs text-slate-500 uppercase mb-2">Dev Contributions</div>
                       <ul className="text-sm text-blue-200 space-y-2">
-                         <li className="flex gap-2"><span className="text-blue-500">►</span> <span>30k+ Word Script</span></li>
                          <li className="flex gap-2"><span className="text-blue-500">►</span> <span>Custom UI Implementation</span></li>
                          <li className="flex gap-2"><span className="text-blue-500">►</span> <span>Plugin Architecture</span></li>
                       </ul>
