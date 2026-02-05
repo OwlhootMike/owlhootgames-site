@@ -25,24 +25,24 @@ export default function ArchivePage() {
 
         {/* CARD 1: GLOBAL GAME JAM 2026 */}
         <ArchiveCard 
-           title="Rhythm Protocol"
-           role="Lead Programmer"
-           year="2026"
+           title="Global Game Jam Games"
+           role="Programmer & Designer, sometimes Artist"
+           year="2013 - Current"
            platform="Global Game Jam"
-           description="A rhythm-action game built in 48 hours. Created custom audio-sync mechanics and beat detection."
-           link="https://globalgamejam.org/" // Update this!
-           tech={["Unity", "C#", "FMOD"]}
+           description="Games made for the Global Game Jam events."
+           link="https://globalgamejam.org/users/michaelfs" // Update this!
+           tech={["Unity", "Gamemaker Studio", "RPG Maker"]}
         />
 
-        {/* CARD 2: PARTYCLUB CITY */}
+        {/* CARD 2: GameJolt */}
         <ArchiveCard 
-           title="Partyclub City"
+           title="GameJolt Games"
            role="Solo Developer"
-           year="2025"
-           platform="Itch.io"
-           description="An incremental tycoon game about managing nightlife economy. Features distinct prestige layers."
-           link="https://owlhootgames.itch.io/" // Update this!
-           tech={["React", "TypeScript", "Tailwind"]}
+           year="2013-2020"
+           platform="GameJolt"
+           description="Games I have worked on as a smaller dev"
+           link="https://gamejolt.com/@OwlhootGames/games" // Update this!
+           tech={["RPG Maker", "Gamemaker Studio"]}
         />
 
         {/* CARD 3: SPACE RHINO (QA) */}
@@ -51,9 +51,71 @@ export default function ArchivePage() {
            role="QA Tester Intern"
            year="2014-2015"
            platform="Professional Work"
-           description="Performed regression testing and bug tracking for mobile titles. Assisted in gameplay balancing."
-           link="#" 
+           description="Performed regression testing and bug tracking for mobile titles. Assisted in gameplay balancing. Game no longer available" 
            tech={["JIRA", "iOS", "Android"]}
+        />
+
+        <ArchiveCard 
+            title="OneShot"
+            role="Tester"
+            year="2016"
+            platform="PC"
+            description="Tested game and reported bugs to Degica Games prior to release."
+            link="https://store.steampowered.com/app/420530/OneShot/" 
+        />
+
+        <ArchiveCard 
+            title="Code of Princess"
+            role="Tester"
+            year="2016"
+            platform="PC"
+            description="Tested game and reported bugs to Degica Games prior to release."
+            link="https://store.steampowered.com/app/408640/Code_of_Princess/" 
+        />
+
+        <ArchiveCard 
+            title="DeathSmiles"
+            role="Tester"
+            year="2016"
+            platform="PC"
+            description="Tested game and reported bugs to Degica Games prior to release."
+            link="https://store.steampowered.com/app/314180/Deathsmiles/" 
+        />
+
+        <ArchiveCard 
+            title="Echoes of Aetheria"
+            role="Tester"
+            year="2016"
+            platform="PC"
+            description="Tested game and reported bugs to Degica Games prior to release."
+            link="https://store.steampowered.com/app/354740/Echoes_of_Aetheria/" 
+        />
+
+        <ArchiveCard 
+            title="Pale Echoes"
+            role="Tester"
+            year="2016"
+            platform="PC"
+            description="Tested game and reported bugs to Degica Games prior to release."
+            link="https://store.steampowered.com/app/377190/Pale_Echoes/" 
+        />
+
+        <ArchiveCard 
+            title="Celestial Tear: Demon's Revenge"
+            role="Tester"
+            year="2016"
+            platform="PC"
+            description="Tested game and reported bugs to Degica Games prior to release."
+            link="https://store.steampowered.com/app/385190/Celestial_Tear_Demons_Revenge/" 
+        />
+
+        <ArchiveCard 
+            title="Skyborn"
+            role="Tester"
+            year="2016"
+            platform="PC"
+            description="Tested game and reported bugs to Degica Games prior to release."
+            link="https://store.steampowered.com/app/278460/Skyborn/" 
         />
 
       </div>

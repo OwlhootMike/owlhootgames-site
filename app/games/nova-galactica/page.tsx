@@ -49,7 +49,7 @@ export default function NovaPage() {
         </motion.div>
         
         <div className="w-full md:w-64 text-right">
-           <p className="text-xs text-blue-400 font-mono mb-1">STARDATE: 2026.11.04</p>
+           <p className="text-xs text-blue-400 font-mono mb-1">STARDATE: 5630.10.04</p>
            <div className="h-1 w-full bg-blue-900 relative overflow-hidden">
              <div className="absolute inset-0 bg-blue-400 w-1/3 animate-pulse"></div>
            </div>
