@@ -51,7 +51,7 @@ export default function ArchivePage() {
            role="QA Tester Intern"
            year="2014-2015"
            platform="Professional Work"
-           description="Performed regression testing and bug tracking for mobile titles. Assisted in gameplay balancing. Game no longer available" 
+           description="Performed regression testing and bug tracking for mobile titles such as Breach TD. Assisted in gameplay balancing. Game no longer available" 
            tech={["JIRA", "iOS", "Android"]}
         />
 
