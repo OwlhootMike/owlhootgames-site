@@ -140,7 +140,7 @@ export default function NightclubsPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                <div className="p-6 border border-slate-800 hover:border-cyan-500/50 transition-colors bg-gradient-to-br from-slate-900 to-transparent">
                  <h4 className="text-xl font-bold text-white mb-2">DJ Rhythm Gameplay</h4>
-                 <p className="text-slate-500 text-sm">Don't just idly play the music. PLAY the music for more reward boosts in the club!</p>
+                 <p className="text-slate-500 text-sm">Don't just idly play the music. PLAY the music for more reward boosts in the club! (Will be compatible with the DJ Hero Controller!!!)</p>
                </div>
                <div className="p-6 border border-slate-800 hover:border-purple-500/50 transition-colors bg-gradient-to-br from-slate-900 to-transparent">
                  <h4 className="text-xl font-bold text-white mb-2">Crowd Fluidity</h4>
