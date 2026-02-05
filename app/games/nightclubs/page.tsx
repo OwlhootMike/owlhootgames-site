@@ -44,7 +44,7 @@ export default function NightclubsPage() {
           </h1>
           <p className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
             A high-fidelity simulation of nightlife management. <br className="hidden md:block" />
-            Control the lights, the music, and the crowd psychology.
+            Serve the guests, play the music, and live the nights with the crowd.
           </p>
         </motion.div>
       </header>
@@ -80,7 +80,7 @@ export default function NightclubsPage() {
                <ul className="space-y-3 font-mono text-sm text-slate-300">
                  <li className="flex justify-between">
                    <span className="text-slate-500">Engine</span>
-                   <span>Unity 2022 LTS</span>
+                   <span>Unity</span>
                  </li>
                  <li className="flex justify-between">
                    <span className="text-slate-500">Language</span>
@@ -101,10 +101,11 @@ export default function NightclubsPage() {
             <div className="bg-slate-900/50 border border-slate-800 p-6 backdrop-blur-sm">
                <h3 className="text-purple-400 font-bold uppercase tracking-widest mb-4 border-b border-slate-800 pb-2">My Contributions</h3>
                <ul className="list-disc list-inside space-y-2 text-slate-300 text-sm leading-relaxed">
-                 <li>Designed the <strong className="text-white">Crowd AI</strong> system using NavMesh agents.</li>
-                 <li>Programmed the dynamic <strong className="text-white">Music Sync</strong> system.</li>
+                 <li>Designed the <strong className="text-white">Crowd AI</strong> system using NavMesh agents and state machines.</li>
+                 <li>Programmed the <strong className="text-white">Rhytmic Music Sync</strong> gameplay system.</li>
                  <li>Implemented UI/UX for the management dashboard.</li>
                  <li>Optimized lighting rendering for mobile performance.</li>
+                 <li>Created script to create music charts with ease.</li>
                </ul>
             </div>
           </div>
@@ -116,32 +117,42 @@ export default function NightclubsPage() {
             <div>
               <h2 className="text-3xl font-black text-white uppercase mb-6 flex items-center gap-3">
                 <span className="w-8 h-1 bg-cyan-500"></span>
-                The Simulation
+                Re-Live the Nights Again!
               </h2>
               <p className="text-slate-400 text-lg leading-relaxed mb-6">
-                <strong>PRSM</strong> is not just a tycoon game; it's a social physics sandbox. 
-                Players don't just build walls—they engineer vibes. The core loop revolves around balancing 
-                three pillars: <span className="text-cyan-300">Music Intensity</span>, <span className="text-purple-300">Lighting Atmosphere</span>, and <span className="text-pink-300">Crowd Density</span>.
+                <strong>PRSM</strong> is not your standard nightclub. It is a statement. PRSM is created to bring back the nights and music, but with more... spice.
+                You, the newly hired manager, are tasked to bring back the soul of these nights we lost. 
+                The competition, The New Millennia, has been established in the city, but as a previous customer, it is missing that vibe we thrived for. 
+                Don't worry about Sven, let me (the CEO of PRSM) worry about it.
+                You just worry about the customer and manage the <span className="text-cyan-300">bar, the security, the DJ, the decour, the parties, and the dance floor</span>.
+                 I'll get in contact with the <span className="text-purple-300">Master Bartender</span> to help start your new drinks and <span className="text-pink-300">the local music enthusiast</span> to help you with the music setup.
               </p>
               <p className="text-slate-400 text-lg leading-relaxed">
                 As the architect, you must adapt to procedural events. A fight breaks out? Kick out the aggressor. 
                 VIPs arriving? Switch the lighting rig to "Gold Mode." Every choice impacts the club's reputation meter in real-time.
+              </p>
+              <p className="text-slate-400 text-lg leading-relaxed">
+                Make us great, and feel the music coursing through the dancefloor again.
               </p>
             </div>
 
             {/* Features Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                <div className="p-6 border border-slate-800 hover:border-cyan-500/50 transition-colors bg-gradient-to-br from-slate-900 to-transparent">
-                 <h4 className="text-xl font-bold text-white mb-2">Dynamic Audio</h4>
-                 <p className="text-slate-500 text-sm">Music stems fade in/out based on crowd energy levels, powered by FMOD.</p>
+                 <h4 className="text-xl font-bold text-white mb-2">DJ Rhythm Gameplay</h4>
+                 <p className="text-slate-500 text-sm">Don't just idly play the music. PLAY the music for more reward boosts in the club!</p>
                </div>
                <div className="p-6 border border-slate-800 hover:border-purple-500/50 transition-colors bg-gradient-to-br from-slate-900 to-transparent">
                  <h4 className="text-xl font-bold text-white mb-2">Crowd Fluidity</h4>
-                 <p className="text-slate-500 text-sm">NPCs feature individual desires (Thirst, Dance, Social) driving the economy.</p>
+                 <p className="text-slate-500 text-sm">NPCs feature individual desires (Thirst, Dance, Social) that drive the economy. Keep them happy, and kick out the riff-raff!</p>
                </div>
                <div className="p-6 border border-slate-800 hover:border-pink-500/50 transition-colors bg-gradient-to-br from-slate-900 to-transparent">
-                 <h4 className="text-xl font-bold text-white mb-2">Lighting Engine</h4>
-                 <p className="text-slate-500 text-sm">Volumetric lighting effects that react to the beat of the music.</p>
+                 <h4 className="text-xl font-bold text-white mb-2">Bartending the Crowd</h4>
+                 <p className="text-slate-500 text-sm">Learn new exclusive drinks, do tricks, get tips and more popularity! Or hire bartenders, we got more stuff to do!</p>
+               </div>
+               <div className="p-6 border border-slate-800 hover:border-pink-500/50 transition-colors bg-gradient-to-br from-slate-900 to-transparent">
+                 <h4 className="text-xl font-bold text-white mb-2">Episodic Stories</h4>
+                 <p className="text-slate-500 text-sm">The nightclub life is not a soap opera without its stories. We are here to establish ourselves and tell Sven and The New Millenia Nightclub to pack it!</p>
                </div>
             </div>
 
