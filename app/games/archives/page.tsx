@@ -62,6 +62,7 @@ export default function ArchivePage() {
             platform="PC"
             description="Tested game and reported bugs to Degica Games prior to release."
             link="https://store.steampowered.com/app/420530/OneShot/" 
+            tech={[]}
         />
 
         <ArchiveCard 
@@ -71,6 +72,7 @@ export default function ArchivePage() {
             platform="PC"
             description="Tested game and reported bugs to Degica Games prior to release."
             link="https://store.steampowered.com/app/408640/Code_of_Princess/" 
+            tech={[]}
         />
 
         <ArchiveCard 
@@ -80,6 +82,7 @@ export default function ArchivePage() {
             platform="PC"
             description="Tested game and reported bugs to Degica Games prior to release."
             link="https://store.steampowered.com/app/314180/Deathsmiles/" 
+            tech={[]}
         />
 
         <ArchiveCard 
@@ -89,6 +92,7 @@ export default function ArchivePage() {
             platform="PC"
             description="Tested game and reported bugs to Degica Games prior to release."
             link="https://store.steampowered.com/app/354740/Echoes_of_Aetheria/" 
+            tech={[]}
         />
 
         <ArchiveCard 
@@ -98,6 +102,7 @@ export default function ArchivePage() {
             platform="PC"
             description="Tested game and reported bugs to Degica Games prior to release."
             link="https://store.steampowered.com/app/377190/Pale_Echoes/" 
+            tech={[]}
         />
 
         <ArchiveCard 
@@ -107,6 +112,7 @@ export default function ArchivePage() {
             platform="PC"
             description="Tested game and reported bugs to Degica Games prior to release."
             link="https://store.steampowered.com/app/385190/Celestial_Tear_Demons_Revenge/" 
+            tech={[]}
         />
 
         <ArchiveCard 
@@ -116,6 +122,7 @@ export default function ArchivePage() {
             platform="PC"
             description="Tested game and reported bugs to Degica Games prior to release."
             link="https://store.steampowered.com/app/278460/Skyborn/" 
+            tech={[]}
         />
 
       </div>
