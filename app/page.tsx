@@ -561,7 +561,7 @@ export default function Home() {
                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
             </a>
             {/* Itch.io Link */}
-            <a href="https://owlhootgames.itch.io/" target="_blank" rel="noopener noreferrer" className="p-4 bg-white border border-slate-200 text-slate-600 hover:text-red-500 hover:border-red-400 transition-all shadow-sm transform hover:scale-110" style={techButtonStyle}>
+            <a href="https://owlhootdev.itch.io/" target="_blank" rel="noopener noreferrer" className="p-4 bg-white border border-slate-200 text-slate-600 hover:text-red-500 hover:border-red-400 transition-all shadow-sm transform hover:scale-110" style={techButtonStyle}>
               <span className="sr-only">Itch.io</span>
               {/* Gamepad Icon */}
               <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20.647 3.515a.998.998 0 0 0-.464-.175c-.347-.053-2.071-.24-5.183-1.84v2.536c0 1.258-2.618 2.376-5.417 2.376-1.574 0-2.923-.354-3.864-.95v3.664c1.238.998 3.55 1.585 5.864 1.585 1.57 0 2.915-.27 3.996-.754.723.637 1.636 1.02 2.634 1.02 2.208 0 4-1.792 4-4 0-1.748-1.12-3.23-2.705-3.786.136-1.25.137-3.136-3.861-5.676zM7.5 12.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm-3-3a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg>
