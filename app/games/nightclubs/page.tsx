@@ -123,7 +123,7 @@ export default function NightclubsPage() {
                 Hi! This is Mike A, your PRSM CEO speaking! Thank you for responding to the ad of Nightclub Operations Manager. I loved your interview, and wish to extend
                 the job opportunity to you. <strong>PRSM</strong> will not be your standard nightclub. It will be a statement. PRSM is created to bring back the nights and music, but with more... soul.
               </p>
-              <p>
+              <p className="text-slate-400 text-lg leading-relaxed mb-6"> 
                 Here are some of your regular tasks as the new manager: create parties, buy and install decor, work the turntable, serve our guests drinks, make our
                 VIPs feel welcomed and kick out the riff-raff! It is your job to bring back the soul of the nights we lost many years ago! 
                 The competition, The New Millennia, has been established in the city, but as a previous customer, it is missing that vibe we thrived for. This is where we come in!
