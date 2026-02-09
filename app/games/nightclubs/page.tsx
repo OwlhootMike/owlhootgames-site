@@ -126,10 +126,10 @@ export default function NightclubsPage() {
                 VIPs feel welcomed and kick out the riff-raff! It is your job tio bring back the soul of the nights we lost many years ago! 
                 The competition, The New Millennia, has been established in the city, but as a previous customer, it is missing that vibe we thrived for. This is where we come in!
                 Don't you worry about Sven, let me worry about him.
-                You just worry about the customer and manage the <span className="text-cyan-300">bar, the security, the DJ, the decour, the parties, and the dance floor</span>.
-                 I'll get in contact with the <span className="text-purple-300">Master Bartender</span> to help start your new drinks and <span className="text-pink-300">the local music enthusiast</span> to help you with the music setup.
               </p>
-              <p className="text-slate-400 text-lg leading-relaxed">
+              <p className="text-slate-400 text-lg leading-relaxed mb-6">
+                You just worry about the customer and manage the <span className="text-cyan-300">bar, the security, the DJ, the decour, the parties, and the dance floor</span>.
+                I'll get in contact with the <span className="text-purple-300">Master Bartender</span> to help start your new drinks and <span className="text-pink-300">the local music enthusiast</span> to help you with the music setup.
                 As the architect, you must adapt to procedural events. A fight breaks out? Kick out the aggressor. 
                 VIPs arriving? Switch the lighting rig to "Gold Mode." Every choice impacts the club's reputation meter in real-time.
               </p>
