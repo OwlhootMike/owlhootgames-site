@@ -102,7 +102,7 @@ export default function NightclubsPage() {
                <h3 className="text-purple-400 font-bold uppercase tracking-widest mb-4 border-b border-slate-800 pb-2">My Contributions</h3>
                <ul className="list-disc list-inside space-y-2 text-slate-300 text-sm leading-relaxed">
                  <li>Designed the <strong className="text-white">Crowd AI</strong> system using NavMesh agents and state machines.</li>
-                 <li>Programmed the <strong className="text-white">Rhytmic Music Sync</strong> gameplay system.</li>
+                 <li>Programmed the <strong className="text-white">Rhythmic Music Sync</strong> gameplay system.</li>
                  <li>Implemented UI/UX for the management dashboard.</li>
                  <li>Optimized lighting rendering for mobile performance.</li>
                  <li>Created script to create music charts with ease.</li>
@@ -122,13 +122,15 @@ export default function NightclubsPage() {
               <p className="text-slate-400 text-lg leading-relaxed mb-6">
                 Hi! This is Mike A, your PRSM CEO speaking! Thank you for responding to the ad of Nightclub Operations Manager. I loved your interview, and wish to extend
                 the job opportunity to you. <strong>PRSM</strong> will not be your standard nightclub. It will be a statement. PRSM is created to bring back the nights and music, but with more... soul.
-                Here are some of your regular tasks as the new manager: create parties, buy and install decour, work the turntable, serve our guests drinks, make our
-                VIPs feel welcomed and kick out the riff-raff! It is your job tio bring back the soul of the nights we lost many years ago! 
+              </p>
+              <p>
+                Here are some of your regular tasks as the new manager: create parties, buy and install decor, work the turntable, serve our guests drinks, make our
+                VIPs feel welcomed and kick out the riff-raff! It is your job to bring back the soul of the nights we lost many years ago! 
                 The competition, The New Millennia, has been established in the city, but as a previous customer, it is missing that vibe we thrived for. This is where we come in!
                 Don't you worry about Sven, let me worry about him.
               </p>
               <p className="text-slate-400 text-lg leading-relaxed mb-6">
-                You just worry about the customer and manage the <span className="text-cyan-300">bar, the security, the DJ, the decour, the parties, and the dance floor</span>.
+                You just worry about the customer and manage the <span className="text-cyan-300">bar, the security, the DJ, the decor, the parties, and the dance floor</span>.
                 I'll get in contact with the <span className="text-purple-300">Master Bartender</span> to help start your new drinks and <span className="text-pink-300">the local music enthusiast</span> to help you with the music setup.
                 As the architect, you must adapt to procedural events. A fight breaks out? Kick out the aggressor. 
                 VIPs arriving? Switch the lighting rig to "Gold Mode." Every choice impacts the club's reputation meter in real-time.
@@ -154,7 +156,7 @@ export default function NightclubsPage() {
                </div>
                <div className="p-6 border border-slate-800 hover:border-pink-500/50 transition-colors bg-gradient-to-br from-slate-900 to-transparent">
                  <h4 className="text-xl font-bold text-white mb-2">Episodic Stories</h4>
-                 <p className="text-slate-500 text-sm">The nightclub life is not a soap opera without its stories. We are here to establish ourselves and tell Sven and The New Millenia Nightclub to pack it!</p>
+                 <p className="text-slate-500 text-sm">The nightclub life is not a soap opera without its stories. We are here to establish ourselves and tell Sven and The New Millennia Nightclub to pack it!</p>
                </div>
             </div>
 
