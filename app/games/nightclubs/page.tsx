@@ -120,10 +120,12 @@ export default function NightclubsPage() {
                 Re-Live the Nights Again!
               </h2>
               <p className="text-slate-400 text-lg leading-relaxed mb-6">
-                <strong>PRSM</strong> is not your standard nightclub. It is a statement. PRSM is created to bring back the nights and music, but with more... spice.
-                You, the newly hired manager, are tasked to bring back the soul of these nights we lost. 
-                The competition, The New Millennia, has been established in the city, but as a previous customer, it is missing that vibe we thrived for. 
-                Don't worry about Sven, let me (the CEO of PRSM) worry about it.
+                Hi! This is Mike A, your PRSM CEO speaking! Thank you for responding to the ad of Nightclub Operations Manager. I loved your interview, and wish to extend
+                the job opportunity to you. <strong>PRSM</strong> will not be your standard nightclub. It will be a statement. PRSM is created to bring back the nights and music, but with more... soul.
+                Here are some of your regular tasks as the new manager: create parties, buy and install decour, work the turntable, serve our guests drinks, make our
+                VIPs feel welcomed and kick out the riff-raff! It is your job tio bring back the soul of the nights we lost many years ago! 
+                The competition, The New Millennia, has been established in the city, but as a previous customer, it is missing that vibe we thrived for. This is where we come in!
+                Don't you worry about Sven, let me worry about him.
                 You just worry about the customer and manage the <span className="text-cyan-300">bar, the security, the DJ, the decour, the parties, and the dance floor</span>.
                  I'll get in contact with the <span className="text-purple-300">Master Bartender</span> to help start your new drinks and <span className="text-pink-300">the local music enthusiast</span> to help you with the music setup.
               </p>
