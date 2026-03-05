@@ -44,7 +44,7 @@ export default function NovaPage() {
              <span className="text-blue-500 text-xs uppercase tracking-widest">System: Sol-3</span>
           </div>
           <h1 className="text-5xl md:text-8xl font-black uppercase tracking-tighter text-white mb-2 leading-none">
-            NOVA <span className="text-transparent bg-clip-text bg-gradient-to-b from-blue-400 to-transparent">GALACTICA</span>
+            NOVA GALACTICA:<span className="text-transparent bg-clip-text bg-gradient-to-b from-blue-400 to-transparent">ODE TO CARINAE</span>
           </h1>
         </motion.div>
         
