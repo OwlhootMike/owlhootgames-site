@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 // We go up two levels (../../) to find the image in the 'app' folder
-import nightclubImg from '../../img-nightclub.png';
+import nightclubImg from '../../PRSMPost.jpg';
 
 export default function NightclubsPage() {
   return (
