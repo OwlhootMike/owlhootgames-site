@@ -90,7 +90,7 @@ export default function NovaPage() {
             <div className="border-l-2 border-blue-500 pl-6">
                <h2 className="text-2xl text-white font-bold uppercase mb-4">Mission Profile</h2>
                <p className="text-blue-100/70 text-lg leading-relaxed mb-6 font-sans">
-                 Humanity has traveled through space across the ages. In 2050, Humanity set sail to the stars, navigating the cosmos and viewing Pulsars across the galaxy. <strong className="text-blue-400">Engineer Edith Williams</strong> is an engineer that is stationed on a moon base that is established with one goal: watch the Eta Carinae and send the information back to the Humanity Centauri Spaceship floating back in the Sol system.
+                 Humanity has traveled through space across the ages. In 2050, Humanity set sail to the stars after discovering light speed travel, navigating the cosmos and viewing Pulsars across the galaxy. It's the year 9565 AD. <strong className="text-blue-400">Engineer Edith Williams</strong> is an engineer that is stationed on a moon base that is established with one goal: watch the Eta Carinae and send the information back to the Humanity Centauri Spaceship floating back in the Sol system.
                  Edith has 2 jobs: maintain the outpost and take care of her child.
                </p>
                <p className="text-blue-100/70 text-lg leading-relaxed font-sans">
