@@ -15,7 +15,7 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 
 // --- IMAGE IMPORTS ---
-import nightclubImg from './img-nightclub.png';
+import nightclubImg from './PRSMPost.jpg';
 import novaImg from './img-nova.jpg';
 import janeImg from './img-jane2.png';
 
