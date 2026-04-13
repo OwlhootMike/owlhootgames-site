@@ -23,7 +23,7 @@ import janeImg from './img-jane2.png';
 const projects = [
   {
     title: "Nightclubs: PRSM",
-    description: "A simulation game focused on nightlife management and social dynamics.",
+    description: "A simulation game focused on nightlife management and social dynamics. (Formerly Partyclub City - The Spiritual successor to Nightclub City)",
     tech: "Unity", 
     image: nightclubImg,
     link: "/games/nightclubs" 
