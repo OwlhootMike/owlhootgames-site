@@ -37,14 +37,15 @@ export default function NightclubsPage() {
           transition={{ duration: 0.8 }}
         >
           <span className="inline-block mb-4 px-3 py-1 bg-purple-900/30 border border-purple-500 text-purple-300 text-xs font-mono uppercase tracking-widest shadow-[0_0_15px_rgba(168,85,247,0.3)]">
-            Project Status: Alpha Build
+            Project Status: Alpha Build (Targeting Season 0 Early Access Relase by Summer 2026)
           </span>
           <h1 className="text-5xl md:text-7xl font-black uppercase tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-cyan-400 drop-shadow-[0_0_10px_rgba(34,211,238,0.5)] mb-6">
             Nightclubs: PRSM
           </h1>
           <p className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
             A high-fidelity simulation of nightlife management. <br className="hidden md:block" />
-            Serve the guests, play the music, and live the nights with the crowd.
+            Serve the guests, play the music, and live the nights with the crowd.<br className="hidden md:block" />
+            Successor to Nightclub City. Formerly known as Partyclub City.
           </p>
         </motion.div>
       </header>
