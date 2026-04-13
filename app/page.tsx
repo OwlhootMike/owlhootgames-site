@@ -331,7 +331,7 @@ export default function Home() {
              <div className="bg-white p-6 md:p-8 border-l-4 border-red-500 shadow-lg relative" style={techPanelStyle}>
                <h3 className="mb-2 md:mb-4 text-2xl md:text-4xl font-black uppercase text-slate-800">Active Task</h3>
                <p className="text-base md:text-lg leading-relaxed text-slate-600">
-                 Developing successor to classic Facebook title. Two visual novels in production.<br/>
+                 Currently developing Nightclubs: PRSM (Successor to Nightclub City). Preparing for Season 0 / v0.1 Early Access in Summer 2026. Two visual novels in production.<br/>
                  <strong>Honor Games</strong>: Designer (Ex-QA Lead) for Project <em>Vultures</em>.
                </p>
              </div>
