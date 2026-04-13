@@ -36,6 +36,9 @@ export default function Navbar() {
           <Link href="/games/archives" className="text-sm font-medium text-zinc-600 hover:text-amber-600 dark:text-zinc-400 dark:hover:text-amber-500">
             Other Work Archives
           </Link>
+          <Link href="https://www.patreon.com/c/OwlHootGames" className="text-sm font-medium text-zinc-600 hover:text-black dark:text-zinc-400 dark:hover:text-white">
+            Patreon
+          </Link>
         </div>
 
         {/* --- MOBILE HAMBURGER BUTTON --- */}
@@ -81,6 +84,10 @@ export default function Navbar() {
            <Link href="/games/archives" onClick={() => setIsOpen(false)} className="block py-2 text-sm font-medium text-zinc-600 hover:text-amber-600 dark:text-zinc-400 dark:hover:text-amber-500">
              Other Work Archives
            </Link>
+
+          <Link href="https://www.patreon.com/c/OwlHootGames" onClick={() => setIsOpen(false)} className="block py-2 text-sm font-medium text-zinc-600 hover:text-amber-600 dark:text-zinc-400 dark:hover:text-amber-500">
+             Patreon
+          </Link>
 
         </div>
       )}
