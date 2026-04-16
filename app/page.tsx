@@ -341,7 +341,7 @@ export default function Home() {
              <div className="absolute inset-0 bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.05)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(255,0,0,0.02),rgba(255,0,0,0.06))] z-0 pointer-events-none bg-[length:100%_4px,6px_100%]"></div>
              <div className="text-center z-10">
                 <div className="text-2xl md:text-3xl font-black text-red-500 mb-1 tracking-widest">HONOR GAMES</div>
-                <div className="inline-block bg-red-600 text-white text-xs font-bold px-2 py-1 uppercase">Role: Designer</div>
+                <div className="inline-block bg-red-600 text-white text-xs font-bold px-2 py-1 uppercase">Role: Designer(EX-QA Lead)</div>
              </div>
           </div>
         </motion.div>
