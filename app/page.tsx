@@ -332,7 +332,7 @@ export default function Home() {
                <h3 className="mb-2 md:mb-4 text-2xl md:text-4xl font-black uppercase text-slate-800">Active Task</h3>
                <p className="text-base md:text-lg leading-relaxed text-slate-600">
                  Currently developing Nightclubs: PRSM (Successor to Nightclub City). Preparing for Season 0 / v0.1 Early Access in Summer 2026. Two visual novels in production.<br/>
-                 <strong>Honor Games</strong>: Designer (Ex-QA Lead) for Project <em>Vultures</em>.
+                 <strong>Moonlighting at Honor Games</strong>: Designer (Ex-QA Lead) for Project <em>Vultures</em>.
                </p>
              </div>
           </div>
