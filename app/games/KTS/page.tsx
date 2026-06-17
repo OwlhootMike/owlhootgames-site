@@ -174,7 +174,7 @@ export default function PhotographyPage() {
             </a>
           </div>
 
-          <p className="text-sm text-slate-400">&copy; {new Date().getFullYear()} Kevision. All rights reserved.</p>
+          <p className="text-sm text-slate-400">&copy; 2019 Kevision. All rights reserved.</p>
         </div>
       </footer>
     </div>
