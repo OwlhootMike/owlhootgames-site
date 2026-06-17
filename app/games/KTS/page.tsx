@@ -16,7 +16,6 @@ export default function PhotographyPage() {
     <div className="min-h-screen bg-white text-slate-800 font-sans selection:bg-emerald-200 selection:text-emerald-900 overflow-x-hidden">
       
       {/* --- SUBTLE BACKGROUND ACCENT --- */}
-      {/* A very light, blurry green gradient orb in the top right to give that "undertone" feel */}
       <div className="fixed top-[-10%] right-[-5%] w-96 h-96 bg-emerald-100 rounded-full blur-3xl opacity-50 pointer-events-none z-0"></div>
 
       {/* --- HEADER / NAVIGATION --- */}
@@ -28,7 +27,6 @@ export default function PhotographyPage() {
           transition={{ duration: 0.8 }}
           className="flex-1"
         >
-          {/* Back button, styled cleanly to match the new aesthetic */}
           <div className="mb-8">
             <Link href="/" className="inline-flex items-center gap-2 text-emerald-600 hover:text-emerald-800 transition-colors text-xs font-semibold uppercase tracking-wider">
                <span>←</span> <span>Return to Main Site</span>
@@ -63,7 +61,6 @@ export default function PhotographyPage() {
         </motion.div>
 
         {/* PHOTO GRID */}
-        {/* Adjusted to 4 columns on large screens for the 4 categories */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           
           {/* Card 1: Portraits */}
@@ -80,7 +77,6 @@ export default function PhotographyPage() {
               fill 
               className="object-cover transition-transform duration-700 group-hover:scale-105"
             />
-            {/* Hover Overlay: light green tint with text */}
             <div className="absolute inset-0 bg-emerald-900/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                <span className="text-white font-medium drop-shadow-md">Portraits</span>
             </div>
@@ -174,7 +170,18 @@ export default function PhotographyPage() {
             </a>
           </div>
 
-          <p className="text-sm text-slate-400">&copy; 2019 Kevision. All rights reserved.</p>
+          {/* EDIT: The rubber duck has been added right next to the copyright text here! */}
+          <div className="flex items-center gap-3">
+            <p className="text-sm text-slate-400">&copy; {new Date().getFullYear()} Kevision. All rights reserved.</p>
+            {/* Standard img tag used here so you don't have to configure next.config.js for external domains */}
+            <img 
+              src="https://images.unsplash.com/photo-1584844615201-9f9392abf488?q=80&w=100&auto=format&fit=crop" 
+              alt="Rubber Duck Debugger" 
+              className="w-6 h-6 rounded-full opacity-50 hover:opacity-100 transition-opacity cursor-pointer shadow-sm"
+              title="Quack!"
+            />
+          </div>
+
         </div>
       </footer>
     </div>
