@@ -9,6 +9,7 @@ import Kevin from "./Kevin.png";
 import Evento from "./Evento.jpeg";
 import Food from "./Comida.jpeg";
 import Playa from "./Playa.jpeg";
+import Quak from "./Quak.png";
 
 export default function PhotographyPage() {
   return (
@@ -170,12 +171,11 @@ export default function PhotographyPage() {
             </a>
           </div>
 
-          {/* EDIT: The rubber duck has been added right next to the copyright text here! */}
+          {/* EDIT: Added `.src` to the Quak object to fix the Next.js import error */}
           <div className="flex items-center gap-3">
             <p className="text-sm text-slate-400">&copy; {new Date().getFullYear()} Kevision. All rights reserved.</p>
-            {/* Standard img tag used here so you don't have to configure next.config.js for external domains */}
             <img 
-              src="https://images.unsplash.com/photo-1584844615201-9f9392abf488?q=80&w=100&auto=format&fit=crop" 
+              src={Quak.src}
               alt="Rubber Duck Debugger" 
               className="w-6 h-6 rounded-full opacity-50 hover:opacity-100 transition-opacity cursor-pointer shadow-sm"
               title="Quack!"
