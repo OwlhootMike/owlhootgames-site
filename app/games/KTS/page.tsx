@@ -35,7 +35,7 @@ export default function PhotographyPage() {
 
           {/* EDIT: Replace with your friend's brand/name */}
           <h1 className="text-4xl md:text-6xl font-light tracking-tight text-slate-900 mb-2">
-            Lens <span className="font-semibold text-emerald-600">&</span> Light
+            Kevin Torres
           </h1>
           <p className="text-slate-500 tracking-wide uppercase text-sm">Photography Portfolio</p>
         </motion.div>
