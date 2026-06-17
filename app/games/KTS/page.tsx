@@ -173,7 +173,7 @@ export default function PhotographyPage() {
 
           {/* EDIT: Added `.src` to the Quak object to fix the Next.js import error */}
           <div className="flex items-center gap-3">
-            <p className="text-sm text-slate-400">&copy; {new Date().getFullYear()} Kevision. All rights reserved.</p>
+            <p className="text-sm text-slate-400">&copy; 2019 Kevision. All rights reserved.</p>
             <img 
               src={Quak.src}
               alt="Rubber Duck Debugger" 
