@@ -7,9 +7,30 @@ import Link from "next/link";
 import nightclubImg from '../../PRSMPost.jpg';
 
 export default function NightclubsPage() {
+  // Schema markup data object
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "VideoGame",
+    "name": "Nightclubs: PRSM",
+    "genre": ["Management Simulation", "Rhythm"],
+    "gamePlatform": "PC",
+    "operatingSystem": "Windows",
+    "applicationCategory": "Game",
+    "author": {
+      "@type": "Organization",
+      "name": "OwlHoot Games"
+    }
+  };
+
   return (
     <div className="min-h-screen bg-slate-950 text-slate-200 font-sans selection:bg-purple-500 selection:text-white overflow-x-hidden">
       
+      {/* --- SEO SCHEMA MARKUP (JSON-LD) --- */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       {/* --- BACKGROUND FX --- */}
       <div className="fixed inset-0 z-0 opacity-20 pointer-events-none"
            style={{
@@ -20,10 +41,9 @@ export default function NightclubsPage() {
       <div className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-500 via-cyan-500 to-purple-500 z-50 shadow-[0_0_20px_rgba(168,85,247,0.5)]"></div>
 
       {/* --- HERO HEADER --- */}
-      {/* --- HERO HEADER --- */}
       <header className="relative pt-24 pb-12 px-6 container mx-auto text-center z-10">
         
-        {/* MOVED NAVIGATION HERE - INLINE */}
+        {/* INLINE NAVIGATION */}
         <div className="flex justify-center mb-8">
            <Link href="/" className="group flex items-center gap-2 bg-black/50 backdrop-blur-md border border-slate-800 px-4 py-2 text-sm font-bold uppercase tracking-widest text-slate-400 transition-all hover:border-cyan-500 hover:text-cyan-400">
              <span className="transition-transform group-hover:-translate-x-1">◄</span>
@@ -37,7 +57,7 @@ export default function NightclubsPage() {
           transition={{ duration: 0.8 }}
         >
           <span className="inline-block mb-4 px-3 py-1 bg-purple-900/30 border border-purple-500 text-purple-300 text-xs font-mono uppercase tracking-widest shadow-[0_0_15px_rgba(168,85,247,0.3)]">
-            Project Status: Alpha Build (Targeting Season 0 Early Access Relase by Summer 2026)
+            Project Status: Alpha Build (Targeting Season 0 Early Access Release by Summer 2026)
           </span>
           <h1 className="text-5xl md:text-7xl font-black uppercase tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-cyan-400 drop-shadow-[0_0_10px_rgba(34,211,238,0.5)] mb-6">
             Nightclubs: PRSM
@@ -49,6 +69,7 @@ export default function NightclubsPage() {
           </p>
         </motion.div>
       </header>
+
       {/* --- MAIN SHOWCASE --- */}
       <main className="container mx-auto px-6 pb-24 relative z-10">
         
@@ -61,8 +82,9 @@ export default function NightclubsPage() {
         >
           <Image 
             src={nightclubImg} 
-            alt="Nightclubs Gameplay" 
+            alt="Nightclubs: PRSM 2.5D nightclub management simulation gameplay showing isometric view" 
             fill 
+            priority
             className="object-cover opacity-80 transition-all duration-700 group-hover:scale-105 group-hover:opacity-100"
           />
           {/* Overlay Grid */}
