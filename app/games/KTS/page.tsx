@@ -57,7 +57,7 @@ export default function PhotographyPage() {
           </h2>
           <p className="text-slate-600 leading-relaxed">
             Welcome to my visual journal. I specialize in portrait, landscape, and event photography, 
-            focusing on natural light and authentic moments. 
+            focusing on natural light and authentic moments. (Webpage powered and created by Michael Figueroa, published by Owlhoot Games)
           </p>
         </motion.div>
 
