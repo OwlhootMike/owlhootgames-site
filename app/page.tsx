@@ -1,11 +1,11 @@
 /**
- * @fileoverview Main Portfolio Homepage
+ * @fileoverview OwlHoot Games Studio Homepage
  * @author Michael Figueroa Acosta
  * @stack Next.js, TailwindCSS, Framer Motion
  * @created Feb 1, 2026
  * * LATEST UPDATE:
- * - Optimized mobile responsiveness (Breakpoints & Overflow fix)
- * - Updated "Legacy" Log text for accuracy
+ * - Transitioned from personal portfolio to official Studio Hub
+ * - Integrated Studio Manifesto, Roadmap, and Perpetual Play philosophy
  */
 
 "use client"; 
@@ -13,6 +13,7 @@
 import { motion } from "framer-motion"; 
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
 // --- IMAGE IMPORTS ---
 import nightclubImg from './PRSMPost.jpg';
@@ -23,21 +24,21 @@ import janeImg from './img-jane2.png';
 const projects = [
   {
     title: "Nightclubs: PRSM",
-    description: "A simulation game focused on nightlife management and social dynamics. (Formerly Partyclub City - The Spiritual successor to Nightclub City. Still is!)",
-    tech: "Unity", 
+    description: "A high-fidelity simulation focused on nightlife management. Serve guests, play the rhythm highway, and actively control the energy of the dancefloor. (Our Flagship Title)",
+    tech: "Unity / FMOD / C#", 
     image: nightclubImg,
     link: "/games/nightclubs" 
   },
   {
     title: "Nova Galactica",
-    description: "A sci-fi narrative game, filled with cosmic beauty, drama, and heatbreak.",
+    description: "A sci-fi narrative game, filled with cosmic beauty, drama, and heartbreak.",
     tech: "RPG Maker MZ",
     image: novaImg,
     link: "/games/nova-galactica"
   },
   {
     title: "The Detective Jane Case Series",
-    description: "A narrative-driven mystery game solving complex cases revolving the life of Jane Davies, her sister Captain Jill Davies, and veteran and trainer officer Darren Mitts.",
+    description: "A narrative-driven mystery game solving complex cases revolving around the life of Jane Davies and veteran training officer Darren Mitts.",
     tech: "TBA",
     image: janeImg,
     link: "/games/detective-jane"
@@ -100,13 +101,12 @@ export default function Home() {
   }, []);
 
   return (
-    // MOBILE FIX: Added overflow-x-hidden to prevent horizontal scrolling glitches
-    <div className="flex min-h-screen flex-col bg-slate-200 text-slate-800 font-sans selection:bg-cyan-400 selection:text-white overflow-x-hidden">
+    <div className="flex min-h-screen flex-col bg-slate-950 text-slate-200 font-sans selection:bg-cyan-500 selection:text-white overflow-x-hidden">
       
-      {/* Octagon Background Grid */}
+      {/* Octagon Background Grid - Dark Mode Optimized */}
       <div className="fixed inset-0 z-0 pointer-events-none" 
            style={{ 
-             backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18 0 h24 l18 18 v24 l-18 18 h-24 l-18 -18 v-24 z' fill='none' stroke='%2394a3b8' stroke-width='1' opacity='0.4'/%3E%3C/svg%3E")`,
+             backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18 0 h24 l18 18 v24 l-18 18 h-24 l-18 -18 v-24 z' fill='none' stroke='%23334155' stroke-width='1' opacity='0.3'/%3E%3C/svg%3E")`,
              backgroundSize: '60px 60px'
            }}
       />
@@ -115,22 +115,21 @@ export default function Home() {
       <section className="relative flex min-h-[90vh] flex-col items-center justify-center overflow-hidden p-4 md:p-6 text-center">
         
         {/* BACKGROUND MARQUEE */}
-        <div className="absolute inset-0 z-0 flex items-center justify-center opacity-30 pointer-events-none">
-           {/* MOBILE FIX: Removed scale-125 on mobile to keep it contained, added md:scale-125 for desktop */}
+        <div className="absolute inset-0 z-0 flex items-center justify-center opacity-10 pointer-events-none">
            <div className="flex w-full -rotate-12 scale-100 md:scale-125 flex-col gap-4">
              {/* Top Row */}
              <div className="flex w-full overflow-hidden">
                <div className="flex animate-marquee whitespace-nowrap min-w-full flex-shrink-0">
                  {[...topRow, ...topRow, ...topRow].map((item, index) => (
-                   <div key={`t1-${index}`} className="relative mx-2 md:mx-4 h-32 w-60 md:h-48 md:w-80 flex-shrink-0 overflow-hidden bg-slate-200" style={techPanelStyle}>
-                     <Image src={item.image} alt={item.title} fill className="object-cover grayscale opacity-70" />
+                   <div key={`t1-${index}`} className="relative mx-2 md:mx-4 h-32 w-60 md:h-48 md:w-80 flex-shrink-0 overflow-hidden bg-slate-900 border border-slate-800" style={techPanelStyle}>
+                     <Image src={item.image} alt={item.title} fill className="object-cover grayscale opacity-50" />
                    </div>
                  ))}
                </div>
                <div className="flex animate-marquee whitespace-nowrap min-w-full flex-shrink-0">
                  {[...topRow, ...topRow, ...topRow].map((item, index) => (
-                   <div key={`t2-${index}`} className="relative mx-2 md:mx-4 h-32 w-60 md:h-48 md:w-80 flex-shrink-0 overflow-hidden bg-slate-200" style={techPanelStyle}>
-                     <Image src={item.image} alt={item.title} fill className="object-cover grayscale opacity-70" />
+                   <div key={`t2-${index}`} className="relative mx-2 md:mx-4 h-32 w-60 md:h-48 md:w-80 flex-shrink-0 overflow-hidden bg-slate-900 border border-slate-800" style={techPanelStyle}>
+                     <Image src={item.image} alt={item.title} fill className="object-cover grayscale opacity-50" />
                    </div>
                  ))}
                </div>
@@ -139,15 +138,15 @@ export default function Home() {
              <div className="flex w-full overflow-hidden">
                <div className="flex animate-marquee whitespace-nowrap min-w-full flex-shrink-0" style={{ animationDuration: '45s' }}>
                  {[...bottomRow, ...bottomRow, ...bottomRow].map((item, index) => (
-                   <div key={`b1-${index}`} className="relative mx-2 md:mx-4 h-32 w-60 md:h-48 md:w-80 flex-shrink-0 overflow-hidden bg-slate-200" style={techPanelStyle}>
-                     <Image src={item.image} alt={item.title} fill className="object-cover grayscale opacity-70" />
+                   <div key={`b1-${index}`} className="relative mx-2 md:mx-4 h-32 w-60 md:h-48 md:w-80 flex-shrink-0 overflow-hidden bg-slate-900 border border-slate-800" style={techPanelStyle}>
+                     <Image src={item.image} alt={item.title} fill className="object-cover grayscale opacity-50" />
                    </div>
                  ))}
                </div>
                <div className="flex animate-marquee whitespace-nowrap min-w-full flex-shrink-0" style={{ animationDuration: '45s' }}>
                  {[...bottomRow, ...bottomRow, ...bottomRow].map((item, index) => (
-                   <div key={`b2-${index}`} className="relative mx-2 md:mx-4 h-32 w-60 md:h-48 md:w-80 flex-shrink-0 overflow-hidden bg-slate-200" style={techPanelStyle}>
-                     <Image src={item.image} alt={item.title} fill className="object-cover grayscale opacity-70" />
+                   <div key={`b2-${index}`} className="relative mx-2 md:mx-4 h-32 w-60 md:h-48 md:w-80 flex-shrink-0 overflow-hidden bg-slate-900 border border-slate-800" style={techPanelStyle}>
+                     <Image src={item.image} alt={item.title} fill className="object-cover grayscale opacity-50" />
                    </div>
                  ))}
                </div>
@@ -160,8 +159,7 @@ export default function Home() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          // MOBILE FIX: Reduced padding p-6 for mobile, p-10 for desktop
-          className="relative z-10 w-full max-w-4xl bg-white/80 backdrop-blur-md p-6 md:p-10 border-2 border-slate-200 shadow-[0_0_30px_rgba(34,211,238,0.2)]"
+          className="relative z-10 w-full max-w-4xl bg-slate-900/80 backdrop-blur-md p-6 md:p-10 border-2 border-slate-700 shadow-[0_0_30px_rgba(34,211,238,0.15)]"
           style={techPanelStyle} 
         >
           {/* Decorative Tech Lines */}
@@ -170,26 +168,24 @@ export default function Home() {
           <div className="absolute bottom-0 left-0 h-4 w-4 border-l-2 border-b-2 border-cyan-500"></div>
           <div className="absolute bottom-0 right-0 h-4 w-4 border-r-2 border-b-2 border-cyan-500"></div>
 
-          {/* MOBILE FIX: Text size 4xl for mobile, 6xl for desktop to prevent wrapping */}
-          <h1 className="mb-4 text-4xl md:text-6xl font-black uppercase tracking-widest text-slate-900 leading-tight">
-            MICHAEL FIGUEROA ACOSTA
-          </h1>
-          {/* MOBILE FIX: Flex-wrap allows tags to stack on small screens */}
-          <div className="mb-8 flex flex-wrap justify-center gap-2 md:gap-4 text-xs md:text-sm font-bold uppercase tracking-[0.2em] text-cyan-600">
-            <span>Dev_Ops</span>
-            <span>//</span>
-            <span>QA_Lead</span>
-            <span>//</span>
-            <span>Architect</span>
-            <span>//</span>
-            <span>AI Programmer</span>
-            <span>//</span>
-            <span>Hobby Artist</span>
+          <div className="mb-4 inline-flex items-center gap-2 border border-cyan-500/50 bg-cyan-950/50 px-3 py-1 text-xs font-bold uppercase tracking-widest text-cyan-400">
+             Independent Game Development & Tools Lab
           </div>
 
-          <p className="mb-10 text-base md:text-lg leading-relaxed text-slate-600 max-w-2xl mx-auto">
-            Building immersive experiences with <span className="font-bold text-slate-900">Unity (C#), UE5 (Blueprints), GameMaker Studio</span> & <span className="font-bold text-slate-900">RPG Maker</span>.<br className="hidden md:block"/>
-            Creator of <span className="font-bold text-cyan-600">OwlHoot Games</span>.
+          <h1 className="mb-4 text-5xl md:text-7xl font-black uppercase tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-slate-100 to-cyan-400 drop-shadow-[0_0_15px_rgba(34,211,238,0.3)] leading-tight">
+            OWLHOOT GAMES
+          </h1>
+          
+          <div className="mb-8 flex flex-wrap justify-center gap-2 md:gap-4 text-xs md:text-sm font-bold uppercase tracking-[0.2em] text-slate-400">
+            <span>HQ: Fort Worth, TX</span>
+            <span>//</span>
+            <span>Active Systems</span>
+            <span>//</span>
+            <span>Modular Design</span>
+          </div>
+
+          <p className="mb-10 text-base md:text-lg leading-relaxed text-slate-300 max-w-2xl mx-auto">
+            Crafting high-fidelity simulations, active rhythm systems, and local-first experiences that bring the soul back to gaming. We build engines, not just games.
           </p>
           
           <motion.div 
@@ -198,49 +194,35 @@ export default function Home() {
             transition={{ delay: 0.3, duration: 0.5 }}
             className="flex flex-wrap justify-center gap-4 md:gap-6"
           >
-            {/* Primary Action - Tech Button */}
+            {/* Primary Action */}
             <motion.a 
-              whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(34,211,238,0.6)" }}
+              whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(34,211,238,0.4)" }}
               whileTap={{ scale: 0.95 }}
-              href="#games" 
+              href="/games/nightclubs" 
               style={techButtonStyle}
-              // MOBILE FIX: Adjusted padding and font size for buttons
-              className="bg-cyan-500 px-6 py-3 md:px-8 md:py-4 text-sm md:text-base font-bold uppercase tracking-widest text-white transition-all hover:bg-cyan-400"
+              className="bg-cyan-500 px-6 py-3 md:px-8 md:py-4 text-sm md:text-base font-bold uppercase tracking-widest text-slate-950 transition-all hover:bg-cyan-400"
             >
-              Database of Games
+              Explore Flagship: PRSM
             </motion.a>
 
-            {/* Resume Button */}
+            {/* Secondary Action */}
             <motion.a 
-              whileHover={{ scale: 1.05, backgroundColor: "rgba(34,211,238,0.1)" }}
+              whileHover={{ scale: 1.05, backgroundColor: "rgba(147,51,234,0.2)" }}
               whileTap={{ scale: 0.95 }}
-              href="https://www.linkedin.com/in/mfa-gamedev/" 
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#manifesto" 
               style={techButtonStyle}
-              className="flex items-center gap-3 border-2 border-slate-300 bg-white px-6 py-3 md:px-8 md:py-4 text-sm md:text-base font-bold uppercase tracking-widest text-slate-700 transition-colors"
+              className="flex items-center gap-3 border-2 border-slate-700 bg-slate-900 px-6 py-3 md:px-8 md:py-4 text-sm md:text-base font-bold uppercase tracking-widest text-slate-300 transition-colors"
             >
-              <span>Resume</span>
-            </motion.a>
-
-             {/* Contact Button */}
-             <motion.a 
-              whileHover={{ scale: 1.05, backgroundColor: "rgba(34,211,238,0.1)" }}
-              whileTap={{ scale: 0.95 }}
-              href="mailto:macosta@owlhootgames.com" 
-              style={techButtonStyle}
-              className="flex items-center border-2 border-slate-300 bg-white px-6 py-3 md:px-8 md:py-4 text-sm md:text-base font-bold uppercase tracking-widest text-slate-700 transition-colors"
-            >
-              Contact
+              <span>Our Philosophy</span>
             </motion.a>
           </motion.div>
         </motion.div>
       </section>
 
-      {/* --- SCROLL-TRIGGERED NARRATIVE SECTIONS --- */}
-      <section className="container mx-auto px-4 md:px-6 py-12 md:py-24 overflow-hidden relative z-10 space-y-20 md:space-y-32">
+      {/* --- STUDIO MANIFESTO SECTIONS --- */}
+      <section id="manifesto" className="container mx-auto px-4 md:px-6 py-12 md:py-24 overflow-hidden relative z-10 space-y-20 md:space-y-32">
         
-        {/* 1. ORIGINS */}
+        {/* 1. PERPETUAL PLAY */}
         <motion.div 
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -249,40 +231,39 @@ export default function Home() {
           className="flex flex-col gap-6 md:gap-10 md:flex-row md:items-center"
         >
           <div className="flex-1">
-             <div className="mb-4 inline-flex items-center gap-2 border-2 border-slate-400 bg-gradient-to-b from-slate-200 to-slate-300 px-4 py-1 text-xs font-bold uppercase tracking-widest text-orange-700 shadow-md" style={smallTechCut}>
-               <div className="h-2 w-2 bg-orange-500 rounded-full"></div>
-               <span>Log: 001</span>
+             <div className="mb-4 inline-flex items-center gap-2 border-2 border-cyan-800 bg-gradient-to-b from-slate-800 to-slate-900 px-4 py-1 text-xs font-bold uppercase tracking-widest text-cyan-400 shadow-md" style={smallTechCut}>
+               <div className="h-2 w-2 bg-cyan-500 rounded-full animate-pulse"></div>
+               <span>Pillar: 01</span>
              </div>
              
              {/* TEXT PLATE */}
-             <div className="bg-white p-6 md:p-8 border-l-4 border-orange-500 shadow-lg relative" style={techPanelStyle}>
-                <h3 className="mb-2 md:mb-4 text-2xl md:text-4xl font-black uppercase text-slate-800">Origins</h3>
-                <p className="text-base md:text-lg leading-relaxed text-slate-600">
-                  Born in Puerto Rico. Route: Graphic Design → IT → Engineering → Game Design. <br/>
-                  Final compilation at <strong>Full Sail University</strong>.
+             <div className="bg-slate-900/80 p-6 md:p-8 border-l-4 border-cyan-500 shadow-lg relative backdrop-blur-sm" style={techPanelStyle}>
+                <h3 className="mb-2 md:mb-4 text-2xl md:text-4xl font-black uppercase text-white">The Perpetual Play Guarantee</h3>
+                <p className="text-base md:text-lg leading-relaxed text-slate-400">
+                  We build local-first games. You buy it, you own it. No always-online dependencies, no remote kill-switches, and zero server shutdowns that turn your game into an unplayable paperweight. If tertiary online features ever end, the core simulation gracefully decouples. 
                 </p>
              </div>
           </div>
           {/* Tech Card */}
-          <div className="flex-1 bg-white p-6 md:p-8 border border-slate-200 shadow-lg relative" style={techPanelStyle}>
+          <div className="flex-1 bg-slate-900/80 p-6 md:p-8 border border-slate-800 shadow-lg relative" style={techPanelStyle}>
              <div className="space-y-4">
-                <div className="flex items-center justify-between border-b border-slate-100 pb-2">
-                   <span className="font-mono text-xs md:text-sm text-slate-400">MODULE_01</span>
-                   <span className="font-bold text-sm md:text-base text-slate-800">Graphic Design</span>
+                <div className="flex items-center justify-between border-b border-slate-800 pb-2">
+                   <span className="font-mono text-xs md:text-sm text-slate-500">REQUIREMENT_01</span>
+                   <span className="font-bold text-sm md:text-base text-slate-300">Local Campaign</span>
                 </div>
-                <div className="flex items-center justify-between border-b border-slate-100 pb-2">
-                   <span className="font-mono text-xs md:text-sm text-slate-400">MODULE_02</span>
-                   <span className="font-bold text-sm md:text-base text-slate-800">Computer Eng.</span>
+                <div className="flex items-center justify-between border-b border-slate-800 pb-2">
+                   <span className="font-mono text-xs md:text-sm text-slate-500">REQUIREMENT_02</span>
+                   <span className="font-bold text-sm md:text-base text-slate-300">Offline Fallback</span>
                 </div>
                 <div className="flex items-center justify-between">
-                   <span className="font-mono text-xs md:text-sm text-orange-500">CURRENT</span>
-                   <span className="font-black text-sm md:text-base text-slate-900 bg-orange-100 px-2">GAME DESIGN</span>
+                   <span className="font-mono text-xs md:text-sm text-cyan-500">STATUS</span>
+                   <span className="font-black text-sm md:text-base text-slate-900 bg-cyan-400 px-2">CONSUMER PROTECTED</span>
                 </div>
              </div>
           </div>
         </motion.div>
 
-        {/* 2. LEGACY */}
+        {/* 2. ACTIVE GAMEPLAY */}
         <motion.div 
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -291,29 +272,28 @@ export default function Home() {
           className="flex flex-col gap-6 md:gap-10 md:flex-row-reverse md:items-center"
         >
           <div className="flex-1 text-left md:text-left">
-             <div className="mb-4 inline-flex items-center gap-2 border-2 border-slate-400 bg-gradient-to-b from-slate-200 to-slate-300 px-4 py-1 text-xs font-bold uppercase tracking-widest text-cyan-700 shadow-md" style={smallTechCut}>
-               <div className="h-2 w-2 bg-cyan-500 rounded-full"></div>
-               <span>Log: 002</span>
+             <div className="mb-4 inline-flex items-center gap-2 border-2 border-purple-800 bg-gradient-to-b from-slate-800 to-slate-900 px-4 py-1 text-xs font-bold uppercase tracking-widest text-purple-400 shadow-md" style={smallTechCut}>
+               <div className="h-2 w-2 bg-purple-500 rounded-full animate-pulse"></div>
+               <span>Pillar: 02</span>
              </div>
 
              {/* TEXT PLATE */}
-             <div className="bg-white p-6 md:p-8 border-l-4 border-cyan-500 shadow-lg relative" style={techPanelStyle}>
-               <h3 className="mb-2 md:mb-4 text-2xl md:text-4xl font-black uppercase text-slate-800">Legacy</h3>
-               <p className="text-base md:text-lg leading-relaxed text-slate-600">
-                 Ex Indie Journalist for <em>Yo Soy Un Gamer</em> and current Webmaster, VP and Journalist for <em>Tu Zona Gamer</em>. First 5 Game Jams: <strong>3 Podiums</strong> (1st, 2nd, 3rd).
-                 Internship: Space Rhino Games. Testing: Degica Games.
+             <div className="bg-slate-900/80 p-6 md:p-8 border-l-4 border-purple-500 shadow-lg relative backdrop-blur-sm" style={techPanelStyle}>
+               <h3 className="mb-2 md:mb-4 text-2xl md:text-4xl font-black uppercase text-white">Active Systems</h3>
+               <p className="text-base md:text-lg leading-relaxed text-slate-400">
+                 We reject passive, spreadsheet-based management. Our simulation mechanics put you directly in control. Drive the energy of the room via custom FMOD audio integrations, rhythm highways, and NavMesh crowd AI driven by individual desires.
                </p>
              </div>
           </div>
-          <div className="flex-1 bg-white p-6 md:p-8 border border-slate-200 shadow-lg" style={techPanelStyle}>
+          <div className="flex-1 bg-slate-900/80 p-6 md:p-8 border border-slate-800 shadow-lg" style={techPanelStyle}>
              <div className="text-center">
-               <span className="block text-3xl md:text-5xl font-black text-cyan-500 mb-2 drop-shadow-sm">Industry Rising Star</span>
-               <span className="text-xs md:text-sm font-mono uppercase tracking-widest text-slate-400">Journalism, Game Jams & Internships</span>
+               <span className="block text-3xl md:text-5xl font-black text-purple-500 mb-2 drop-shadow-[0_0_10px_rgba(168,85,247,0.4)]">FMOD + NavMesh</span>
+               <span className="text-xs md:text-sm font-mono uppercase tracking-widest text-slate-500">Real-Time Audio & AI States</span>
              </div>
           </div>
         </motion.div>
 
-        {/* 3. CURRENT WORK */}
+        {/* 3. MODULAR ARCHITECTURE */}
         <motion.div 
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -322,164 +302,61 @@ export default function Home() {
           className="flex flex-col gap-6 md:gap-10 md:flex-row md:items-center"
         >
            <div className="flex-1">
-             <div className="mb-4 inline-flex items-center gap-2 border-2 border-slate-400 bg-gradient-to-b from-slate-200 to-slate-300 px-4 py-1 text-xs font-bold uppercase tracking-widest text-red-700 shadow-md" style={smallTechCut}>
-               <div className="h-2 w-2 bg-red-500 rounded-full"></div>
-               <span>Log: 003</span>
+             <div className="mb-4 inline-flex items-center gap-2 border-2 border-emerald-800 bg-gradient-to-b from-slate-800 to-slate-900 px-4 py-1 text-xs font-bold uppercase tracking-widest text-emerald-400 shadow-md" style={smallTechCut}>
+               <div className="h-2 w-2 bg-emerald-500 rounded-full animate-pulse"></div>
+               <span>Pillar: 03</span>
              </div>
 
              {/* TEXT PLATE */}
-             <div className="bg-white p-6 md:p-8 border-l-4 border-red-500 shadow-lg relative" style={techPanelStyle}>
-               <h3 className="mb-2 md:mb-4 text-2xl md:text-4xl font-black uppercase text-slate-800">Active Task</h3>
-               <p className="text-base md:text-lg leading-relaxed text-slate-600">
-                 Currently developing Nightclubs: PRSM (Successor to Nightclub City). Preparing for Season 0 / v0.1 Early Access in Summer 2026. Two visual novels in production.<br/>
-                 <strong>Moonlighting at Honor Games</strong>: Designer (Ex-QA Lead) for Project <em>Vultures</em>.
+             <div className="bg-slate-900/80 p-6 md:p-8 border-l-4 border-emerald-500 shadow-lg relative backdrop-blur-sm" style={techPanelStyle}>
+               <h3 className="mb-2 md:mb-4 text-2xl md:text-4xl font-black uppercase text-white">Modular Architecture</h3>
+               <p className="text-base md:text-lg leading-relaxed text-slate-400">
+                 We engineer reusable C# libraries and middleware tools before we build the game. By developing standalone parsing engines and proprietary toolsets, we ensure our games are built on rock-solid, bug-free foundations.
                </p>
              </div>
           </div>
-          <div className="flex-1 bg-white p-6 md:p-8 border border-slate-200 shadow-lg flex items-center justify-center relative overflow-hidden" style={techPanelStyle}>
-             {/* Scanline effect */}
-             <div className="absolute inset-0 bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.05)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(255,0,0,0.02),rgba(255,0,0,0.06))] z-0 pointer-events-none bg-[length:100%_4px,6px_100%]"></div>
-             <div className="text-center z-10">
-                <div className="text-2xl md:text-3xl font-black text-red-500 mb-1 tracking-widest">HONOR GAMES</div>
-                <div className="inline-block bg-red-600 text-white text-xs font-bold px-2 py-1 uppercase">Role: Designer(EX-QA Lead)</div>
+          <div className="flex-1 bg-black p-6 md:p-8 border border-slate-800 shadow-lg flex items-center justify-center relative overflow-hidden" style={techPanelStyle}>
+             <div className="absolute inset-0 bg-[linear-gradient(rgba(16,18,16,0)_50%,rgba(0,0,0,0.5)_50%),linear-gradient(90deg,rgba(0,255,100,0.03),rgba(0,255,100,0.01),rgba(0,255,100,0.03))] z-0 pointer-events-none bg-[length:100%_4px,6px_100%]"></div>
+             <div className="text-left w-full z-10 font-mono text-xs md:text-sm text-emerald-500 space-y-2">
+                <div className="border-b border-slate-800 pb-2 mb-2">&gt; INIT STANDALONE_LIBS...</div>
+                <div>[OK] Chart_Parser.cs</div>
+                <div>[OK] State_Machine_Core.dll</div>
+                <div>[OK] Economy_Manager.cs</div>
+                <div className="pt-2 text-white animate-pulse">Waiting for execution...</div>
              </div>
           </div>
         </motion.div>
 
-        {/* 4. AI SYSTEMS */}
+        {/* 4. THE ROADMAP */}
         <motion.div 
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.7 }}
-          className="flex flex-col gap-6 md:gap-10 md:flex-row-reverse md:items-center"
+          className="w-full max-w-4xl mx-auto"
         >
-          <div className="flex-1">
-             <div className="mb-4 inline-flex items-center gap-2 border-2 border-slate-400 bg-gradient-to-b from-slate-200 to-slate-300 px-4 py-1 text-xs font-bold uppercase tracking-widest text-indigo-700 shadow-md" style={smallTechCut}>
-               <div className="h-2 w-2 bg-indigo-500 rounded-full"></div>
-               <span>Log: 004</span>
+          <div className="bg-slate-900/80 border border-slate-700 p-8 shadow-[0_0_30px_rgba(0,0,0,0.5)] relative" style={techPanelStyle}>
+             <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-cyan-500/10 to-transparent pointer-events-none"></div>
+             <h3 className="text-2xl font-black uppercase tracking-widest text-cyan-400 mb-6 text-center border-b border-slate-800 pb-4">Development Roadmap</h3>
+             
+             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+               <div className="space-y-2 border-l-2 border-cyan-500 pl-4">
+                 <div className="font-bold text-white uppercase text-sm">Phase 1: Foundation (Active)</div>
+                 <p className="text-slate-400 text-sm">Establish social networks, define studio philosophy, and hit our $300 LLC goal to secure revenue-share contracts.</p>
+               </div>
+               <div className="space-y-2 border-l-2 border-slate-700 pl-4 opacity-70">
+                 <div className="font-bold text-white uppercase text-sm">Phase 2: Alpha Testing</div>
+                 <p className="text-slate-400 text-sm">Game previews, technical Unity/FMOD dev logs, and closed alpha testing of proprietary systems.</p>
+               </div>
+               <div className="space-y-2 border-l-2 border-slate-700 pl-4 opacity-70">
+                 <div className="font-bold text-white uppercase text-sm">Phase 3: Season 0</div>
+                 <p className="text-slate-400 text-sm">Free Community Early Access release to gather feedback and stress-test the simulation economy.</p>
+               </div>
+               <div className="space-y-2 border-l-2 border-slate-700 pl-4 opacity-70">
+                 <div className="font-bold text-white uppercase text-sm">Phase 4: Commercial Launch</div>
+                 <p className="text-slate-400 text-sm">Season 1 full commercial release with finalized episodic story content and advanced features.</p>
+               </div>
              </div>
-
-             {/* TEXT PLATE */}
-             <div className="bg-white p-6 md:p-8 border-l-4 border-indigo-500 shadow-lg relative" style={techPanelStyle}>
-               <h3 className="mb-2 md:mb-4 text-2xl md:text-4xl font-black uppercase text-slate-800">AI Logic</h3>
-               <p className="text-base md:text-lg leading-relaxed text-slate-600">
-                 Architecting intelligent behaviors. Enemy pathfinding, combat tactics, and reactive NPC states using advanced Behavior Trees.
-               </p>
-             </div>
-          </div>
-          <div className="flex-1 bg-zinc-900 p-6 md:p-8 border border-zinc-700 shadow-lg" style={techPanelStyle}>
-             <div className="space-y-3 font-mono text-xs md:text-sm text-green-400">
-                <div className="flex justify-between border-b border-zinc-700 pb-2">
-                  <span>&gt; SYSTEM.AI_ROOT</span>
-                  <span className="animate-pulse">ONLINE</span>
-                </div>
-                <div className="pl-4 border-l border-zinc-700">├─ Patrol_Nodes (Vector3)</div>
-                <div className="pl-4 border-l border-zinc-700">├─ Detect_Player (Raycast)</div>
-                <div className="pl-4 border-l border-zinc-700">└─ Execute_Flank (State)</div>
-             </div>
-          </div>
-        </motion.div>
-
-        {/* 5. 3D FABRICATION */}
-        <motion.div 
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.7 }}
-          className="flex flex-col gap-6 md:gap-10 md:flex-row md:items-center"
-        >
-          <div className="flex-1">
-             <div className="mb-4 inline-flex items-center gap-2 border-2 border-slate-400 bg-gradient-to-b from-slate-200 to-slate-300 px-4 py-1 text-xs font-bold uppercase tracking-widest text-teal-700 shadow-md" style={smallTechCut}>
-               <div className="h-2 w-2 bg-teal-500 rounded-full"></div>
-               <span>Log: 005</span>
-             </div>
-
-             {/* TEXT PLATE */}
-             <div className="bg-white p-6 md:p-8 border-l-4 border-teal-500 shadow-lg relative" style={techPanelStyle}>
-               <h3 className="mb-2 md:mb-4 text-2xl md:text-4xl font-black uppercase text-slate-800">Fabrication</h3>
-               <p className="text-base md:text-lg leading-relaxed text-slate-600">
-                 Bridging digital and physical. Utilizing <strong>Blender</strong> for modeling and blueprints, converting assets for game environments and 3D printing.
-               </p>
-             </div>
-          </div>
-          <div className="flex-1 bg-white p-6 md:p-8 border border-slate-200 shadow-lg grid grid-cols-2 gap-4" style={techPanelStyle}>
-             <div className="bg-slate-50 p-4 border border-slate-100 text-center">
-                <span className="block text-lg md:text-xl font-bold text-slate-700">Blender</span>
-                <span className="text-xs font-mono text-slate-400 uppercase">Modeling</span>
-             </div>
-             <div className="bg-slate-50 p-4 border border-slate-100 text-center">
-                <span className="block text-lg md:text-xl font-bold text-slate-700">Cura</span>
-                <span className="text-xs font-mono text-slate-400 uppercase">Slicing</span>
-             </div>
-             <div className="col-span-2 bg-teal-500 text-white p-2 text-center text-xs font-bold uppercase tracking-widest">
-                Physical_Asset_Pipeline
-             </div>
-          </div>
-        </motion.div>
-
-        {/* 6. QA FIRST */}
-        <motion.div 
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.7 }}
-          className="flex flex-col gap-6 md:gap-10 md:flex-row-reverse md:items-center"
-        >
-          <div className="flex-1">
-             <div className="mb-4 inline-flex items-center gap-2 border-2 border-slate-400 bg-gradient-to-b from-slate-200 to-slate-300 px-4 py-1 text-xs font-bold uppercase tracking-widest text-blue-700 shadow-md" style={smallTechCut}>
-               <div className="h-2 w-2 bg-blue-500 rounded-full"></div>
-               <span>Log: 006</span>
-             </div>
-
-             {/* TEXT PLATE */}
-             <div className="bg-white p-6 md:p-8 border-l-4 border-blue-500 shadow-lg relative" style={techPanelStyle}>
-               <h3 className="mb-2 md:mb-4 text-2xl md:text-4xl font-black uppercase text-slate-800">Stability</h3>
-               <p className="text-base md:text-lg leading-relaxed text-slate-600">
-                 Great games are broken and rebuilt. My "stability-first" mindset ensures mechanics are robust. 
-                 QA isn't just bug hunting; it's protecting the player experience.
-               </p>
-             </div>
-          </div>
-          <div className="flex-1 bg-slate-800 p-6 md:p-8 border border-slate-600 shadow-lg" style={techPanelStyle}>
-             <code className="block text-xs md:text-sm text-green-400 font-mono">
-               // QA_Log: Integrity<br/>
-               <span className="text-slate-500">------------------</span><br/>
-               [PASS] Player_Trust<br/>
-               [PASS] Client_Promise<br/>
-               [PASS] Core_Mechanics<br/>
-               <span className="animate-pulse font-bold text-blue-400">STATUS: GOLD_MASTER</span>
-             </code>
-          </div>
-        </motion.div>
-
-        {/* 7. FULL STACK */}
-        <motion.div 
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.7 }}
-          className="flex flex-col gap-6 md:gap-10 md:flex-row md:items-center"
-        >
-          <div className="flex-1">
-             <div className="mb-4 inline-flex items-center gap-2 border-2 border-slate-400 bg-gradient-to-b from-slate-200 to-slate-300 px-4 py-1 text-xs font-bold uppercase tracking-widest text-purple-700 shadow-md" style={smallTechCut}>
-               <div className="h-2 w-2 bg-purple-500 rounded-full"></div>
-               <span>Log: 007</span>
-             </div>
-
-             {/* TEXT PLATE */}
-             <div className="bg-white p-6 md:p-8 border-l-4 border-purple-500 shadow-lg relative" style={techPanelStyle}>
-               <h3 className="mb-2 md:mb-4 text-2xl md:text-4xl font-black uppercase text-slate-800">Full Stack</h3>
-               <p className="text-base md:text-lg leading-relaxed text-slate-600">
-                 From pixel art in Aseprite and GraphicsGale to complex C# logic in Unity. Wiring UI systems, optimizing shaders, and wearing every hat in the pipeline.
-               </p>
-             </div>
-          </div>
-          <div className="flex-1 bg-white p-6 md:p-8 border border-slate-200 shadow-lg grid grid-cols-2 gap-4" style={techPanelStyle}>
-             <div className="p-4 bg-slate-50 text-center border-l-2 border-purple-500"><span className="font-bold text-sm md:text-base text-slate-700">Unity</span></div>
-             <div className="p-4 bg-slate-50 text-center border-l-2 border-purple-500"><span className="font-bold text-sm md:text-base text-slate-700">Src Ctrl</span></div>
-             <div className="p-4 bg-slate-50 text-center border-l-2 border-purple-500"><span className="font-bold text-sm md:text-base text-slate-700">G. Gale</span></div>
-             <div className="p-4 bg-slate-50 text-center border-l-2 border-purple-500"><span className="font-bold text-sm md:text-base text-slate-700">Jira</span></div>
           </div>
         </motion.div>
 
@@ -489,8 +366,8 @@ export default function Home() {
       <section id="games" className="container mx-auto max-w-6xl px-4 md:px-6 py-12 md:py-24 relative z-10">
         <div className="mb-8 md:mb-12 flex items-center gap-4">
            <div className="h-[2px] w-8 md:w-12 bg-cyan-400"></div>
-           <h2 className="text-2xl md:text-3xl font-black uppercase tracking-widest text-slate-800">Project_Database</h2>
-           <div className="h-[2px] flex-1 bg-slate-200"></div>
+           <h2 className="text-2xl md:text-3xl font-black uppercase tracking-widest text-slate-100">Project_Database</h2>
+           <div className="h-[2px] flex-1 bg-slate-800"></div>
         </div>
         
         <motion.div 
@@ -505,25 +382,25 @@ export default function Home() {
               variants={itemVariants}
               key={index} 
               href={project.link} 
-              className="group block relative bg-white transition-all hover:-translate-y-2"
+              className="group block relative bg-slate-900 border border-slate-800 transition-all hover:-translate-y-2 hover:shadow-[0_0_20px_rgba(34,211,238,0.2)]"
               style={techPanelStyle} 
             >
               {/* Image Container */}
-              <div className="relative h-48 w-full bg-slate-200 overflow-hidden">
-                <Image src={project.image} alt={project.title} fill className="object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0"/>
+              <div className="relative h-48 w-full bg-slate-950 overflow-hidden">
+                <Image src={project.image} alt={project.title} fill className="object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0 opacity-70 group-hover:opacity-100"/>
                 {/* Overlay Gradient */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 transition-opacity group-hover:opacity-100"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-80 transition-opacity group-hover:opacity-40"></div>
               </div>
               
               {/* Content */}
               <div className="p-6 border-l-4 border-transparent group-hover:border-cyan-400 transition-colors">
                 <div className="mb-2 flex items-center justify-between">
-                  <h3 className="text-xl font-bold uppercase text-slate-800">{project.title}</h3>
+                  <h3 className="text-xl font-bold uppercase text-slate-100">{project.title}</h3>
                 </div>
-                <p className="mb-4 text-sm text-slate-500 leading-relaxed">{project.description}</p>
+                <p className="mb-4 text-sm text-slate-400 leading-relaxed">{project.description}</p>
                 <div className="flex justify-between items-center">
-                  <span className="font-mono text-xs font-bold text-cyan-600 bg-cyan-50 px-2 py-1">{project.tech}</span>
-                  <span className="text-slate-300 group-hover:text-cyan-400 transition-colors">► ACCESS</span>
+                  <span className="font-mono text-xs font-bold text-cyan-400 bg-cyan-950/50 px-2 py-1 border border-cyan-500/30">{project.tech}</span>
+                  <span className="text-slate-500 group-hover:text-cyan-400 transition-colors uppercase text-xs tracking-widest font-bold">► ACCESS</span>
                 </div>
               </div>
             </motion.a>
@@ -531,53 +408,51 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* --- CONTACT SECTION --- */}
-      <section id="contact" className="bg-slate-100 py-12 md:py-24 text-center relative z-10 border-t border-slate-200">
+      {/* --- CONTACT / COMMUNITY SECTION --- */}
+      <section id="contact" className="bg-slate-900/50 py-12 md:py-24 text-center relative z-10 border-t border-slate-800">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="container mx-auto px-4 md:px-6 max-w-2xl"
         >
-          <div className="mx-auto mb-8 h-16 w-16 bg-cyan-400 text-white flex items-center justify-center" style={{ clipPath: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)" }}>
-             <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" /></svg>
+          <div className="mx-auto mb-8 h-16 w-16 bg-cyan-500 text-slate-950 flex items-center justify-center shadow-[0_0_20px_rgba(34,211,238,0.4)]" style={{ clipPath: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)" }}>
+             <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
           </div>
-          <h2 className="mb-6 text-2xl md:text-3xl font-black uppercase text-slate-800">Establish Comms</h2>
-          <p className="mb-10 text-slate-600">
-            Currently open to new opportunities in Game QA and Development. 
-            Initialize connection protocol below.
+          <h2 className="mb-6 text-2xl md:text-3xl font-black uppercase text-white">Join the Network</h2>
+          <p className="mb-10 text-slate-400">
+            Phase 1 is active. Support our LLC goal, join the VIP Discord, and help shape the future of PRSM.
           </p>
           <div className="flex justify-center gap-4 md:gap-6 flex-wrap">
-            <a href="https://www.linkedin.com/in/mfa-gamedev/" target="_blank" rel="noopener noreferrer" className="p-4 bg-white border border-slate-200 text-slate-600 hover:text-cyan-500 hover:border-cyan-400 transition-all shadow-sm transform hover:scale-110" style={techButtonStyle}>
-               <span className="sr-only">LinkedIn</span>
-               <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            
+            {/* Patreon */}
+            <a href="https://www.patreon.com" target="_blank" rel="noopener noreferrer" className="p-4 bg-slate-950 border border-slate-700 text-pink-500 hover:text-pink-400 hover:border-pink-500 transition-all shadow-sm transform hover:scale-110 group" style={techButtonStyle}>
+               <span className="sr-only">Patreon</span>
+               <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M15.386 1c-4.757 0-8.618 3.86-8.618 8.618 0 4.757 3.86 8.618 8.618 8.618 4.757 0 8.614-3.861 8.614-8.618C24 4.86 20.143 1 15.386 1zM2.614 23h3.535V1H2.614v22z"/></svg>
             </a>
-            <a href="https://github.com/OwlhootMike" className="p-4 bg-white border border-slate-200 text-slate-600 hover:text-cyan-500 hover:border-cyan-400 transition-all shadow-sm transform hover:scale-110" style={techButtonStyle}>
-               <span className="sr-only">GitHub</span>
-               <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+
+            {/* Reddit */}
+            <a href="https://www.reddit.com/r/NightclubsPRSM/" target="_blank" rel="noopener noreferrer" className="p-4 bg-slate-950 border border-slate-700 text-orange-500 hover:text-orange-400 hover:border-orange-500 transition-all shadow-sm transform hover:scale-110" style={techButtonStyle}>
+               <span className="sr-only">Reddit</span>
+               <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 11.779c0-1.459-1.192-2.645-2.657-2.645-.715 0-1.363.286-1.84.746-1.81-1.191-4.259-1.949-6.971-2.046l1.483-4.669 4.016.941-.006.12c0 1.258 1.026 2.277 2.288 2.277 1.261 0 2.285-1.019 2.285-2.277 0-1.259-1.024-2.277-2.285-2.277-1.036 0-1.916.688-2.2 1.637l-4.238-.992c-.22-.051-.439.066-.51.277l-1.68 5.289c-2.822.05-5.38.809-7.25 2.033-.473-.46-1.121-.745-1.834-.745-1.465 0-2.657 1.186-2.657 2.645 0 .977.537 1.835 1.336 2.283-.021.203-.035.41-.035.618 0 3.753 5.372 6.8 12 6.8s12-3.047 12-6.8c0-.208-.014-.415-.034-.618.799-.448 1.336-1.306 1.336-2.283zm-16.711 3.518c0-1.257 1.026-2.276 2.288-2.276 1.262 0 2.286 1.019 2.286 2.276 0 1.259-1.024 2.278-2.286 2.278-1.262 0-2.288-1.019-2.288-2.278zm10.74 3.655c-1.32.997-3.666 1.218-5.74 1.218-2.072 0-4.42-.221-5.74-1.218-.31-.232-.375-.68-.141-.991.233-.31.68-.373.99-.139 1.008.756 2.946.993 4.891.993 1.947 0 3.885-.237 4.893-.993.31-.234.757-.171.99.139.234.311.169.759-.141.991zm-1.056-1.377c-1.261 0-2.286-1.019-2.286-2.278 0-1.257 1.025-2.276 2.286-2.276 1.262 0 2.287 1.019 2.287 2.276 0 1.259-1.025 2.278-2.287 2.278z"/></svg>
             </a>
-            <a href="mailto:macosta@owlhootgames.com" className="p-4 bg-white border border-slate-200 text-slate-600 hover:text-cyan-500 hover:border-cyan-400 transition-all shadow-sm transform hover:scale-110" style={techButtonStyle}>
+            
+            {/* Discord */}
+            <a href="https://discord.gg" target="_blank" rel="noopener noreferrer" className="p-4 bg-slate-950 border border-slate-700 text-indigo-500 hover:text-indigo-400 hover:border-indigo-500 transition-all shadow-sm transform hover:scale-110" style={techButtonStyle}>
+               <span className="sr-only">Discord</span>
+               <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/></svg>
+            </a>
+
+            {/* Email */}
+            <a href="mailto:macosta@owlhootgames.com" className="p-4 bg-slate-950 border border-slate-700 text-slate-400 hover:text-cyan-500 hover:border-cyan-400 transition-all shadow-sm transform hover:scale-110" style={techButtonStyle}>
                <span className="sr-only">Email</span>
                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
             </a>
-            {/* Itch.io Link */}
-            <a href="https://owlhootdev.itch.io/" target="_blank" rel="noopener noreferrer" className="p-4 bg-white border border-slate-200 text-slate-600 hover:text-red-500 hover:border-red-400 transition-all shadow-sm transform hover:scale-110" style={techButtonStyle}>
-              <span className="sr-only">Itch.io</span>
-              {/* Gamepad Icon */}
-              <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20.647 3.515a.998.998 0 0 0-.464-.175c-.347-.053-2.071-.24-5.183-1.84v2.536c0 1.258-2.618 2.376-5.417 2.376-1.574 0-2.923-.354-3.864-.95v3.664c1.238.998 3.55 1.585 5.864 1.585 1.57 0 2.915-.27 3.996-.754.723.637 1.636 1.02 2.634 1.02 2.208 0 4-1.792 4-4 0-1.748-1.12-3.23-2.705-3.786.136-1.25.137-3.136-3.861-5.676zM7.5 12.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm-3-3a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg>
-            </a>
-
-            {/* GameJolt Link */}
-            <a href="https://gamejolt.com/@OwlhootGames" target="_blank" rel="noopener noreferrer" className="p-4 bg-white border border-slate-200 text-slate-600 hover:text-green-500 hover:border-green-400 transition-all shadow-sm transform hover:scale-110" style={techButtonStyle}>
-              <span className="sr-only">GameJolt</span>
-              {/* Lightning Icon */}
-              <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M7 2v11h3v9l7-12h-4l4-8z"/></svg>
-            </a>
           </div>
-          <div className="mt-12 text-sm text-slate-400 font-mono">
-            // SYSTEM STATUS: OPTIMAL <br/>
-            &copy; {new Date().getFullYear()} OwlHoot Games. All rights reserved.
-            Site created by: Michael Figueroa Acosta. Part of Portfolio.
+          <div className="mt-12 text-sm text-slate-600 font-mono">
+            // STUDIO STATUS: PHASE 1 ACTIVE <br/>
+            &copy; {new Date().getFullYear()} OwlHoot Games. All rights reserved. <br/>
+            Founded by Michael Figueroa Acosta
           </div>
         </motion.div>
       </section>
