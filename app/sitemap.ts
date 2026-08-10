@@ -9,7 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: 'https://owlhootgames.com/games/nightclubs',
+      url: 'https://owlhootgames.com/games/nightclubsPRSM',
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,

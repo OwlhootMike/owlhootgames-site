@@ -24,7 +24,7 @@ export default function Navbar() {
           <Link href="/" className="text-sm font-medium text-zinc-600 hover:text-black dark:text-zinc-400 dark:hover:text-white">
             Home
           </Link>
-          <Link href="/games/nightclubs" className="text-sm font-medium text-zinc-600 hover:text-purple-500 dark:text-zinc-400 dark:hover:text-purple-400">
+          <Link href="/games/nightclubsPRSM" className="text-sm font-medium text-zinc-600 hover:text-purple-500 dark:text-zinc-400 dark:hover:text-purple-400">
             Nightclubs: PRSM
           </Link>
           <Link href="/games/nova-galactica" className="text-sm font-medium text-zinc-600 hover:text-blue-500 dark:text-zinc-400 dark:hover:text-blue-400">
@@ -66,7 +66,7 @@ export default function Navbar() {
              Home
            </Link>
 
-           <Link href="/games/nightclubs" onClick={() => setIsOpen(false)} className="block py-2 text-sm font-medium text-zinc-600 hover:text-purple-500 dark:text-zinc-400 dark:hover:text-purple-400">
+           <Link href="/games/nightclubsPRSM" onClick={() => setIsOpen(false)} className="block py-2 text-sm font-medium text-zinc-600 hover:text-purple-500 dark:text-zinc-400 dark:hover:text-purple-400">
              Nightclubs: PRSM
            </Link>
 

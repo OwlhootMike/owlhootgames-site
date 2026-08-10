@@ -27,7 +27,7 @@ const projects = [
     description: "A high-fidelity simulation focused on nightlife management. Serve guests, play the rhythm highway, and actively control the energy of the dancefloor. (Our Flagship Title)",
     tech: "Unity / FMOD / C#", 
     image: nightclubImg,
-    link: "/games/nightclubs" 
+    link: "/games/nightclubsPRSM" 
   },
   {
     title: "Nova Galactica",
@@ -198,7 +198,7 @@ export default function Home() {
             <motion.a 
               whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(34,211,238,0.4)" }}
               whileTap={{ scale: 0.95 }}
-              href="/games/nightclubs" 
+              href="/games/nightclubsPRSM" 
               style={techButtonStyle}
               className="bg-cyan-500 px-6 py-3 md:px-8 md:py-4 text-sm md:text-base font-bold uppercase tracking-widest text-slate-950 transition-all hover:bg-cyan-400"
             >
