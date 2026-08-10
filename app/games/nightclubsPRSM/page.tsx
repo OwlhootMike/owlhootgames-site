@@ -57,7 +57,7 @@ export default function NightclubsPage() {
           transition={{ duration: 0.8 }}
         >
           <span className="inline-block mb-4 px-3 py-1 bg-purple-900/30 border border-purple-500 text-purple-300 text-xs font-mono uppercase tracking-widest shadow-[0_0_15px_rgba(168,85,247,0.3)]">
-            Project Status: Alpha Build (Targeting Season 0 Early Access Release by Summer 2026)
+            Project Status: Alpha Build (Targeting Season 0, Alpha Build Coming Soon)
           </span>
           <h1 className="text-5xl md:text-7xl font-black uppercase tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-cyan-400 drop-shadow-[0_0_10px_rgba(34,211,238,0.5)] mb-6">
             Nightclubs: PRSM
