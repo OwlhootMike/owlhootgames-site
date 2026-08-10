@@ -177,7 +177,7 @@ export default function Home() {
           </h1>
           
           <div className="mb-8 flex flex-wrap justify-center gap-2 md:gap-4 text-xs md:text-sm font-bold uppercase tracking-[0.2em] text-slate-400">
-            <span>HQ: Fort Worth, TX</span>
+            <span>New HQ: Fort Worth, TX</span>
             <span>//</span>
             <span>Active Systems</span>
             <span>//</span>
@@ -185,7 +185,7 @@ export default function Home() {
           </div>
 
           <p className="mb-10 text-base md:text-lg leading-relaxed text-slate-300 max-w-2xl mx-auto">
-            Crafting high-fidelity simulations, active rhythm systems, and local-first experiences that bring the soul back to gaming. We build engines, not just games.
+            Creating local experiences first, server based experienced second to bring back the soul of gaming. You buy, you own FOREVER! 
           </p>
           
           <motion.div 
@@ -202,7 +202,7 @@ export default function Home() {
               style={techButtonStyle}
               className="bg-cyan-500 px-6 py-3 md:px-8 md:py-4 text-sm md:text-base font-bold uppercase tracking-widest text-slate-950 transition-all hover:bg-cyan-400"
             >
-              Explore Flagship: PRSM
+              Explore our Flagship: PRSM
             </motion.a>
 
             {/* Secondary Action */}
@@ -281,7 +281,7 @@ export default function Home() {
              <div className="bg-slate-900/80 p-6 md:p-8 border-l-4 border-purple-500 shadow-lg relative backdrop-blur-sm" style={techPanelStyle}>
                <h3 className="mb-2 md:mb-4 text-2xl md:text-4xl font-black uppercase text-white">Active Systems</h3>
                <p className="text-base md:text-lg leading-relaxed text-slate-400">
-                 We reject passive, spreadsheet-based management. Our simulation mechanics put you directly in control. Drive the energy of the room via custom FMOD audio integrations, rhythm highways, and NavMesh crowd AI driven by individual desires.
+                 Using FMOD systems to help us create better audio systems that are dynamic for our projects, especially for Nightclubs PRSM. AI Navmeshes helps us create dynamic and better AI NPCs for their behaviors and movements.
                </p>
              </div>
           </div>

@@ -15,7 +15,7 @@ export default function Navbar() {
         
         {/* Logo */}
         <Link href="/" className="text-xl font-bold tracking-tighter hover:opacity-80">
-          Michael Figueroa
+          Owlhoot Games
         </Link>
 
         {/* --- DESKTOP MENU --- */}
