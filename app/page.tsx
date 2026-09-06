@@ -346,15 +346,15 @@ export default function Home() {
                </div>
                <div className="space-y-2 border-l-2 border-slate-700 pl-4 opacity-70">
                  <div className="font-bold text-white uppercase text-sm">Phase 2: Alpha Testing</div>
-                 <p className="text-slate-400 text-sm">Game previews, technical Unity/FMOD dev logs, and closed alpha testing of proprietary systems.</p>
+                 <p className="text-slate-400 text-sm">Game previews for Nightclubs PRSM, technical Unity/FMOD dev logs, and closed alpha testing of proprietary systems.</p>
                </div>
                <div className="space-y-2 border-l-2 border-slate-700 pl-4 opacity-70">
                  <div className="font-bold text-white uppercase text-sm">Phase 3: Season 0</div>
-                 <p className="text-slate-400 text-sm">Free Community Early Access release to gather feedback and stress-test the simulation economy.</p>
+                 <p className="text-slate-400 text-sm">Free Community Early Access release of Nightclubs PRSM to gather feedback and stress-test the simulation economy.</p>
                </div>
                <div className="space-y-2 border-l-2 border-slate-700 pl-4 opacity-70">
                  <div className="font-bold text-white uppercase text-sm">Phase 4: Commercial Launch</div>
-                 <p className="text-slate-400 text-sm">Season 1 full commercial release with finalized episodic story content and advanced features.</p>
+                 <p className="text-slate-400 text-sm">Season 1 full commercial release of Nightclubs PRSM with finalized episodic story content and advanced features.</p>
                </div>
              </div>
           </div>
