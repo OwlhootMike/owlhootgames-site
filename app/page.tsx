@@ -177,11 +177,11 @@ export default function Home() {
           </h1>
           
           <div className="mb-8 flex flex-wrap justify-center gap-2 md:gap-4 text-xs md:text-sm font-bold uppercase tracking-[0.2em] text-slate-400">
-            <span>New HQ: Fort Worth, TX</span>
+            <span>HQ: Fort Worth, TX</span>
             <span>//</span>
             <span>Active Systems</span>
             <span>//</span>
-            <span>Modular Design</span>
+            <span>Modular Design & Storytelling</span>
           </div>
 
           <p className="mb-10 text-base md:text-lg leading-relaxed text-slate-300 max-w-2xl mx-auto">
