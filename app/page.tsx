@@ -1,5 +1,5 @@
 /**
- * @fileoverview OwlHoot Games Studio Homepage
+ * @fileoverview OwlHoot Games Studio LLC Homepage
  * @author Michael Figueroa Acosta
  * @stack Next.js, TailwindCSS, Framer Motion
  * @created Feb 1, 2026
@@ -173,7 +173,7 @@ export default function Home() {
           </div>
 
           <h1 className="mb-4 text-5xl md:text-7xl font-black uppercase tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-slate-100 to-cyan-400 drop-shadow-[0_0_15px_rgba(34,211,238,0.3)] leading-tight">
-            OWLHOOT GAMES
+            OWLHOOT GAMES LLC
           </h1>
           
           <div className="mb-8 flex flex-wrap justify-center gap-2 md:gap-4 text-xs md:text-sm font-bold uppercase tracking-[0.2em] text-slate-400">
@@ -421,7 +421,7 @@ export default function Home() {
           </div>
           <h2 className="mb-6 text-2xl md:text-3xl font-black uppercase text-white">Join the Network</h2>
           <p className="mb-10 text-slate-400">
-            Phase 1 is active. Support our LLC goal, join the VIP Discord, and help shape the future of PRSM.
+            Phase 1 is active. We are now officially an LLC! Join the VIP Discord, and help shape the future of PRSM.
           </p>
           <div className="flex justify-center gap-4 md:gap-6 flex-wrap">
             
@@ -451,7 +451,7 @@ export default function Home() {
           </div>
           <div className="mt-12 text-sm text-slate-600 font-mono">
             // STUDIO STATUS: PHASE 1 ACTIVE <br/>
-            &copy; {new Date().getFullYear()} OwlHoot Games. All rights reserved. <br/>
+            &copy; {new Date().getFullYear()} OwlHoot Games LLC. All rights reserved. <br/>
             Founded by Michael Figueroa Acosta
           </div>
         </motion.div>
