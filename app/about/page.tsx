@@ -235,7 +235,7 @@ export default function AboutPage() {
               </div>
             </motion.div>
 
-            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn,Up} className="flex flex-col md:flex-row gap-6 items-center justify-center p-6 bg-slate-900/40 rounded-xl border border-dashed border-slate-700 relative overflow-hidden">
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="flex flex-col md:flex-row gap-6 items-center justify-center p-6 bg-slate-900/40 rounded-xl border border-dashed border-slate-700 relative overflow-hidden">
               <div className="absolute inset-0 bg-repeat bg-[url('https://www.transparenttextures.com/patterns/diagonal-stripes.png')] opacity-[0.03]"></div>
               <Lock className="w-8 h-8 text-slate-500 mb-2 md:mb-0 md:mr-2" />
               <div className="text-center md:text-left z-10">
