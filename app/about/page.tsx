@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, Variants } from "framer-motion";
-import { Shield, Disc, Workflow, Users, Target, Lock, UserCircle, Cpu, Music, MapPin } from "lucide-react"; 
+import { Shield, Disc, Workflow, Users, Target, Lock, UserCircle, Cpu, Music, MapPin, Flame } from "lucide-react"; 
 
 // --- Animation Variants ---
 const fadeInUp: Variants = {
@@ -39,29 +39,25 @@ export default function AboutPage() {
         </motion.div>
       </section>
 
-      {/* THE GENESIS & TIMELINE */}
+      {/* THE STUDIO ORIGIN: BORN FROM THE ASHES */}
       <section className="bg-slate-900/50 py-24 border-y border-slate-800">
-        <div className="max-w-5xl mx-auto px-6">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeInUp} className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-4">Born from the Ashes of 2014</h2>
-            <p className="text-lg text-slate-400">
-              In July 2010, <span className="text-slate-200 font-semibold">Nightclub City</span> pioneered social simulation. By March 2014, corporate priorities shifted, servers went dark, and millions of players lost their progress overnight. OwlHoot Games was built to challenge this exact status quo. We believe in local-first architectures and perpetual play guarantees.
-            </p>
-          </motion.div>
-
-          <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            {[
-              { year: "2019", title: "The Overwork Phase", desc: "Four simultaneous jobs across Universal, Disney, and GameStop, restricting dev time to midnight hours." },
-              { year: "2020", title: "The Displacement", desc: "Contracted COVID-19 on Day 1 of lockdown. Financial crisis and housing instability halted all pipelines." },
-              { year: "2023", title: "Texas & Data Loss", desc: "Relocated to Fort Worth as a Site Operations Manager. A catastrophic hard drive failure erased all source code." },
-              { year: "2026", title: "Recovery & Shield", desc: "Formed OwlHoot Games LLC. Modernized the stack with Unity, Synty, and FMOD for a total codebase reboot." }
-            ].map((item, index) => (
-              <motion.div key={index} variants={fadeInUp} className="bg-slate-900 p-6 rounded-xl border border-slate-800 hover:border-purple-500/50 transition-colors relative overflow-hidden">
-                <div className="text-purple-500 font-bold text-xl mb-2">{item.year}</div>
-                <h3 className="text-white font-semibold mb-2">{item.title}</h3>
-                <p className="text-sm text-slate-400">{item.desc}</p>
-              </motion.div>
-            ))}
+        <div className="max-w-4xl mx-auto px-6">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
+            <h2 className="text-3xl font-bold text-white mb-6">Born from the Ashes of 2014</h2>
+            <div className="space-y-6 text-lg text-slate-400 leading-relaxed">
+              <p>
+                In July 2010, <span className="text-slate-200 font-semibold">Nightclub City</span> pioneered the social business-simulation genre on Facebook. At its peak, it pulled in over 7.9 million monthly active users, allowing players to manage virtual venues populated by real-world licensed music. It was a cultural phenomenon.
+              </p>
+              <p>
+                But by March 2014, corporate priorities shifted. The servers were permanently deactivated. Millions of players lost their digital progress, their investments, and the communities they had built overnight. The art was simply erased from existence.
+              </p>
+              <p className="text-purple-300 font-medium">
+                OwlHoot Games was established to challenge this exact status quo.
+              </p>
+              <p>
+                By pioneering an open-source ethos, local-first architectures, and human-centric attribution, we aim to demonstrate a repeatable, sustainable business framework. We believe that when you buy a game, you should own it permanently. Our games are built to survive without us.
+              </p>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -106,7 +102,8 @@ export default function AboutPage() {
             </h2>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          {/* Bio & Workshop Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-20">
             
             {/* Biography Column (Left) */}
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="lg:col-span-7 space-y-6 text-lg text-slate-300">
@@ -126,7 +123,6 @@ export default function AboutPage() {
 
             {/* The Workshop / Hobbies Grid (Right) */}
             <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }} className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-4">
-              
               <motion.div variants={fadeInUp} className="bg-slate-950 p-6 rounded-xl border border-slate-800">
                 <Music className="w-6 h-6 text-purple-400 mb-3" />
                 <h4 className="text-white font-bold mb-2">Hardware Research</h4>
@@ -149,9 +145,35 @@ export default function AboutPage() {
                  <p className="text-xs text-slate-500 uppercase tracking-widest mb-1">Status</p>
                  <p className="text-green-400 font-bold">Independent</p>
               </motion.div>
-
             </motion.div>
           </div>
+
+          {/* THE DEVELOPER's JOURNEY TIMELINE */}
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="mb-8 border-t border-slate-800 pt-16">
+            <h3 className="text-2xl font-bold text-white flex items-center gap-3 mb-2">
+              <Flame className="w-7 h-7 text-purple-500" />
+              A Trial by Fire: The Road to Launch
+            </h3>
+            <p className="text-slate-400 max-w-2xl">
+              While the conceptual framework for our flagship project traces its roots back to 2019, the timeline to a formal commercial launch spanned nearly a decade due to an extraordinary series of personal, financial, and technical crises.
+            </p>
+          </motion.div>
+
+          <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            {[
+              { year: "2019", title: "The Overwork Phase", desc: "Managed four simultaneous jobs across Universal, Disney, and GameStop, severely restricting active dev sprint windows to midnight hours." },
+              { year: "2020", title: "The Displacement", desc: "Contracted COVID-19 on Day 1 of regional lockdown. The resulting financial crisis and housing instability halted all pipelines." },
+              { year: "2023", title: "Texas & Data Loss", desc: "Relocated to Texas as a Site Operations Manager. A catastrophic hard drive failure during the move erased all historical source code." },
+              { year: "2026", title: "Recovery & Shield", desc: "Rebooted the codebase entirely. Formed OwlHoot Games LLC to shield the IP, modernized the stack with Unity, and achieved stabilization." }
+            ].map((item, index) => (
+              <motion.div key={index} variants={fadeInUp} className="bg-slate-950 p-6 rounded-xl border border-slate-800 hover:border-purple-500/50 transition-colors relative overflow-hidden">
+                <div className="text-purple-500 font-bold text-xl mb-2">{item.year}</div>
+                <h3 className="text-white font-semibold mb-2">{item.title}</h3>
+                <p className="text-sm text-slate-400">{item.desc}</p>
+              </motion.div>
+            ))}
+          </motion.div>
+
         </div>
       </section>
 
