@@ -24,6 +24,10 @@ export default function Navbar() {
           <Link href="/" className="text-sm font-medium text-zinc-600 hover:text-black dark:text-zinc-400 dark:hover:text-white">
             Home
           </Link>
+          {/* NEW: About Us Desktop Link */}
+          <Link href="/about" className="text-sm font-medium text-zinc-600 hover:text-black dark:text-zinc-400 dark:hover:text-white">
+            About Us
+          </Link>
           <Link href="/games/nightclubsPRSM" className="text-sm font-medium text-zinc-600 hover:text-purple-500 dark:text-zinc-400 dark:hover:text-purple-400">
             Nightclubs: PRSM
           </Link>
@@ -64,6 +68,11 @@ export default function Navbar() {
 
            <Link href="/" onClick={() => setIsOpen(false)} className="block py-2 text-sm font-medium text-zinc-600 hover:text-black dark:text-zinc-400 dark:hover:text-white">
              Home
+           </Link>
+
+           {/* NEW: About Us Mobile Link */}
+           <Link href="/about" onClick={() => setIsOpen(false)} className="block py-2 text-sm font-medium text-zinc-600 hover:text-black dark:text-zinc-400 dark:hover:text-white">
+             About Us
            </Link>
 
            <Link href="/games/nightclubsPRSM" onClick={() => setIsOpen(false)} className="block py-2 text-sm font-medium text-zinc-600 hover:text-purple-500 dark:text-zinc-400 dark:hover:text-purple-400">
