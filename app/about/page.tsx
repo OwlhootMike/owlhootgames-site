@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Clock, Shield, Disc, Workflow, Users, Target, Lock } from "lucide-react"; 
+import { Shield, Disc, Workflow, Users, Target, Lock } from "lucide-react"; 
 
 // --- Animation Variants ---
 const fadeInUp = {
