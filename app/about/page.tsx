@@ -114,7 +114,7 @@ export default function AboutPage() {
                 Michael brings a highly unique, multidisciplinary background to independent game development. With formal education in IT, game design and computer engineering, he approaches software architecture with a deeply technical mindset. 
               </p>
               <p>
-                However, his true edge in building management simulation games comes from his real-world career. Initially, he has worked in studios as QA Tester starting in 2015 as well as being part of the local chapter's secretary chair in Puerto Rico. Later, started to work in areas like Florida with Universal Studios and Walt Disney World, Amazon, and Gamestop while pursuing his degree at Full Sail University. Later, moves to Texas as a Site Operations Manager and Service Technician within the theme park and entertainment industry. Having managed complex physical assets, logistics, and guest experiences at massive scale in his previous jobs, he translates actual operational logistics directly into the authentic management mechanics found in titles like <span className="text-white font-semibold italic">Nightclubs: PRSM</span>.
+                However, his true edge in building management simulation games comes from his real-world career. Initially, he has worked in studios as QA Tester starting in 2015 as well as being part of the local game developer chapter's secretary chair in Puerto Rico. Later, he moved to Florida to work for big companies, holding 5 jobs at a time, while pursuing his degree at Full Sail University. Later, moves to Texas where he currently resides and works, has found work in the industry as a QA Lead and Designer, as well as the location where he establishes his first studio, Owlhoot Games LLC. Having managed complex physical assets, logistics, and guest experiences at massive scale in his previous jobs, he translates actual operational logistics directly into the authentic management mechanics found in titles like <span className="text-white font-semibold italic">Nightclubs: PRSM</span>.
               </p>
               <p>
                 He still supports a spanish gaming website as webmaster and content creator & writer for Tu Zona Gamer, an opportunity that approached him after working as a collaborator with Yo Soy Un Gamer. As a single-member studio head, Michael architects everything from Unity C# frameworks and dynamic FMOD audio integration to UI/UX web deployment and narrative design, ensuring a singular, uncompromised creative vision.
@@ -127,7 +127,7 @@ export default function AboutPage() {
                   A Lifelong Engine Lineage
                 </h4>
                 <p className="text-base text-slate-400 leading-relaxed mb-6">
-                  The path into game development didn't begin in a university lab—it started in childhood with a pirated copy of RPG Maker XP. That scrappy, unauthorized download was the necessary spark that ignited a lifelong obsession with interactive design. While following the RPG Maker lineage across the ages, Michael continuously expanded his technical vocabulary across the indie spectrum. Today, the studio's stack is highly specialized, moving away from grid-bound constraints to focus on fully modular mechanics and robust 3D simulations.
+                  The path into game development didn't begin in a university lab—it started in childhood with a pirated copy of RPG Maker XP, which turned into a supported engine starting with RPG Maker 2003. That scrappy, unauthorized download was the necessary spark that ignited a lifelong obsession with interactive design. While following the RPG Maker lineage across the ages, Michael continuously expanded his technical vocabulary across the indie spectrum. Today, the studio's stack is highly specialized, moving away from grid-bound constraints to focus on fully modular mechanics and robust 3D simulations.
                 </p>
                 <div className="flex flex-wrap gap-2 text-sm font-mono">
                   {[
@@ -153,13 +153,13 @@ export default function AboutPage() {
               <motion.div variants={fadeInUp} className="bg-slate-950 p-6 rounded-xl border border-slate-800">
                 <Music className="w-6 h-6 text-purple-400 mb-3" />
                 <h4 className="text-white font-bold mb-2">Hardware Research</h4>
-                <p className="text-sm text-slate-400">Practices on a physical Pioneer DDJ-FLX4 controller to reverse-engineer tactile DJ mechanics for rhythm gameplay.</p>
+                <p className="text-sm text-slate-400">Practices on a physical Pioneer DDJ-FLX4 controller to understand tactile DJ mechanics for rhythm gameplay.</p>
               </motion.div>
 
               <motion.div variants={fadeInUp} className="bg-slate-950 p-6 rounded-xl border border-slate-800">
                 <Cpu className="w-6 h-6 text-purple-400 mb-3" />
-                <h4 className="text-white font-bold mb-2">The Workstation</h4>
-                <p className="text-sm text-slate-400">Develops on a custom Ryzen 9 5900X / RTX 4070 Super rig with dual Odyssey monitors for maximum engine workflow.</p>
+                <h4 className="text-white font-bold mb-2">His Studio</h4>
+                <p className="text-sm text-slate-400">Works with Unity, RPG Maker, GameMaker Studio, and learning Unreal Engine 5 to help the studio grow.</p>
               </motion.div>
 
               <motion.div variants={fadeInUp} className="bg-slate-950 p-6 rounded-xl border border-slate-800">
@@ -188,9 +188,9 @@ export default function AboutPage() {
 
           <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid grid-cols-1 md:grid-cols-4 gap-6">
             {[
-              { year: "2019", title: "The Overwork Phase", desc: "Managed four simultaneous jobs across Universal, Disney, and GameStop, severely restricting active dev sprint windows to midnight hours." },
+              { year: "2019", title: "The Overwork Phase", desc: "Managed five simultaneous jobs across, severely restricting active dev sprint windows to midnight hours." },
               { year: "2020", title: "The Displacement", desc: "Contracted COVID-19 on Day 1 of regional lockdown. The resulting financial crisis and housing instability halted all pipelines." },
-              { year: "2023", title: "Texas & Data Loss", desc: "Relocated to Texas as a Site Operations Manager. A catastrophic hard drive failure during the move erased all historical source code." },
+              { year: "2023", title: "Texas & Data Loss", desc: "Relocated to Texas. A catastrophic hard drive failure during the move erased all historical source code." },
               { year: "2026", title: "Recovery & Shield", desc: "Rebooted the codebase entirely. Formed OwlHoot Games LLC to shield the IP, modernized the stack with Unity, and achieved stabilization." }
             ].map((item, index) => (
               <motion.div key={index} variants={fadeInUp} className="bg-slate-950 p-6 rounded-xl border border-slate-800 hover:border-purple-500/50 transition-colors relative overflow-hidden">
