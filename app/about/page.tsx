@@ -103,7 +103,7 @@ export default function AboutPage() {
           </motion.div>
 
           {/* Bio & Workshop Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-20">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-20 items-start">
             
             {/* Biography Column (Left) */}
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="lg:col-span-7 space-y-6 text-lg text-slate-300">
@@ -111,13 +111,13 @@ export default function AboutPage() {
               <p className="text-purple-400 font-medium uppercase tracking-wider text-sm mb-6">CEO & Lead Developer</p>
               
               <p>
-                Michael brings a highly unique, multidisciplinary background to independent game development. With formal education in IT and computer engineering, he approaches software architecture with a deeply technical mindset. 
+                Michael brings a highly unique, multidisciplinary background to independent game development. With formal education in IT, game design and computer engineering, he approaches software architecture with a deeply technical mindset. 
               </p>
               <p>
-                However, his true edge in building management simulation games comes from his real-world career. Operating out of Texas, Michael works as a Site Operations Manager and Service Technician within the theme park and entertainment industry. Having managed complex physical assets, logistics, and guest experiences at massive scale for locations like Six Flags Over Texas, Universal Studios, and Disney, he translates actual operational logistics directly into the authentic management mechanics found in titles like <span className="text-white font-semibold italic">Nightclubs: PRSM</span>.
+                However, his true edge in building management simulation games comes from his real-world career. Initially, he has worked in studios as QA Tester starting in 2015 as well as being part of the local chapter's secretary chair in Puerto Rico. Later, started to work in areas like Florida with Universal Studios and Walt Disney World, Amazon, and Gamestop while pursuing his degree at Full Sail University. Later, moves to Texas as a Site Operations Manager and Service Technician within the theme park and entertainment industry. Having managed complex physical assets, logistics, and guest experiences at massive scale in his previous jobs, he translates actual operational logistics directly into the authentic management mechanics found in titles like <span className="text-white font-semibold italic">Nightclubs: PRSM</span>.
               </p>
               <p>
-                As a single-member studio head, Michael architects everything from Unity C# frameworks and dynamic FMOD audio integration to UI/UX web deployment and narrative design, ensuring a singular, uncompromised creative vision.
+                He still supports a spanish gaming website as webmaster and content creator & writer for Tu Zona Gamer, an opportunity that approached him after working as a collaborator with Yo Soy Un Gamer. As a single-member studio head, Michael architects everything from Unity C# frameworks and dynamic FMOD audio integration to UI/UX web deployment and narrative design, ensuring a singular, uncompromised creative vision.
               </p>
 
               {/* NEW: The Engine History Block */}
