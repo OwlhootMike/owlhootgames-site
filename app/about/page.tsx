@@ -46,16 +46,16 @@ export default function AboutPage() {
             <h2 className="text-3xl font-bold text-white mb-6">Born from the Ashes of 2014</h2>
             <div className="space-y-6 text-lg text-slate-400 leading-relaxed">
               <p>
-                In July 2010, <span className="text-slate-200 font-semibold">Nightclub City</span> pioneered the social business-simulation genre on Facebook. At its peak, it pulled in over 7.9 million monthly active users, allowing players to manage virtual venues populated by real-world licensed music. It was a cultural phenomenon.
+                In July 2010, <span className="text-slate-200 font-semibold italic">Nightclub City</span> pioneered the social business-simulation genre. At its peak, it pulled in millions of monthly active users, allowing them to manage virtual venues to the pulse of real-world licensed music. It was a cultural phenomenon that we deeply loved.
               </p>
               <p>
-                But by March 2014, corporate priorities shifted. The servers were permanently deactivated. Millions of players lost their digital progress, their investments, and the communities they had built overnight. The art was simply erased from existence.
+                But by March 2014, the harsh realities of live-service hosting set in. Due to industry shifts and circumstances likely far beyond the original developers' control, the servers were permanently deactivated. We hold no ill will toward the original studio—building and sustaining online games is incredibly difficult—but the fallout for the community was devastating. Millions of players lost their digital progress, their investments, and the vibrant venues they had built overnight. A beloved piece of interactive art was simply erased.
               </p>
               <p className="text-purple-300 font-medium">
-                OwlHoot Games was established to challenge this exact status quo.
+                OwlHoot Games was established to help establish a new norm to prevent this from happening again.
               </p>
               <p>
-                By pioneering an open-source ethos, local-first architectures, and human-centric attribution, we aim to demonstrate a repeatable, sustainable business framework. We believe that when you buy a game, you should own it permanently. Our games are built to survive without us.
+                By pioneering local-first architectures and an unwavering commitment to preservation, we are building a framework where history isn't deleted when a server budget runs out. We believe that when you buy a game, you should own it permanently. Our games are built to survive without us.
               </p>
             </div>
           </motion.div>
@@ -235,7 +235,7 @@ export default function AboutPage() {
               </div>
             </motion.div>
 
-            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="flex flex-col md:flex-row gap-6 items-center justify-center p-6 bg-slate-900/40 rounded-xl border border-dashed border-slate-700 relative overflow-hidden">
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeIn,Up} className="flex flex-col md:flex-row gap-6 items-center justify-center p-6 bg-slate-900/40 rounded-xl border border-dashed border-slate-700 relative overflow-hidden">
               <div className="absolute inset-0 bg-repeat bg-[url('https://www.transparenttextures.com/patterns/diagonal-stripes.png')] opacity-[0.03]"></div>
               <Lock className="w-8 h-8 text-slate-500 mb-2 md:mb-0 md:mr-2" />
               <div className="text-center md:text-left z-10">
