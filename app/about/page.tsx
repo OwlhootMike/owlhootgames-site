@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, Variants } from "framer-motion";
-import { Shield, Disc, Workflow, Users, Target, Lock, UserCircle, Cpu, Music, MapPin, Flame } from "lucide-react"; 
+import { Shield, Disc, Workflow, Users, Target, Lock, UserCircle, Cpu, Music, MapPin, Flame, Terminal } from "lucide-react"; 
 
 // --- Animation Variants ---
 const fadeInUp: Variants = {
@@ -119,6 +119,33 @@ export default function AboutPage() {
               <p>
                 As a single-member studio head, Michael architects everything from Unity C# frameworks and dynamic FMOD audio integration to UI/UX web deployment and narrative design, ensuring a singular, uncompromised creative vision.
               </p>
+
+              {/* NEW: The Engine History Block */}
+              <div className="mt-10 p-8 bg-slate-900/50 rounded-2xl border border-slate-800">
+                <h4 className="text-xl font-bold text-white mb-4 flex items-center gap-3">
+                  <Terminal className="w-6 h-6 text-purple-400" />
+                  A Lifelong Engine Lineage
+                </h4>
+                <p className="text-base text-slate-400 leading-relaxed mb-6">
+                  The path into game development didn't begin in a university lab—it started in childhood with a pirated copy of RPG Maker XP. That scrappy, unauthorized download was the necessary spark that ignited a lifelong obsession with interactive design. While following the RPG Maker lineage across the ages, Michael continuously expanded his technical vocabulary across the indie spectrum. Today, the studio's stack is highly specialized, moving away from grid-bound constraints to focus on fully modular mechanics and robust 3D simulations.
+                </p>
+                <div className="flex flex-wrap gap-2 text-sm font-mono">
+                  {[
+                    "RPG Maker XP -> MZ", 
+                    "Clickteam Fusion", 
+                    "Construct", 
+                    "Cocos 2D", 
+                    "GameMaker 1.4 -> LTS", 
+                    "Unity", 
+                    "DragonRuby", 
+                    "Unreal Engine 5"
+                  ].map(tech => (
+                    <span key={tech} className="px-3 py-1.5 bg-slate-950 border border-slate-700/50 rounded-md text-slate-300 shadow-inner">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
             </motion.div>
 
             {/* The Workshop / Hobbies Grid (Right) */}
@@ -249,4 +276,4 @@ export default function AboutPage() {
 
     </div>
   );
-} //update
+}
