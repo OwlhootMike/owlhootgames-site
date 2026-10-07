@@ -1,15 +1,16 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion"; // <-- Added 'Variants' here
 import { Shield, Disc, Workflow, Users, Target, Lock } from "lucide-react"; 
 
 // --- Animation Variants ---
-const fadeInUp = {
+// We added ': Variants' so TypeScript knows these are official Framer formats
+const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
 };
 
-const staggerContainer = {
+const staggerContainer: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
