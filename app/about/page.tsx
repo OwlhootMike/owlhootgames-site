@@ -52,7 +52,7 @@ export default function AboutPage() {
                 But by March 2014, the harsh realities of live-service hosting set in. Due to industry shifts and circumstances likely far beyond the original developers' control, the servers were permanently deactivated. We hold no ill will toward the original studio—building and sustaining online games is incredibly difficult—but the fallout for the community was devastating. Millions of players lost their digital progress, their investments, and the vibrant venues they had built overnight. A beloved piece of interactive art was simply erased.
               </p>
               <p className="text-purple-300 font-medium">
-                OwlHoot Games was established to help establish a new norm to prevent this from happening again.
+                OwlHoot Games was created to help establish a new norm to prevent this from happening again.
               </p>
               <p>
                 By pioneering local-first architectures and an unwavering commitment to preservation, we are building a framework where history isn't deleted when a server budget runs out. We believe that when you buy a game, you should own it permanently. Our games are built to survive without us.
