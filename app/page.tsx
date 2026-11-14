@@ -340,13 +340,13 @@ export default function Home() {
              <h3 className="text-2xl font-black uppercase tracking-widest text-cyan-400 mb-6 text-center border-b border-slate-800 pb-4">Development Roadmap</h3>
              
              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-               <div className="space-y-2 border-l-2 border-cyan-500 pl-4">
-                 <div className="font-bold text-white uppercase text-sm">Phase 1: Foundation (Active)</div>
-                 <p className="text-slate-400 text-sm">Establish social networks, define studio philosophy, and hit our $300 LLC goal to secure revenue-share contracts.</p>
-               </div>
                <div className="space-y-2 border-l-2 border-slate-700 pl-4 opacity-70">
-                 <div className="font-bold text-white uppercase text-sm">Phase 2: Alpha Testing</div>
-                 <p className="text-slate-400 text-sm">Game previews for Nightclubs PRSM, technical Unity/FMOD dev logs, and closed alpha testing of proprietary systems.</p>
+                 <div className="font-bold text-white uppercase text-sm">Phase 1: Foundation (Complete)</div>
+                 <p className="text-slate-400 text-sm">Established our social networks, defined the studio philosophy, and officially formed OwlHoot Games LLC to secure revenue-share contracts.</p>
+               </div>
+               <div className="space-y-2 border-l-2 border-cyan-500 pl-4">
+                 <div className="font-bold text-white uppercase text-sm">Phase 2: Alpha Testing (Active)</div>
+                 <p className="text-slate-400 text-sm">Game previews for Nightclubs PRSM, technical Unity/FMOD dev logs, and closed alpha testing of proprietary systems. Work-in-progress is being shared on Discord now, with Patreon and Facebook coming soon.</p>
                </div>
                <div className="space-y-2 border-l-2 border-slate-700 pl-4 opacity-70">
                  <div className="font-bold text-white uppercase text-sm">Phase 3: Season 0</div>
@@ -421,12 +421,12 @@ export default function Home() {
           </div>
           <h2 className="mb-6 text-2xl md:text-3xl font-black uppercase text-white">Join the Network</h2>
           <p className="mb-10 text-slate-400">
-            Phase 1 is active. We are now officially an LLC! Join the VIP Discord, and help shape the future of PRSM.
+            Phase 2 is active. OwlHoot Games is officially an LLC, and we&apos;re sharing work-in-progress on the VIP Discord, with Patreon and Facebook updates coming soon. Join in and help shape the future of PRSM.
           </p>
           <div className="flex justify-center gap-4 md:gap-6 flex-wrap">
             
             {/* Patreon */}
-            <a href="https://www.patreon.com" target="_blank" rel="noopener noreferrer" className="p-4 bg-slate-950 border border-slate-700 text-pink-500 hover:text-pink-400 hover:border-pink-500 transition-all shadow-sm transform hover:scale-110 group" style={techButtonStyle}>
+            <a href="https://www.patreon.com/c/OwlHootGames" target="_blank" rel="noopener noreferrer" className="p-4 bg-slate-950 border border-slate-700 text-pink-500 hover:text-pink-400 hover:border-pink-500 transition-all shadow-sm transform hover:scale-110 group" style={techButtonStyle}>
                <span className="sr-only">Patreon</span>
                <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M15.386 1c-4.757 0-8.618 3.86-8.618 8.618 0 4.757 3.86 8.618 8.618 8.618 4.757 0 8.614-3.861 8.614-8.618C24 4.86 20.143 1 15.386 1zM2.614 23h3.535V1H2.614v22z"/></svg>
             </a>
@@ -450,7 +450,7 @@ export default function Home() {
             </a>
           </div>
           <div className="mt-12 text-sm text-slate-600 font-mono">
-            // STUDIO STATUS: PHASE 1 ACTIVE <br/>
+            // STUDIO STATUS: PHASE 2 ACTIVE <br/>
             &copy; {new Date().getFullYear()} OwlHoot Games LLC. All rights reserved. <br/>
             Founded by Michael Figueroa Acosta
           </div>
