@@ -49,13 +49,13 @@ export default function AboutPage() {
                 In July 2010, <span className="text-slate-200 font-semibold italic">Nightclub City</span> pioneered the social business-simulation genre. At its peak, it pulled in millions of monthly active users, allowing them to manage virtual venues to the pulse of real-world licensed music. It was a cultural phenomenon that we deeply loved.
               </p>
               <p>
-                But by March 2014, the harsh realities of live-service hosting set in. Due to industry shifts and circumstances likely far beyond the original developers' control, the servers were permanently deactivated. We hold no ill will toward the original studio—building and sustaining online games is incredibly difficult—but the fallout for the community was devastating. Millions of players lost their digital progress, their investments, and the vibrant venues they had built overnight. A beloved piece of interactive art was simply erased.
+                But by March 2014, the harsh realities of live-service hosting set in. Due to industry shifts and circumstances likely far beyond the original developers&apos; control, the servers were permanently deactivated. We hold no ill will toward the original studio—building and sustaining online games is incredibly difficult—but the fallout for the community was devastating. Millions of players lost their digital progress, their investments, and the vibrant venues they had built overnight. A beloved piece of interactive art was simply erased.
               </p>
               <p className="text-purple-300 font-medium">
                 Owlhoot Games was created to help establish a new norm to prevent this from happening again.
               </p>
               <p>
-                By pioneering local-first architectures and an unwavering commitment to preservation, we are building a framework where history isn't deleted when a server budget runs out. We believe that when you buy a game, you should own it permanently. Our games are built to survive without us.
+                By pioneering local-first architectures and an unwavering commitment to preservation, we are building a framework where history isn&apos;t deleted when a server budget runs out. We believe that when you buy a game, you should own it permanently. Our games are built to survive without us.
               </p>
             </div>
           </motion.div>
@@ -73,7 +73,7 @@ export default function AboutPage() {
             <Target className="w-8 h-8 text-purple-400 mb-4" />
             <h3 className="text-xl font-bold text-white mb-3">DRM-Free & Preservation First</h3>
             <p className="text-slate-400">
-              We target Itch.io and GOG over algorithm-heavy platforms like Steam. We offer a Perpetual Play Guarantee—you own your software forever. We utilize crowdsourced QA with a "Fun-First" Exploit Policy: if a victimless bug brings joy, it becomes a feature.
+              We target Itch.io and GOG over algorithm-heavy platforms like Steam. We offer a Perpetual Play Guarantee—you own your software forever. We utilize crowdsourced QA with a &quot;Fun-First&quot; Exploit Policy: if a victimless bug brings joy, it becomes a feature.
             </p>
           </motion.div>
 
@@ -81,7 +81,7 @@ export default function AboutPage() {
             <Users className="w-8 h-8 text-purple-400 mb-4" />
             <h3 className="text-xl font-bold text-white mb-3">The Immortalization Protocol</h3>
             <p className="text-slate-400">
-              We reject the "Auteur" celebrity developer archetype. Freelance artists, indie composers, and early altruistic donors are permanently woven into the digital fabric of the universe as VIP patrons or lore characters, celebrated on the Master Studio Plaque.
+              We reject the &quot;Auteur&quot; celebrity developer archetype. Freelance artists, indie composers, and early altruistic donors are permanently woven into the digital fabric of the universe as VIP patrons or lore characters, celebrated on the Master Studio Plaque.
             </p>
           </motion.div>
         </div>
@@ -92,7 +92,7 @@ export default function AboutPage() {
           PART 2: MICHAEL FIGUEROA ACOSTA (THE FOUNDER)
           ========================================= */}
       
-      <section className="bg-gradient-to-b from-slate-950 to-slate-900 py-24 border-y border-slate-800">
+      <section className="bg-linear-to-b from-slate-950 to-slate-900 py-24 border-y border-slate-800">
         <div className="max-w-6xl mx-auto px-6">
           
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="mb-16">
@@ -114,7 +114,7 @@ export default function AboutPage() {
                 Michael brings a highly unique, multidisciplinary background to independent game development. With formal education in IT, game design and computer engineering, he approaches software architecture with a deeply technical mindset. 
               </p>
               <p>
-                However, his true edge in building management simulation games comes from his real-world career. He began working in studios as a QA Tester in 2015 and served as secretary of the local game developer chapter in Puerto Rico. He then moved to Florida, where he worked for major companies, at times holding five jobs at once, while earning his degree at Full Sail University. Today he lives and works in Texas as a QA Lead and Designer, and it's where he founded his first studio, Owlhoot Games LLC. Having managed complex physical assets, logistics, and guest experiences at massive scale in his previous jobs, he translates actual operational logistics directly into the authentic management mechanics found in titles like <span className="text-white font-semibold italic">Nightclubs: PRSM</span>.
+                However, his true edge in building management simulation games comes from his real-world career. He began working in studios as a QA Tester in 2015 and served as secretary of the local game developer chapter in Puerto Rico. He then moved to Florida, where he worked for major companies, at times holding five jobs at once, while earning his degree at Full Sail University. Today he lives and works in Texas as a QA Lead and Designer, and it&apos;s where he founded his first studio, Owlhoot Games LLC. Having managed complex physical assets, logistics, and guest experiences at massive scale in his previous jobs, he translates actual operational logistics directly into the authentic management mechanics found in titles like <span className="text-white font-semibold italic">Nightclubs: PRSM</span>.
               </p>
               <p>
                 He still supports a Spanish-language gaming website as webmaster and content creator & writer for Tu Zona Gamer, an opportunity that approached him after working as a collaborator with Yo Soy Un Gamer. As a single-member studio head, Michael architects everything from Unity C# frameworks and dynamic FMOD audio integration to UI/UX web deployment and narrative design, ensuring a singular, uncompromised creative vision.
@@ -127,7 +127,7 @@ export default function AboutPage() {
                   A Lifelong Engine Lineage
                 </h4>
                 <p className="text-base text-slate-400 leading-relaxed mb-6">
-                  The path into game development didn't begin in a university lab—it started in childhood with a pirated copy of RPG Maker XP, which turned into a supported engine starting with RPG Maker 2003. That scrappy, unauthorized download was the necessary spark that ignited a lifelong obsession with interactive design. While following the RPG Maker lineage across the ages, Michael continuously expanded his technical vocabulary across the indie spectrum. Today, the studio's stack is highly specialized, moving away from grid-bound constraints to focus on fully modular mechanics and robust 3D simulations.
+                  The path into game development didn&apos;t begin in a university lab—it started in childhood with a pirated copy of RPG Maker XP, which turned into a supported engine starting with RPG Maker 2003. That scrappy, unauthorized download was the necessary spark that ignited a lifelong obsession with interactive design. While following the RPG Maker lineage across the ages, Michael continuously expanded his technical vocabulary across the indie spectrum. Today, the studio&apos;s stack is highly specialized, moving away from grid-bound constraints to focus on fully modular mechanics and robust 3D simulations.
                 </p>
                 <div className="flex flex-wrap gap-2 text-sm font-mono">
                   {[
@@ -215,17 +215,17 @@ export default function AboutPage() {
         </motion.div>
 
         <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <motion.div variants={fadeInUp} className="p-8 rounded-2xl bg-gradient-to-b from-slate-800/50 to-slate-900 border border-slate-800">
+          <motion.div variants={fadeInUp} className="p-8 rounded-2xl bg-linear-to-b from-slate-800/50 to-slate-900 border border-slate-800">
             <Workflow className="w-10 h-10 text-purple-400 mb-4" />
             <h3 className="text-xl font-bold text-white mb-3">The Unity Pivot</h3>
-            <p className="text-slate-400 text-sm">Pivoted from GameMaker to utilize Unity's advanced NavMesh AI, solving the complex dynamic pathfinding required for massive nightclub crowds.</p>
+            <p className="text-slate-400 text-sm">Pivoted from GameMaker to utilize Unity&apos;s advanced NavMesh AI, solving the complex dynamic pathfinding required for massive nightclub crowds.</p>
           </motion.div>
-          <motion.div variants={fadeInUp} className="p-8 rounded-2xl bg-gradient-to-b from-slate-800/50 to-slate-900 border border-slate-800">
+          <motion.div variants={fadeInUp} className="p-8 rounded-2xl bg-linear-to-b from-slate-800/50 to-slate-900 border border-slate-800">
             <Disc className="w-10 h-10 text-purple-400 mb-4" />
             <h3 className="text-xl font-bold text-white mb-3">Hardware Reverse-Engineering</h3>
             <p className="text-slate-400 text-sm">Utilizing professional technician diagnostics on physical DJ turntable decks to ensure rhythm mechanics map with absolute physical accuracy.</p>
           </motion.div>
-          <motion.div variants={fadeInUp} className="p-8 rounded-2xl bg-gradient-to-b from-slate-800/50 to-slate-900 border border-slate-800">
+          <motion.div variants={fadeInUp} className="p-8 rounded-2xl bg-linear-to-b from-slate-800/50 to-slate-900 border border-slate-800">
             <Shield className="w-10 h-10 text-purple-400 mb-4" />
             <h3 className="text-xl font-bold text-white mb-3">Intentional Restraint</h3>
             <p className="text-slate-400 text-sm">Benched Unreal Engine 5. We prioritize mid-tier accessibility and performance via modular Synty assets and FMOD audio over exclusionary visual bloat.</p>

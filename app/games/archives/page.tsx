@@ -139,7 +139,17 @@ export default function ArchivePage() {
 }
 
 // --- REUSABLE CARD COMPONENT ---
-function ArchiveCard({ title, role, year, platform, description, link, tech }: any) {
+type ArchiveCardProps = {
+  title: string;
+  role: string;
+  year: string;
+  platform: string;
+  description: string;
+  link?: string;
+  tech: string[];
+};
+
+function ArchiveCard({ title, role, year, platform, description, link, tech }: ArchiveCardProps) {
   return (
     <motion.div 
       whileHover={{ y: -5 }}
@@ -151,7 +161,7 @@ function ArchiveCard({ title, role, year, platform, description, link, tech }: a
              <h3 className="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">{title}</h3>
              <span className="text-xs font-mono text-emerald-600 uppercase">{platform}</span>
            </div>
-           <span className="text-xs font-mono text-slate-600 border border-slate-800 px-2 py-1 rounded">{year}</span>
+           <span className="text-xs font-mono text-slate-600 border border-slate-800 px-2 py-1 rounded-sm">{year}</span>
         </div>
         
         <p className="text-sm text-slate-400 leading-relaxed mb-6">
@@ -163,7 +173,7 @@ function ArchiveCard({ title, role, year, platform, description, link, tech }: a
         {/* Tech Tags */}
         <div className="flex flex-wrap gap-2 mb-6">
            {tech.map((t: string) => (
-             <span key={t} className="text-[10px] font-bold uppercase text-slate-500 bg-neutral-800 px-2 py-1 rounded">
+             <span key={t} className="text-[10px] font-bold uppercase text-slate-500 bg-neutral-800 px-2 py-1 rounded-sm">
                {t}
              </span>
            ))}

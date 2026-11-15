@@ -38,7 +38,7 @@ export default function NightclubsPage() {
              backgroundSize: "100% 4px, 6px 100%"
            }}
       />
-      <div className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-500 via-cyan-500 to-purple-500 z-50 shadow-[0_0_20px_rgba(168,85,247,0.5)]"></div>
+      <div className="fixed top-0 left-0 right-0 h-1 bg-linear-to-r from-purple-500 via-cyan-500 to-purple-500 z-50 shadow-[0_0_20px_rgba(168,85,247,0.5)]"></div>
 
       {/* --- HERO HEADER --- */}
       <header className="relative pt-24 pb-12 px-6 container mx-auto text-center z-10">
@@ -59,7 +59,7 @@ export default function NightclubsPage() {
           <span className="inline-block mb-4 px-3 py-1 bg-purple-900/30 border border-purple-500 text-purple-300 text-xs font-mono uppercase tracking-widest shadow-[0_0_15px_rgba(168,85,247,0.3)]">
             Project Status: In Development (Phase 2: Alpha Testing)
           </span>
-          <h1 className="text-5xl md:text-7xl font-black uppercase tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-cyan-400 drop-shadow-[0_0_10px_rgba(34,211,238,0.5)] mb-6">
+          <h1 className="text-5xl md:text-7xl font-black uppercase tracking-tighter text-transparent bg-clip-text bg-linear-to-r from-cyan-400 via-purple-400 to-cyan-400 drop-shadow-[0_0_10px_rgba(34,211,238,0.5)] mb-6">
             Nightclubs: PRSM
           </h1>
           <p className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
@@ -78,7 +78,7 @@ export default function NightclubsPage() {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.2, duration: 0.8 }}
-          className="relative w-full aspect-video md:aspect-[21/9] rounded-none border-y-2 border-slate-800 overflow-hidden mb-16 group"
+          className="relative w-full aspect-video md:aspect-21/9 rounded-none border-y-2 border-slate-800 overflow-hidden mb-16 group"
         >
           <Image 
             src={nightclubImg} 
@@ -97,8 +97,8 @@ export default function NightclubsPage() {
           {/* LEFT COLUMN: SPECS (4 Columns) */}
           <div className="md:col-span-4 space-y-8">
             {/* Tech Stack Box */}
-            <div className="bg-slate-900/50 border border-slate-800 p-6 backdrop-blur-sm relative overflow-hidden">
-               <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-cyan-500/10 to-transparent"></div>
+            <div className="bg-slate-900/50 border border-slate-800 p-6 backdrop-blur-xs relative overflow-hidden">
+               <div className="absolute top-0 right-0 w-16 h-16 bg-linear-to-bl from-cyan-500/10 to-transparent"></div>
                <h3 className="text-cyan-400 font-bold uppercase tracking-widest mb-4 border-b border-slate-800 pb-2">Technical Specs</h3>
                <ul className="space-y-3 font-mono text-sm text-slate-300">
                  <li className="flex justify-between">
@@ -121,7 +121,7 @@ export default function NightclubsPage() {
             </div>
 
             {/* My Role Box */}
-            <div className="bg-slate-900/50 border border-slate-800 p-6 backdrop-blur-sm">
+            <div className="bg-slate-900/50 border border-slate-800 p-6 backdrop-blur-xs">
                <h3 className="text-purple-400 font-bold uppercase tracking-widest mb-4 border-b border-slate-800 pb-2">My Contributions</h3>
                <ul className="list-disc list-inside space-y-2 text-slate-300 text-sm leading-relaxed">
                  <li>Designed the <strong className="text-white">Crowd AI</strong> system using NavMesh agents and state machines.</li>
@@ -150,13 +150,13 @@ export default function NightclubsPage() {
                 Here are some of your regular tasks as the new manager: create parties, buy and install decor, work the turntable, serve our guests drinks, make our
                 VIPs feel welcomed and kick out the riff-raff! It is your job to bring back the soul of the nights we lost many years ago! 
                 The competition, The New Millennia, has been established in the city, but as a previous customer, it is missing that vibe we thrived for. This is where we come in!
-                Don't you worry about Sven, let me worry about him.
+                Don&apos;t you worry about Sven, let me worry about him.
               </p>
               <p className="text-slate-400 text-lg leading-relaxed mb-6">
                 You just worry about the customer and manage the <span className="text-cyan-300">bar, the security, the DJ, the decor, the parties, and the dance floor</span>.
-                I'll get in contact with the <span className="text-purple-300">Master Bartender</span> to help start your new drinks and <span className="text-pink-300">the local music enthusiast</span> to help you with the music setup.
+                I&apos;ll get in contact with the <span className="text-purple-300">Master Bartender</span> to help start your new drinks and <span className="text-pink-300">the local music enthusiast</span> to help you with the music setup.
                 As the architect, you must adapt to procedural events. A fight breaks out? Kick out the aggressor. 
-                VIPs arriving? Switch the lighting rig to "Gold Mode." Every choice impacts the club's reputation meter in real-time.
+                VIPs arriving? Switch the lighting rig to &quot;Gold Mode.&quot; Every choice impacts the club&apos;s reputation meter in real-time.
               </p>
               <p className="text-slate-400 text-lg leading-relaxed">
                 Make us great, and feel the music coursing through the dancefloor again.
@@ -165,19 +165,19 @@ export default function NightclubsPage() {
 
             {/* Features Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-               <div className="p-6 border border-slate-800 hover:border-cyan-500/50 transition-colors bg-gradient-to-br from-slate-900 to-transparent">
+               <div className="p-6 border border-slate-800 hover:border-cyan-500/50 transition-colors bg-linear-to-br from-slate-900 to-transparent">
                  <h4 className="text-xl font-bold text-white mb-2">DJ Rhythm Gameplay</h4>
-                 <p className="text-slate-500 text-sm">Don't just idly play the music. PLAY the music for more reward boosts in the club! (Will be compatible with the DJ Hero Controller!!!)</p>
+                 <p className="text-slate-500 text-sm">Don&apos;t just idly play the music. PLAY the music for more reward boosts in the club! (Will be compatible with the DJ Hero Controller!!!)</p>
                </div>
-               <div className="p-6 border border-slate-800 hover:border-purple-500/50 transition-colors bg-gradient-to-br from-slate-900 to-transparent">
+               <div className="p-6 border border-slate-800 hover:border-purple-500/50 transition-colors bg-linear-to-br from-slate-900 to-transparent">
                  <h4 className="text-xl font-bold text-white mb-2">Crowd Fluidity</h4>
                  <p className="text-slate-500 text-sm">NPCs feature individual desires (Thirst, Dance, Social) that drive the economy. Keep them happy, and kick out the riff-raff!</p>
                </div>
-               <div className="p-6 border border-slate-800 hover:border-pink-500/50 transition-colors bg-gradient-to-br from-slate-900 to-transparent">
+               <div className="p-6 border border-slate-800 hover:border-pink-500/50 transition-colors bg-linear-to-br from-slate-900 to-transparent">
                  <h4 className="text-xl font-bold text-white mb-2">Bartending the Crowd</h4>
                  <p className="text-slate-500 text-sm">Learn new exclusive drinks, do tricks, get tips and more popularity! Or hire bartenders, we got more stuff to do!</p>
                </div>
-               <div className="p-6 border border-slate-800 hover:border-pink-500/50 transition-colors bg-gradient-to-br from-slate-900 to-transparent">
+               <div className="p-6 border border-slate-800 hover:border-pink-500/50 transition-colors bg-linear-to-br from-slate-900 to-transparent">
                  <h4 className="text-xl font-bold text-white mb-2">Episodic Stories</h4>
                  <p className="text-slate-500 text-sm">The nightclub life is not a soap opera without its stories. We are here to establish ourselves and tell Sven and The New Millennia Nightclub to pack it!</p>
                </div>

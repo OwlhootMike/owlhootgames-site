@@ -13,7 +13,7 @@
 import { motion } from "framer-motion"; 
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import Link from "next/link";
+import type { StaticImageData } from "next/image";
 
 // --- IMAGE IMPORTS ---
 import nightclubImg from './PRSMPost.jpg';
@@ -45,13 +45,15 @@ const projects = [
   },
 ];
 
-const screenshots = [
+type Screenshot = { title: string; image: StaticImageData };
+
+const screenshots: Screenshot[] = [
   { title: "Action Shot 1", image: nightclubImg },
   { title: "Space View",    image: novaImg },
   { title: "Mystery Scene", image: janeImg },
 ];
 
-function shuffleArray(array: any[]) {
+function shuffleArray<T>(array: T[]): T[] {
   const newArray = [...array];
   for (let i = newArray.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -87,6 +89,28 @@ const techButtonStyle = {
   clipPath: "polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px)"
 };
 
+// One scrolling row of the hero background. The track is rendered twice side by
+// side so the loop is seamless; each track repeats the screenshots three times.
+function MarqueeRow({ items, keyPrefix, duration }: { items: Screenshot[]; keyPrefix: string; duration?: string }) {
+  return (
+    <div className="flex w-full overflow-hidden">
+      {[1, 2].map((track) => (
+        <div
+          key={track}
+          className="flex animate-marquee whitespace-nowrap min-w-full shrink-0"
+          style={duration ? { animationDuration: duration } : undefined}
+        >
+          {[...items, ...items, ...items].map((item, index) => (
+            <div key={`${keyPrefix}${track}-${index}`} className="relative mx-2 md:mx-4 h-32 w-60 md:h-48 md:w-80 shrink-0 overflow-hidden bg-slate-900 border border-slate-800" style={techPanelStyle}>
+              <Image src={item.image} alt={item.title} fill className="object-cover grayscale opacity-50" />
+            </div>
+          ))}
+        </div>
+      ))}
+    </div>
+  );
+}
+
 const smallTechCut = {
   clipPath: "polygon(5px 0, 100% 0, 100% calc(100% - 5px), calc(100% - 5px) 100%, 0 100%, 0 5px)"
 };
@@ -95,7 +119,9 @@ export default function Home() {
   const [topRow, setTopRow] = useState(screenshots);
   const [bottomRow, setBottomRow] = useState(screenshots);
 
+  // Shuffle after the first render so server and browser HTML match (avoids hydration errors).
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setTopRow(shuffleArray(screenshots));
     setBottomRow(shuffleArray(screenshots));
   }, []);
@@ -117,40 +143,8 @@ export default function Home() {
         {/* BACKGROUND MARQUEE */}
         <div className="absolute inset-0 z-0 flex items-center justify-center opacity-10 pointer-events-none">
            <div className="flex w-full -rotate-12 scale-100 md:scale-125 flex-col gap-4">
-             {/* Top Row */}
-             <div className="flex w-full overflow-hidden">
-               <div className="flex animate-marquee whitespace-nowrap min-w-full flex-shrink-0">
-                 {[...topRow, ...topRow, ...topRow].map((item, index) => (
-                   <div key={`t1-${index}`} className="relative mx-2 md:mx-4 h-32 w-60 md:h-48 md:w-80 flex-shrink-0 overflow-hidden bg-slate-900 border border-slate-800" style={techPanelStyle}>
-                     <Image src={item.image} alt={item.title} fill className="object-cover grayscale opacity-50" />
-                   </div>
-                 ))}
-               </div>
-               <div className="flex animate-marquee whitespace-nowrap min-w-full flex-shrink-0">
-                 {[...topRow, ...topRow, ...topRow].map((item, index) => (
-                   <div key={`t2-${index}`} className="relative mx-2 md:mx-4 h-32 w-60 md:h-48 md:w-80 flex-shrink-0 overflow-hidden bg-slate-900 border border-slate-800" style={techPanelStyle}>
-                     <Image src={item.image} alt={item.title} fill className="object-cover grayscale opacity-50" />
-                   </div>
-                 ))}
-               </div>
-             </div>
-             {/* Bottom Row */}
-             <div className="flex w-full overflow-hidden">
-               <div className="flex animate-marquee whitespace-nowrap min-w-full flex-shrink-0" style={{ animationDuration: '45s' }}>
-                 {[...bottomRow, ...bottomRow, ...bottomRow].map((item, index) => (
-                   <div key={`b1-${index}`} className="relative mx-2 md:mx-4 h-32 w-60 md:h-48 md:w-80 flex-shrink-0 overflow-hidden bg-slate-900 border border-slate-800" style={techPanelStyle}>
-                     <Image src={item.image} alt={item.title} fill className="object-cover grayscale opacity-50" />
-                   </div>
-                 ))}
-               </div>
-               <div className="flex animate-marquee whitespace-nowrap min-w-full flex-shrink-0" style={{ animationDuration: '45s' }}>
-                 {[...bottomRow, ...bottomRow, ...bottomRow].map((item, index) => (
-                   <div key={`b2-${index}`} className="relative mx-2 md:mx-4 h-32 w-60 md:h-48 md:w-80 flex-shrink-0 overflow-hidden bg-slate-900 border border-slate-800" style={techPanelStyle}>
-                     <Image src={item.image} alt={item.title} fill className="object-cover grayscale opacity-50" />
-                   </div>
-                 ))}
-               </div>
-             </div>
+             <MarqueeRow items={topRow} keyPrefix="t" />
+             <MarqueeRow items={bottomRow} keyPrefix="b" duration="45s" />
            </div>
         </div>
 
@@ -172,15 +166,15 @@ export default function Home() {
              Independent Game Development & Tools Lab
           </div>
 
-          <h1 className="mb-4 text-5xl md:text-7xl font-black uppercase tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-slate-100 to-cyan-400 drop-shadow-[0_0_15px_rgba(34,211,238,0.3)] leading-tight">
+          <h1 className="mb-4 text-5xl md:text-7xl font-black uppercase tracking-tighter text-transparent bg-clip-text bg-linear-to-r from-cyan-400 via-slate-100 to-cyan-400 drop-shadow-[0_0_15px_rgba(34,211,238,0.3)] leading-tight">
             OWLHOOT GAMES LLC
           </h1>
           
           <div className="mb-8 flex flex-wrap justify-center gap-2 md:gap-4 text-xs md:text-sm font-bold uppercase tracking-[0.2em] text-slate-400">
             <span>HQ: Fort Worth, TX</span>
-            <span>//</span>
+            <span>{"//"}</span>
             <span>Active Systems</span>
-            <span>//</span>
+            <span>{"//"}</span>
             <span>Modular Design & Storytelling</span>
           </div>
 
@@ -231,13 +225,13 @@ export default function Home() {
           className="flex flex-col gap-6 md:gap-10 md:flex-row md:items-center"
         >
           <div className="flex-1">
-             <div className="mb-4 inline-flex items-center gap-2 border-2 border-cyan-800 bg-gradient-to-b from-slate-800 to-slate-900 px-4 py-1 text-xs font-bold uppercase tracking-widest text-cyan-400 shadow-md" style={smallTechCut}>
+             <div className="mb-4 inline-flex items-center gap-2 border-2 border-cyan-800 bg-linear-to-b from-slate-800 to-slate-900 px-4 py-1 text-xs font-bold uppercase tracking-widest text-cyan-400 shadow-md" style={smallTechCut}>
                <div className="h-2 w-2 bg-cyan-500 rounded-full animate-pulse"></div>
                <span>Pillar: 01</span>
              </div>
              
              {/* TEXT PLATE */}
-             <div className="bg-slate-900/80 p-6 md:p-8 border-l-4 border-cyan-500 shadow-lg relative backdrop-blur-sm" style={techPanelStyle}>
+             <div className="bg-slate-900/80 p-6 md:p-8 border-l-4 border-cyan-500 shadow-lg relative backdrop-blur-xs" style={techPanelStyle}>
                 <h3 className="mb-2 md:mb-4 text-2xl md:text-4xl font-black uppercase text-white">The Perpetual Play Guarantee</h3>
                 <p className="text-base md:text-lg leading-relaxed text-slate-400">
                   We build local-first games. You buy it, you own it. No always-online dependencies, no remote kill-switches, and zero server shutdowns that turn your game into an unplayable paperweight. If tertiary online features ever end, the core simulation gracefully decouples. 
@@ -272,13 +266,13 @@ export default function Home() {
           className="flex flex-col gap-6 md:gap-10 md:flex-row-reverse md:items-center"
         >
           <div className="flex-1 text-left md:text-left">
-             <div className="mb-4 inline-flex items-center gap-2 border-2 border-purple-800 bg-gradient-to-b from-slate-800 to-slate-900 px-4 py-1 text-xs font-bold uppercase tracking-widest text-purple-400 shadow-md" style={smallTechCut}>
+             <div className="mb-4 inline-flex items-center gap-2 border-2 border-purple-800 bg-linear-to-b from-slate-800 to-slate-900 px-4 py-1 text-xs font-bold uppercase tracking-widest text-purple-400 shadow-md" style={smallTechCut}>
                <div className="h-2 w-2 bg-purple-500 rounded-full animate-pulse"></div>
                <span>Pillar: 02</span>
              </div>
 
              {/* TEXT PLATE */}
-             <div className="bg-slate-900/80 p-6 md:p-8 border-l-4 border-purple-500 shadow-lg relative backdrop-blur-sm" style={techPanelStyle}>
+             <div className="bg-slate-900/80 p-6 md:p-8 border-l-4 border-purple-500 shadow-lg relative backdrop-blur-xs" style={techPanelStyle}>
                <h3 className="mb-2 md:mb-4 text-2xl md:text-4xl font-black uppercase text-white">Active Systems</h3>
                <p className="text-base md:text-lg leading-relaxed text-slate-400">
                  We use FMOD to build dynamic audio that reacts to gameplay, especially in Nightclubs: PRSM. Unity&apos;s NavMesh AI drives smarter, more lifelike NPC movement and behavior.
@@ -302,13 +296,13 @@ export default function Home() {
           className="flex flex-col gap-6 md:gap-10 md:flex-row md:items-center"
         >
            <div className="flex-1">
-             <div className="mb-4 inline-flex items-center gap-2 border-2 border-emerald-800 bg-gradient-to-b from-slate-800 to-slate-900 px-4 py-1 text-xs font-bold uppercase tracking-widest text-emerald-400 shadow-md" style={smallTechCut}>
+             <div className="mb-4 inline-flex items-center gap-2 border-2 border-emerald-800 bg-linear-to-b from-slate-800 to-slate-900 px-4 py-1 text-xs font-bold uppercase tracking-widest text-emerald-400 shadow-md" style={smallTechCut}>
                <div className="h-2 w-2 bg-emerald-500 rounded-full animate-pulse"></div>
                <span>Pillar: 03</span>
              </div>
 
              {/* TEXT PLATE */}
-             <div className="bg-slate-900/80 p-6 md:p-8 border-l-4 border-emerald-500 shadow-lg relative backdrop-blur-sm" style={techPanelStyle}>
+             <div className="bg-slate-900/80 p-6 md:p-8 border-l-4 border-emerald-500 shadow-lg relative backdrop-blur-xs" style={techPanelStyle}>
                <h3 className="mb-2 md:mb-4 text-2xl md:text-4xl font-black uppercase text-white">Modular Architecture</h3>
                <p className="text-base md:text-lg leading-relaxed text-slate-400">
                  We engineer reusable C# libraries and middleware tools before we build the game. By developing standalone parsing engines and proprietary toolsets, we ensure our games are built on rock-solid, well-tested foundations.
@@ -316,7 +310,7 @@ export default function Home() {
              </div>
           </div>
           <div className="flex-1 bg-black p-6 md:p-8 border border-slate-800 shadow-lg flex items-center justify-center relative overflow-hidden" style={techPanelStyle}>
-             <div className="absolute inset-0 bg-[linear-gradient(rgba(16,18,16,0)_50%,rgba(0,0,0,0.5)_50%),linear-gradient(90deg,rgba(0,255,100,0.03),rgba(0,255,100,0.01),rgba(0,255,100,0.03))] z-0 pointer-events-none bg-[length:100%_4px,6px_100%]"></div>
+             <div className="absolute inset-0 bg-[linear-gradient(rgba(16,18,16,0)_50%,rgba(0,0,0,0.5)_50%),linear-gradient(90deg,rgba(0,255,100,0.03),rgba(0,255,100,0.01),rgba(0,255,100,0.03))] z-0 pointer-events-none bg-size-[100%_4px,6px_100%]"></div>
              <div className="text-left w-full z-10 font-mono text-xs md:text-sm text-emerald-500 space-y-2">
                 <div className="border-b border-slate-800 pb-2 mb-2">&gt; INIT STANDALONE_LIBS...</div>
                 <div>[OK] Chart_Parser.cs</div>
@@ -336,7 +330,7 @@ export default function Home() {
           className="w-full max-w-4xl mx-auto"
         >
           <div className="bg-slate-900/80 border border-slate-700 p-8 shadow-[0_0_30px_rgba(0,0,0,0.5)] relative" style={techPanelStyle}>
-             <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-cyan-500/10 to-transparent pointer-events-none"></div>
+             <div className="absolute top-0 right-0 w-32 h-32 bg-linear-to-bl from-cyan-500/10 to-transparent pointer-events-none"></div>
              <h3 className="text-2xl font-black uppercase tracking-widest text-cyan-400 mb-6 text-center border-b border-slate-800 pb-4">Development Roadmap</h3>
              
              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -389,7 +383,7 @@ export default function Home() {
               <div className="relative h-48 w-full bg-slate-950 overflow-hidden">
                 <Image src={project.image} alt={project.title} fill className="object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0 opacity-70 group-hover:opacity-100"/>
                 {/* Overlay Gradient */}
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-80 transition-opacity group-hover:opacity-40"></div>
+                <div className="absolute inset-0 bg-linear-to-t from-slate-900 to-transparent opacity-80 transition-opacity group-hover:opacity-40"></div>
               </div>
               
               {/* Content */}

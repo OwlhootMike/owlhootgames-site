@@ -70,7 +70,7 @@ export default function PhotographyPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="group relative aspect-[4/5] overflow-hidden bg-slate-100 rounded-sm"
+            className="group relative aspect-4/5 overflow-hidden bg-slate-100 rounded-xs"
           >
             <Image 
               src={Kevin} 
@@ -89,7 +89,7 @@ export default function PhotographyPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="group relative aspect-[4/5] overflow-hidden bg-slate-100 rounded-sm"
+            className="group relative aspect-4/5 overflow-hidden bg-slate-100 rounded-xs"
           >
             <Image 
               src={Evento} 
@@ -108,7 +108,7 @@ export default function PhotographyPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="group relative aspect-[4/5] overflow-hidden bg-slate-100 rounded-sm"
+            className="group relative aspect-4/5 overflow-hidden bg-slate-100 rounded-xs"
           >
             <Image 
               src={Food} 
@@ -127,7 +127,7 @@ export default function PhotographyPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="group relative aspect-[4/5] overflow-hidden bg-slate-100 rounded-sm"
+            className="group relative aspect-4/5 overflow-hidden bg-slate-100 rounded-xs"
           >
             <Image 
               src={Playa} 
@@ -177,7 +177,7 @@ export default function PhotographyPage() {
             <img 
               src={Quak.src}
               alt="Rubber Duck Debugger" 
-              className="w-6 h-6 rounded-full opacity-50 hover:opacity-100 transition-opacity cursor-pointer shadow-sm"
+              className="w-6 h-6 rounded-full opacity-50 hover:opacity-100 transition-opacity cursor-pointer shadow-xs"
               title="Quack!"
             />
           </div>

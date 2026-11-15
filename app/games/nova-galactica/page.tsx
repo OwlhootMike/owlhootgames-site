@@ -20,7 +20,7 @@ export default function NovaPage() {
       />
       
       {/* CRT Scanline Overlay - Gives it a retro-futuristic screen look */}
-      <div className="fixed inset-0 z-50 pointer-events-none bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.1)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] bg-[length:100%_4px,6px_100%] opacity-20"></div>
+      <div className="fixed inset-0 z-50 pointer-events-none bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.1)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] bg-size-[100%_4px,6px_100%] opacity-20"></div>
 
       {/* --- HERO HEADER --- */}
       {/* --- HERO HEADER --- */}
@@ -44,7 +44,7 @@ export default function NovaPage() {
              <span className="text-blue-500 text-xs uppercase tracking-widest">System: Sol-3</span>
           </div>
           <h1 className="text-5xl md:text-8xl font-black uppercase tracking-tighter text-white mb-2 leading-none">
-            NOVA GALACTICA:<span className="text-transparent bg-clip-text bg-gradient-to-b from-blue-400 to-transparent">ODE TO CARINAE</span>
+            NOVA GALACTICA:<span className="text-transparent bg-clip-text bg-linear-to-b from-blue-400 to-transparent">ODE TO CARINAE</span>
           </h1>
         </motion.div>
         
@@ -64,7 +64,7 @@ export default function NovaPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.8 }}
-          className="relative w-full aspect-video md:aspect-[21/9] border-2 border-blue-600/30 bg-black/50 p-1 mb-16"
+          className="relative w-full aspect-video md:aspect-21/9 border-2 border-blue-600/30 bg-black/50 p-1 mb-16"
         >
            {/* Corner Brackets */}
            <div className="absolute top-0 left-0 w-4 h-4 border-l-2 border-t-2 border-blue-500 z-20"></div>
@@ -90,7 +90,7 @@ export default function NovaPage() {
             <div className="border-l-2 border-blue-500 pl-6">
                <h2 className="text-2xl text-white font-bold uppercase mb-4">Mission Profile</h2>
                <p className="text-blue-100/70 text-lg leading-relaxed mb-6 font-sans">
-                 Humanity has traveled through space across the ages. In 2050, humanity set sail for the stars after discovering light speed travel, navigating the cosmos and viewing Pulsars across the galaxy. It's the year 9565 AD. <strong className="text-blue-400">Engineer Edith Williams</strong> is stationed on a moon base that is established with one goal: watch the Eta Carinae and send the information back to the Humanity Centauri Spaceship floating back in the Sol system.
+                 Humanity has traveled through space across the ages. In 2050, humanity set sail for the stars after discovering light speed travel, navigating the cosmos and viewing Pulsars across the galaxy. It&apos;s the year 9565 AD. <strong className="text-blue-400">Engineer Edith Williams</strong> is stationed on a moon base that is established with one goal: watch the Eta Carinae and send the information back to the Humanity Centauri Spaceship floating back in the Sol system.
                  Edith has two jobs: maintain the outpost and take care of her child.
                </p>
                <p className="text-blue-100/70 text-lg leading-relaxed font-sans">

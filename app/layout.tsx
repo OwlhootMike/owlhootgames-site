@@ -5,7 +5,7 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
   // 1. The Base URL (Crucial for images to work)
@@ -44,8 +44,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} bg-slate-950`}>
+    <html lang="en" className={inter.variable}>
+      <body className="bg-slate-950 font-sans">
         {/* 2. Place Navbar here so it sits at the top of every page */}
         <Navbar />
         {/* This "children" is where your page.tsx content loads */}

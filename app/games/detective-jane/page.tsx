@@ -53,7 +53,7 @@ export default function DetectiveJanePage() {
           </div>
           
           {/* Decorative Stamp */}
-          <div className="hidden md:block opacity-50 rotate-[-10deg] border-4 border-slate-700 p-2 rounded">
+          <div className="hidden md:block opacity-50 rotate-[-10deg] border-4 border-slate-700 p-2 rounded-sm">
              <span className="text-3xl font-black text-slate-700 uppercase">Classified</span>
           </div>
         </motion.div>
@@ -67,7 +67,7 @@ export default function DetectiveJanePage() {
           initial={{ opacity: 0, scale: 0.98 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.2, duration: 0.8 }}
-          className="relative w-full aspect-video md:aspect-[21/9] bg-black border-y-4 border-slate-800 overflow-hidden mb-12 group"
+          className="relative w-full aspect-video md:aspect-21/9 bg-black border-y-4 border-slate-800 overflow-hidden mb-12 group"
         >
           <Image 
             src={janeImg} 
@@ -76,11 +76,11 @@ export default function DetectiveJanePage() {
             className="object-cover opacity-90 transition-all duration-700 group-hover:scale-105"
           />
           {/* Scanning Line Animation */}
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-amber-500/10 to-transparent h-[20%] w-full animate-scanline pointer-events-none"></div>
+          <div className="absolute inset-0 bg-linear-to-b from-transparent via-amber-500/10 to-transparent h-[20%] w-full animate-scanline pointer-events-none"></div>
           
           {/* Image Overlay UI */}
           <div className="absolute bottom-4 left-4 flex gap-4">
-             <div className="px-2 py-1 bg-black/70 backdrop-blur text-xs font-mono text-amber-500">CAM_01 [REC]</div>
+             <div className="px-2 py-1 bg-black/70 backdrop-blur-sm text-xs font-mono text-amber-500">CAM_01 [REC]</div>
           </div>
         </motion.div>
 
@@ -112,7 +112,7 @@ export default function DetectiveJanePage() {
                 </div>
                 <div className="bg-slate-900 border border-slate-800 p-5">
                    <h3 className="text-amber-500 font-bold uppercase text-sm mb-2">Interrogation</h3>
-                   <p className="text-xs text-slate-400">Read micro-expressions and press suspects when their story doesn't add up.</p>
+                   <p className="text-xs text-slate-400">Read micro-expressions and press suspects when their story doesn&apos;t add up.</p>
                 </div>
              </div>
           </div>
@@ -120,7 +120,7 @@ export default function DetectiveJanePage() {
           {/* RIGHT: SUSPECT/TECH DATA */}
           <div className="md:col-span-1 space-y-6">
              {/* Tech Specs */}
-             <div className="bg-slate-800/50 p-6 rounded-sm">
+             <div className="bg-slate-800/50 p-6 rounded-xs">
                 <h3 className="text-slate-200 font-bold uppercase border-b border-slate-600 pb-2 mb-4">Technical Data</h3>
                 <ul className="space-y-4 font-mono text-sm">
                    <li>
@@ -145,7 +145,7 @@ export default function DetectiveJanePage() {
                    <span className="font-bold text-slate-300 text-sm uppercase">Designer Note</span>
                 </div>
                 <p className="text-xs text-slate-400 italic">
-                   "Inspired by classics like L.A. Noire and Disco Elysium. The goal is to make the player feel smart, not just guide them from waypoint to waypoint."
+                   &quot;Inspired by classics like L.A. Noire and Disco Elysium. The goal is to make the player feel smart, not just guide them from waypoint to waypoint.&quot;
                 </p>
              </div>
           </div>

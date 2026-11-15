@@ -76,7 +76,7 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 z-50 w-full border-b border-slate-800 bg-slate-950/90 backdrop-blur-md">
       {/* Thin cyan accent line along the bottom edge */}
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-cyan-500/40 to-transparent" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-linear-to-r from-transparent via-cyan-500/40 to-transparent" />
 
       <div className="container mx-auto flex h-16 items-center justify-between px-6">
         {/* Logo + studio name */}
