@@ -5,6 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 import type { UpdatePost, UpdateReply } from "@/lib/prsm-updates";
 import { authors, fallbackAuthor, tagStyles, defaultTagStyle, type Author } from "@/lib/prsm-authors";
+import { PATREON_URL } from "@/app/components/Navbar";
+import prsmImg from "@/app/PRSMPost.jpg";
 
 const DISCORD_URL = "https://discord.gg/GfQScUK9Dm";
 
@@ -239,6 +241,196 @@ function WaveDivider() {
   );
 }
 
+// Skyline along the bottom of the page: [width, height] per building, plus lit windows.
+const SKYLINE: [number, number][] = [
+  [60, 90], [40, 140], [70, 110], [50, 190], [80, 120], [45, 160], [65, 100], [55, 210],
+  [75, 130], [40, 170], [60, 95], [85, 150], [50, 120], [70, 200], [45, 110], [60, 160],
+  [80, 105], [50, 180], [65, 125], [55, 145],
+];
+
+const WINDOW_COLORS = ["#e879f9", "#22d3ee", "#fcd34d"];
+
+// Each building's x position (buildings sit 4 apart), worked out once.
+const BUILDINGS = SKYLINE.map(([w, h], i) => ({
+  x: SKYLINE.slice(0, i).reduce((sum, [bw]) => sum + bw + 4, 0),
+  w,
+  h,
+  i,
+}));
+const SKYLINE_WIDTH = SKYLINE.reduce((sum, [w]) => sum + w + 4, 0);
+
+function Skyline() {
+  const buildings = BUILDINGS;
+  return (
+    <svg className="absolute inset-x-0 bottom-0 h-48 w-full" viewBox={`0 0 ${SKYLINE_WIDTH} 220`} preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+      {buildings.map(({ x: bx, w, h, i }) => (
+        <g key={i}>
+          <rect x={bx} y={220 - h} width={w} height={h} fill="#0a0814" />
+          {/* A few lit windows per building, always in the same spots */}
+          {[0, 1, 2].map((n) => (
+            <rect
+              key={n}
+              x={bx + 8 + ((i * 19 + n * 29) % (w - 16))}
+              y={220 - h + 14 + ((i * 37 + n * 53) % (h - 30))}
+              width={4}
+              height={5}
+              fill={WINDOW_COLORS[(i + n) % 3]}
+              opacity={0.55}
+            />
+          ))}
+        </g>
+      ))}
+    </svg>
+  );
+}
+
+const SPOTLIGHT = "absolute top-[-10%] h-[90%] w-64 origin-top blur-2xl [clip-path:polygon(45%_0,55%_0,100%_100%,0_100%)] motion-safe:animate-sweep";
+
+// Club atmosphere behind the phone: drifting lights, sweeping spotlights, grain and a skyline.
+function ClubBackdrop() {
+  return (
+    <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
+      <div className="absolute -left-32 top-1/4 h-96 w-96 rounded-full bg-fuchsia-600/20 blur-[120px] motion-safe:animate-drift" />
+      <div
+        className="absolute -right-32 top-1/2 h-96 w-96 rounded-full bg-cyan-500/15 blur-[120px] motion-safe:animate-drift"
+        style={{ animationDelay: "-11s", animationDirection: "alternate-reverse" }}
+      />
+      <div
+        className="absolute bottom-0 left-1/3 hidden h-80 w-80 rounded-full bg-purple-600/15 blur-[120px] motion-safe:animate-drift sm:block"
+        style={{ animationDelay: "-6s" }}
+      />
+
+      {/* Spotlights from the ceiling */}
+      <div className="hidden sm:block">
+        <div className={`${SPOTLIGHT} left-[16%] bg-linear-to-b from-fuchsia-400/20 to-transparent`} />
+        <div
+          className={`${SPOTLIGHT} right-[16%] bg-linear-to-b from-cyan-300/15 to-transparent`}
+          style={{ animationDelay: "-4.5s", animationDirection: "alternate-reverse" }}
+        />
+      </div>
+
+      <div className="absolute inset-0 bg-[url('/noise.svg')] opacity-15 mix-blend-overlay" />
+      <div className="hidden sm:block">
+        <Skyline />
+      </div>
+    </div>
+  );
+}
+
+// Left-side "game profile" shown on wide screens.
+function InfoPanel({
+  posts,
+  tags,
+  filter,
+  onFilter,
+}: {
+  posts: UpdatePost[];
+  tags: string[];
+  filter: string | null;
+  onFilter: (tag: string | null) => void;
+}) {
+  const replyCount = posts.reduce((n, p) => n + p.replies.length, 0);
+  const tagCounts = new Map<string, number>();
+  posts.forEach((p) => p.tags.forEach((t) => tagCounts.set(t.toLowerCase(), (tagCounts.get(t.toLowerCase()) ?? 0) + 1)));
+  const trending = [...tags].sort((a, b) => (tagCounts.get(b.toLowerCase()) ?? 0) - (tagCounts.get(a.toLowerCase()) ?? 0));
+  const lastUpdate = posts[0]?.date;
+
+  return (
+    <aside className="hidden w-72 shrink-0 space-y-4 xl:block">
+      <Link
+        href="/games/nightclubsPRSM"
+        className="flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-slate-500 transition-colors hover:text-cyan-400"
+      >
+        ◄ Back to Nightclubs: PRSM
+      </Link>
+
+      {/* Game card */}
+      <div className="overflow-hidden rounded-3xl border border-[#2a2450] bg-[#0b0916]/80 shadow-[0_0_40px_rgba(168,85,247,0.12)] backdrop-blur">
+        <div className="relative aspect-video">
+          <Image src={prsmImg} alt="Nightclubs: PRSM gameplay" fill sizes="288px" className="object-cover opacity-90" />
+          <div className="absolute inset-0 bg-linear-to-t from-[#0b0916] via-transparent to-transparent" />
+        </div>
+        <div className="space-y-3 px-5 pb-5">
+          <div>
+            <h2 className="bg-linear-to-r from-cyan-300 via-purple-300 to-cyan-300 bg-clip-text text-xl font-black uppercase tracking-tight text-transparent">
+              Nightclubs: PRSM
+            </h2>
+            <p className="mt-1 text-sm leading-relaxed text-[#bdb7e6]">Serve the guests, play the music, and live the nights with the crowd.</p>
+          </div>
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-purple-500/60 bg-purple-950/40 px-2.5 py-1 font-mono text-[10px] uppercase tracking-widest text-purple-200">
+            <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-red-500" aria-hidden="true" />
+            Phase 2 · Alpha Testing
+          </span>
+
+          {/* Stats */}
+          <dl className="grid grid-cols-3 gap-2 border-t border-[#1b1830] pt-3 text-center">
+            <div>
+              <dt className="font-mono text-[10px] uppercase tracking-widest text-[#7d76b8]">Posts</dt>
+              <dd className="text-lg font-black text-slate-100">{posts.length}</dd>
+            </div>
+            <div>
+              <dt className="font-mono text-[10px] uppercase tracking-widest text-[#7d76b8]">Replies</dt>
+              <dd className="text-lg font-black text-slate-100">{replyCount}</dd>
+            </div>
+            <div>
+              <dt className="font-mono text-[10px] uppercase tracking-widest text-[#7d76b8]">Latest</dt>
+              <dd className="pt-1.5 font-mono text-[11px] font-bold text-slate-100">{lastUpdate ? formatDate(lastUpdate).replace(/, \d{4}$/, "") : "—"}</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+
+      {/* Trending tags (same filter as the chips inside the phone) */}
+      {trending.length > 0 && (
+        <div className="rounded-3xl border border-[#2a2450] bg-[#0b0916]/80 p-5 backdrop-blur">
+          <h3 className="mb-3 font-mono text-[11px] uppercase tracking-widest text-[#7d76b8]">Trending on NightSpace</h3>
+          <ul className="space-y-1">
+            {trending.map((tag) => {
+              const key = tag.toLowerCase();
+              const active = filter === key;
+              return (
+                <li key={key}>
+                  <button
+                    type="button"
+                    onClick={() => onFilter(active ? null : key)}
+                    aria-pressed={active}
+                    className={`flex w-full items-center justify-between rounded-xl border px-3 py-1.5 text-left font-mono text-xs uppercase tracking-wider transition-colors ${
+                      active ? tagClass(tag) : "border-transparent text-[#bdb7e6] hover:bg-white/5 hover:text-white"
+                    }`}
+                  >
+                    <span>#{tag}</span>
+                    <span className="opacity-60">{tagCounts.get(key)}</span>
+                  </button>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      )}
+
+      {/* Community links */}
+      <div className="grid grid-cols-2 gap-2">
+        <a
+          href={DISCORD_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="rounded-2xl border border-cyan-500/40 bg-cyan-950/40 px-3 py-2.5 text-center font-mono text-xs uppercase tracking-widest text-cyan-200 transition-colors hover:border-cyan-300 hover:text-white"
+        >
+          Discord ↗
+        </a>
+        <a
+          href={PATREON_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="rounded-2xl border border-fuchsia-500/40 bg-fuchsia-950/40 px-3 py-2.5 text-center font-mono text-xs uppercase tracking-widest text-fuchsia-200 transition-colors hover:border-fuchsia-300 hover:text-white"
+        >
+          Patreon ↗
+        </a>
+      </div>
+    </aside>
+  );
+}
+
 export default function NightSpaceFeed({ posts }: { posts: UpdatePost[] }) {
   const [filter, setFilter] = useState<string | null>(null);
 
@@ -251,17 +443,16 @@ export default function NightSpaceFeed({ posts }: { posts: UpdatePost[] }) {
   const visible = filter ? posts.filter((p) => p.tags.some((t) => t.toLowerCase() === filter)) : posts;
 
   return (
-    <div className="min-h-screen bg-[#05040a] pb-0 sm:py-10">
-      {/* Club lights behind the phone */}
-      <div className="pointer-events-none fixed inset-0 z-0" aria-hidden="true">
-        <div className="absolute -left-32 top-1/4 h-96 w-96 rounded-full bg-fuchsia-600/20 blur-[120px]" />
-        <div className="absolute -right-32 top-1/2 h-96 w-96 rounded-full bg-cyan-500/15 blur-[120px]" />
-      </div>
+    <div className="relative min-h-screen bg-[#05040a] pb-0 sm:py-10">
+      <ClubBackdrop />
 
-      <div className="relative z-10 mx-auto flex w-full flex-col sm:max-w-[420px]">
+      <div className="relative z-10 flex w-full items-start justify-center gap-10">
+        <InfoPanel posts={posts} tags={tags} filter={filter} onFilter={setFilter} />
+
+        <div className="flex w-full flex-col sm:max-w-[420px]">
         <Link
           href="/games/nightclubsPRSM"
-          className="mx-4 mb-4 hidden items-center gap-2 self-start font-mono text-xs uppercase tracking-widest text-slate-500 transition-colors hover:text-cyan-400 sm:flex"
+          className="mx-4 mb-4 hidden items-center gap-2 self-start font-mono text-xs uppercase tracking-widest text-slate-500 transition-colors hover:text-cyan-400 sm:flex xl:hidden"
         >
           ◄ Back to Nightclubs: PRSM
         </Link>
@@ -357,6 +548,10 @@ export default function NightSpaceFeed({ posts }: { posts: UpdatePost[] }) {
             <span className="font-mono text-[11px] text-[#9b95c9]">LIVE</span>
           </a>
         </div>
+        </div>
+
+        {/* Keeps the phone centered; the cast panel can go here later */}
+        <div className="hidden w-72 shrink-0 xl:block" aria-hidden="true" />
       </div>
     </div>
   );
