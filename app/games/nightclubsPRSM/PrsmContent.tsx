@@ -1,0 +1,232 @@
+"use client";
+
+import { motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
+// We go up two levels (../../) to find the image in the 'app' folder
+import nightclubImg from '../../PRSMPost.jpg';
+import type { UpdatePost } from "@/lib/prsm-updates";
+import { authors, fallbackAuthor } from "@/lib/prsm-authors";
+import { Avatar, formatDate, plainText } from "./updates/BackstageFeed";
+
+const UPDATES_URL = "/games/nightclubsPRSM/updates";
+
+export default function PrsmContent({ latestUpdate }: { latestUpdate: UpdatePost | null }) {
+  // Schema markup data object
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "VideoGame",
+    "name": "Nightclubs: PRSM",
+    "genre": ["Management Simulation", "Rhythm"],
+    "gamePlatform": "PC",
+    "operatingSystem": "Windows",
+    "applicationCategory": "Game",
+    "author": {
+      "@type": "Organization",
+      "name": "Owlhoot Games"
+    }
+  };
+
+  return (
+    <div className="min-h-screen bg-slate-950 text-slate-200 font-sans selection:bg-purple-500 selection:text-white overflow-x-hidden">
+      
+      {/* --- SEO SCHEMA MARKUP (JSON-LD) --- */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
+      {/* --- BACKGROUND FX --- */}
+      <div className="fixed inset-0 z-0 opacity-20 pointer-events-none"
+           style={{
+             backgroundImage: "linear-gradient(rgba(18, 18, 18, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06))",
+             backgroundSize: "100% 4px, 6px 100%"
+           }}
+      />
+      <div className="fixed top-0 left-0 right-0 h-1 bg-linear-to-r from-purple-500 via-cyan-500 to-purple-500 z-50 shadow-[0_0_20px_rgba(168,85,247,0.5)]"></div>
+
+      {/* --- HERO HEADER --- */}
+      <header className="relative pt-24 pb-12 px-6 container mx-auto text-center z-10">
+        
+        {/* INLINE NAVIGATION */}
+        <div className="flex justify-center mb-8">
+           <Link href="/" className="group flex items-center gap-2 bg-black/50 backdrop-blur-md border border-slate-800 px-4 py-2 text-sm font-bold uppercase tracking-widest text-slate-400 transition-all hover:border-cyan-500 hover:text-cyan-400">
+             <span className="transition-transform group-hover:-translate-x-1">◄</span>
+             <span>Return to Database</span>
+           </Link>
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <span className="inline-block mb-4 px-3 py-1 bg-purple-900/30 border border-purple-500 text-purple-300 text-xs font-mono uppercase tracking-widest shadow-[0_0_15px_rgba(168,85,247,0.3)]">
+            Project Status: In Development (Phase 2: Alpha Testing)
+          </span>
+          <div className="mb-6">
+            <Link
+              href={UPDATES_URL}
+              className="group inline-flex items-center gap-2 rounded-full border border-fuchsia-500/60 bg-fuchsia-950/40 px-4 py-1.5 font-mono text-xs uppercase tracking-widest text-fuchsia-200 shadow-[0_0_15px_rgba(232,121,249,0.25)] transition-all hover:border-cyan-400 hover:text-cyan-200"
+            >
+              <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-red-500" aria-hidden="true" />
+              Dev Updates: PRSM Backstage
+              <span className="transition-transform group-hover:translate-x-1" aria-hidden="true">►</span>
+            </Link>
+          </div>
+          <h1 className="text-5xl md:text-7xl font-black uppercase tracking-tighter text-transparent bg-clip-text bg-linear-to-r from-cyan-400 via-purple-400 to-cyan-400 drop-shadow-[0_0_10px_rgba(34,211,238,0.5)] mb-6">
+            Nightclubs: PRSM
+          </h1>
+          <p className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
+            A high-fidelity simulation of nightlife management. <br className="hidden md:block" />
+            Serve the guests, play the music, and live the nights with the crowd.<br className="hidden md:block" />
+            A spiritual successor to Nightclub City. Formerly known as Partyclub City.
+          </p>
+        </motion.div>
+      </header>
+
+      {/* --- MAIN SHOWCASE --- */}
+      <main className="container mx-auto px-6 pb-24 relative z-10">
+        
+        {/* HERO IMAGE */}
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.2, duration: 0.8 }}
+          className="relative w-full aspect-video md:aspect-21/9 rounded-none border-y-2 border-slate-800 overflow-hidden mb-16 group"
+        >
+          <Image 
+            src={nightclubImg} 
+            alt="Nightclubs: PRSM 2.5D nightclub management simulation gameplay showing isometric view" 
+            fill 
+            priority
+            className="object-cover opacity-80 transition-all duration-700 group-hover:scale-105 group-hover:opacity-100"
+          />
+          {/* Overlay Grid */}
+          <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay"></div>
+        </motion.div>
+
+        {/* --- GRID LAYOUT --- */}
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
+          
+          {/* LEFT COLUMN: SPECS (4 Columns) */}
+          <div className="md:col-span-4 space-y-8">
+            {/* Tech Stack Box */}
+            <div className="bg-slate-900/50 border border-slate-800 p-6 backdrop-blur-xs relative overflow-hidden">
+               <div className="absolute top-0 right-0 w-16 h-16 bg-linear-to-bl from-cyan-500/10 to-transparent"></div>
+               <h3 className="text-cyan-400 font-bold uppercase tracking-widest mb-4 border-b border-slate-800 pb-2">Technical Specs</h3>
+               <ul className="space-y-3 font-mono text-sm text-slate-300">
+                 <li className="flex justify-between">
+                   <span className="text-slate-500">Engine</span>
+                   <span>Unity</span>
+                 </li>
+                 <li className="flex justify-between">
+                   <span className="text-slate-500">Language</span>
+                   <span>C# (CSharp)</span>
+                 </li>
+                 <li className="flex justify-between">
+                   <span className="text-slate-500">Perspective</span>
+                   <span>Top-Down / Iso</span>
+                 </li>
+                 <li className="flex justify-between">
+                   <span className="text-slate-500">Audio</span>
+                   <span>FMOD Middleware</span>
+                 </li>
+               </ul>
+            </div>
+
+            {/* My Role Box */}
+            <div className="bg-slate-900/50 border border-slate-800 p-6 backdrop-blur-xs">
+               <h3 className="text-purple-400 font-bold uppercase tracking-widest mb-4 border-b border-slate-800 pb-2">My Contributions</h3>
+               <ul className="list-disc list-inside space-y-2 text-slate-300 text-sm leading-relaxed">
+                 <li>Designed the <strong className="text-white">Crowd AI</strong> system using NavMesh agents and state machines.</li>
+                 <li>Programmed the <strong className="text-white">Rhythmic Music Sync</strong> gameplay system.</li>
+                 <li>Implemented UI/UX for the management dashboard.</li>
+                 <li>Optimized lighting rendering for lower-end hardware.</li>
+                 <li>Built a tool for creating music charts quickly.</li>
+               </ul>
+            </div>
+          </div>
+
+          {/* RIGHT COLUMN: DESCRIPTION (8 Columns) */}
+          <div className="md:col-span-8 space-y-12">
+            
+            {/* Narrative Section */}
+            <div>
+              <h2 className="text-3xl font-black text-white uppercase mb-6 flex items-center gap-3">
+                <span className="w-8 h-1 bg-cyan-500"></span>
+                Re-Live the Nights Again!
+              </h2>
+              <p className="text-slate-400 text-lg leading-relaxed mb-6">
+                Hi! This is Mike A, your PRSM CEO speaking! Thank you for responding to the ad of Nightclub Operations Manager. I loved your interview, and wish to extend
+                the job opportunity to you. <strong>PRSM</strong> is a brand to help bring back the nightlife lifestyle with music, drinks and vibes. Our nightclubs will not be your standard nightclubs. They will be a statement. PRSM is created to bring back the nights and music, but with more... soul.
+              </p>
+              <p className="text-slate-400 text-lg leading-relaxed mb-6"> 
+                Here are some of your regular tasks as the new manager: create parties, buy and install decor, work the turntable, serve our guests drinks, make our
+                VIPs feel welcomed and kick out the riff-raff! It is your job to bring back the soul of the nights we lost many years ago! 
+                The competition, The New Millennia, has been established in the city, but as a previous customer, it is missing that vibe we thrived for. This is where we come in!
+                Don&apos;t you worry about Sven, let me worry about him.
+              </p>
+              <p className="text-slate-400 text-lg leading-relaxed mb-6">
+                You just worry about the customer and manage the <span className="text-cyan-300">bar, the security, the DJ, the decor, the parties, and the dance floor</span>.
+                I&apos;ll get in contact with the <span className="text-purple-300">Master Bartender</span> to help start your new drinks and <span className="text-pink-300">the local music enthusiast</span> to help you with the music setup.
+                As the architect, you must adapt to procedural events. A fight breaks out? Kick out the aggressor. 
+                VIPs arriving? Switch the lighting rig to &quot;Gold Mode.&quot; Every choice impacts the club&apos;s reputation meter in real-time.
+              </p>
+              <p className="text-slate-400 text-lg leading-relaxed">
+                Make us great, and feel the music coursing through the dancefloor again.
+              </p>
+            </div>
+
+            {/* Features Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+               <div className="p-6 border border-slate-800 hover:border-cyan-500/50 transition-colors bg-linear-to-br from-slate-900 to-transparent">
+                 <h4 className="text-xl font-bold text-white mb-2">DJ Rhythm Gameplay</h4>
+                 <p className="text-slate-500 text-sm">Don&apos;t just idly play the music. PLAY the music for more reward boosts in the club! (Will be compatible with the DJ Hero Controller!!!)</p>
+               </div>
+               <div className="p-6 border border-slate-800 hover:border-purple-500/50 transition-colors bg-linear-to-br from-slate-900 to-transparent">
+                 <h4 className="text-xl font-bold text-white mb-2">Crowd Fluidity</h4>
+                 <p className="text-slate-500 text-sm">NPCs feature individual desires (Thirst, Dance, Social) that drive the economy. Keep them happy, and kick out the riff-raff!</p>
+               </div>
+               <div className="p-6 border border-slate-800 hover:border-pink-500/50 transition-colors bg-linear-to-br from-slate-900 to-transparent">
+                 <h4 className="text-xl font-bold text-white mb-2">Bartending the Crowd</h4>
+                 <p className="text-slate-500 text-sm">Learn new exclusive drinks, do tricks, get tips and more popularity! Or hire bartenders, we got more stuff to do!</p>
+               </div>
+               <div className="p-6 border border-slate-800 hover:border-pink-500/50 transition-colors bg-linear-to-br from-slate-900 to-transparent">
+                 <h4 className="text-xl font-bold text-white mb-2">Episodic Stories</h4>
+                 <p className="text-slate-500 text-sm">The nightclub life is not a soap opera without its stories. We are here to establish ourselves and tell Sven and The New Millennia Nightclub to pack it!</p>
+               </div>
+            </div>
+
+            {/* Latest from PRSM Backstage */}
+            {latestUpdate && (
+              <Link
+                href={UPDATES_URL}
+                className="group block border border-fuchsia-500/30 bg-[#0b0916] p-6 transition-colors hover:border-fuchsia-400/70"
+              >
+                <div className="mb-4 flex items-center justify-between">
+                  <h3 className="font-bold uppercase tracking-widest text-fuchsia-300">Latest from the booth</h3>
+                  <span className="font-mono text-xs uppercase tracking-widest text-slate-500 transition-colors group-hover:text-cyan-400">
+                    All updates ►
+                  </span>
+                </div>
+                <div className="flex gap-3">
+                  <Avatar author={authors[latestUpdate.author] ?? fallbackAuthor} />
+                  <div className="min-w-0">
+                    <p className="mb-1 font-mono text-xs text-slate-500">
+                      {(authors[latestUpdate.author] ?? fallbackAuthor).name} · {formatDate(latestUpdate.date)}
+                    </p>
+                    <p className="mb-1 font-black uppercase tracking-wide text-white">{latestUpdate.title}</p>
+                    <p className="line-clamp-2 text-sm text-slate-400">{plainText(latestUpdate.paragraphs[0] ?? "")}</p>
+                  </div>
+                </div>
+              </Link>
+            )}
+
+          </div>
+        </div>
+      </main>
+
+    </div>
+  );
+}

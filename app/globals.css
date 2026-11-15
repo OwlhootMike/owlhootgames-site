@@ -9,6 +9,19 @@
   /* Background screenshot strip on the home page. */
   --animate-marquee: marquee 30s linear infinite;
 
+  /* Equalizer bars on PRSM Backstage. */
+  --animate-eq: eq 1.1s ease-in-out infinite;
+
+  @keyframes eq {
+    0%,
+    100% {
+      transform: scaleY(0.3);
+    }
+    50% {
+      transform: scaleY(1);
+    }
+  }
+
   @keyframes marquee {
     0% {
       transform: translateX(0%);

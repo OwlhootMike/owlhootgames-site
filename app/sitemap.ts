@@ -7,6 +7,7 @@ const pages: { path: string; priority: number; changeFrequency: 'weekly' | 'mont
   { path: '', priority: 1, changeFrequency: 'monthly' },
   { path: '/about', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/games/nightclubsPRSM', priority: 0.9, changeFrequency: 'weekly' },
+  { path: '/games/nightclubsPRSM/updates', priority: 0.8, changeFrequency: 'weekly' },
   { path: '/games/nova-galactica', priority: 0.7, changeFrequency: 'monthly' },
   { path: '/games/detective-jane', priority: 0.7, changeFrequency: 'monthly' },
 ];
