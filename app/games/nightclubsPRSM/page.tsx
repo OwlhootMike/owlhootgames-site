@@ -18,7 +18,7 @@ export default function NightclubsPage() {
     "applicationCategory": "Game",
     "author": {
       "@type": "Organization",
-      "name": "OwlHoot Games"
+      "name": "Owlhoot Games"
     }
   };
 

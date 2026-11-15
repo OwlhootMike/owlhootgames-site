@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 // 1. Import the Navbar
-import Navbar from "./components/Navbar"; 
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -12,18 +13,18 @@ export const metadata: Metadata = {
 
   // 2. The Title (Browser Tab)
   title: {
-    default: "OwlHoot Games | Independent Game Studio",
+    default: "Owlhoot Games | Independent Game Studio",
     // THE FIX: Added %s so Next.js knows where to put the page name
-    template: "%s | OwlHoot Games" 
+    template: "%s | Owlhoot Games" 
   },
   description: "Crafting high-fidelity simulations, active rhythm systems, and local-first experiences. You buy it, you own it. Forever.",
   
   // 3. Open Graph (Facebook, Discord, LinkedIn, iMessage)
   openGraph: {
-    title: "OwlHoot Games Studio",
+    title: "Owlhoot Games Studio",
     description: "Independent Game Development & Tools Lab. Creators of Nightclubs: PRSM.",
     url: 'https://owlhootgames.com',
-    siteName: 'OwlHoot Games',
+    siteName: 'Owlhoot Games',
     locale: 'en_US',
     type: 'website',
   },
@@ -31,7 +32,7 @@ export const metadata: Metadata = {
   // 4. Twitter Card (Twitter/X)
   twitter: {
     card: 'summary_large_image',
-    title: "OwlHoot Games Studio",
+    title: "Owlhoot Games Studio",
     description: "Independent Game Development & Tools Lab. Creators of Nightclubs: PRSM.",
     creator: '@OwlhootGames', 
   },
@@ -44,13 +45,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} bg-slate-950`}>
         {/* 2. Place Navbar here so it sits at the top of every page */}
         <Navbar />
         {/* This "children" is where your page.tsx content loads */}
         <main className="pt-16"> 
           {children}
         </main>
+        {/* Shared footer (hidden automatically on the KTS test page) */}
+        <Footer />
       </body>
     </html>
   );

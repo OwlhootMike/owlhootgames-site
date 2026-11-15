@@ -29,10 +29,10 @@ export default function AboutPage() {
       <section className="max-w-5xl mx-auto px-6 pt-32 pb-20">
         <motion.div initial="hidden" animate="visible" variants={fadeInUp} className="text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight">
-            The <span className="text-purple-500">OwlHoot</span> Manifesto
+            The <span className="text-purple-500">Owlhoot</span> Manifesto
           </h1>
           <p className="text-xl leading-relaxed text-slate-300 max-w-3xl mx-auto">
-            OwlHoot Games LLC is an independent, preservation-first video game development studio. 
+            Owlhoot Games LLC is an independent, preservation-first video game development studio. 
             We operate as a structural antidote to the modern industry’s reliance on predatory monetization, 
             live-service fragility, and sudden software erasure.
           </p>
@@ -52,7 +52,7 @@ export default function AboutPage() {
                 But by March 2014, the harsh realities of live-service hosting set in. Due to industry shifts and circumstances likely far beyond the original developers' control, the servers were permanently deactivated. We hold no ill will toward the original studio—building and sustaining online games is incredibly difficult—but the fallout for the community was devastating. Millions of players lost their digital progress, their investments, and the vibrant venues they had built overnight. A beloved piece of interactive art was simply erased.
               </p>
               <p className="text-purple-300 font-medium">
-                OwlHoot Games was created to help establish a new norm to prevent this from happening again.
+                Owlhoot Games was created to help establish a new norm to prevent this from happening again.
               </p>
               <p>
                 By pioneering local-first architectures and an unwavering commitment to preservation, we are building a framework where history isn't deleted when a server budget runs out. We believe that when you buy a game, you should own it permanently. Our games are built to survive without us.
@@ -191,7 +191,7 @@ export default function AboutPage() {
               { year: "2019", title: "The Overwork Phase", desc: "Managed five simultaneous jobs across, severely restricting active dev sprint windows to midnight hours." },
               { year: "2020", title: "The Displacement", desc: "Contracted COVID-19 on Day 1 of regional lockdown. The resulting financial crisis and housing instability halted all pipelines." },
               { year: "2023", title: "Texas & Data Loss", desc: "Relocated to Texas. A catastrophic hard drive failure during the move erased all historical source code." },
-              { year: "2026", title: "Recovery & Shield", desc: "Rebooted the codebase entirely. Formed OwlHoot Games LLC to shield the IP, modernized the stack with Unity, and achieved stabilization." }
+              { year: "2026", title: "Recovery & Shield", desc: "Rebooted the codebase entirely. Formed Owlhoot Games LLC to shield the IP, modernized the stack with Unity, and achieved stabilization." }
             ].map((item, index) => (
               <motion.div key={index} variants={fadeInUp} className="bg-slate-950 p-6 rounded-xl border border-slate-800 hover:border-purple-500/50 transition-colors relative overflow-hidden">
                 <div className="text-purple-500 font-bold text-xl mb-2">{item.year}</div>
