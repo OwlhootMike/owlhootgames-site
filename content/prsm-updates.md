@@ -21,6 +21,12 @@ Voices:
   brtny    BRTNY (@BRTNYHere): mirrors Sven, larger than life, LOVES attention.
   kts      KTS (@BartendingTricks): very laid back and chill, loves ducks (uses duck emojis), all about bars, drinks and good vibes.
 
+Relationships (lore):
+  Clara and Daisy are twin sisters with a rivalry. They talk to each other as sisters ("sis").
+  Mike is secretly their father: he never mentions or hints at it, and they never call him dad.
+  Mike and KTS work together at PRSM. Sven and BRTNY work together at The New Millennia,
+  so they back each other up against PRSM.
+
 Who reacts to what (not exclusive; mix it up):
   Luxury levels, club looks, customization -> clara (shows off, caring but a bit self-centered);
       sven talks down the image and quality.
@@ -100,6 +106,9 @@ The panel stays hidden during normal play. Close it with its close button, the E
 > clara | 3h
 > Darling, a proper hostess always knows her guests' names. Now everyone gets to be a proper hostess. Almost as good as me.
 
+> daisy | 4h
+> @ClaraBelleSwings "almost as good as you." Sis, you forgot half the guest list at our own birthday party.
+
 > kts | 4h
 > tip rate right there on the panel? that's the bartender's cheat sheet 🦆
 
@@ -112,10 +121,10 @@ Babes. BABES. The new Guest Info panel has three buttons: **Gift Drink**, **Mic 
 Gift me a drink and hand me the mic and watch the whole room turn around. Just saying. xoxo
 
 > sven | 1h
-> A Mic Boost for BRTNY. PRSM will need earplugs, not upgrades.
+> BRTNY on a PRSM mic? Waste of talent. She already owns the stage at The New Millennia.
 
 > brtny | 1h
-> @NewMillenniaClub jealousy looks so good on you, Sven. xoxo
+> @NewMillenniaClub aww, boss. A girl can window-shop. But yes, my stage, my spotlight. xoxo
 
 > kts | 2h
 > gift drink button?? say less. I'll have something ready when it switches on 🦆
@@ -136,6 +145,12 @@ Regulars are wonderfully loyal; it takes several miserable nights before they dr
 
 > clara | 5h
 > @NewMillenniaClub Sven, darling, loyalty is earned with comfort and charm. You should try them sometime.
+
+> daisy | 6h
+> Regulars stay for the music, sis. The velvet is just where they sit between songs.
+
+> clara | 7h
+> @DZ and yet they always ask for me by name, darling sister.
 
 ## 2026-11-14 | Names. Wow.
 Author: sven
@@ -163,7 +178,10 @@ Each guest has their own tip rate. It goes up when they leave happy and drops wh
 > The finest rooms earn the finest tips, darling. Generous guests reward a beautiful club, and I do so love being rewarded.
 
 > mike | 3h
-> TIP JAR FULL OR BUST!
+> TIP JAR FULL OR BUST! @BartendingTricks keep those pours coming!
+
+> kts | 4h
+> @MikePRSM always, boss 🦆
 
 ## 2026-11-14 | Reading the room
 Author: daisy
@@ -174,7 +192,7 @@ Any DJ worth their decks knows the real set happens in the crowd's head. Now you
 They react to everything: arriving, getting welcomed back, becoming a Regular, waiting too long in line, buying something, feeling amazing or feeling awful, heading home. Check them in the Guest Info panel, and catch the odd bubble floating above their heads. Read the room, then drop the beat.
 
 > clara | 2h
-> I do hope "waiting too long in line" never shows up in my guests' thoughts. Unthinkable.
+> Lovely post, sister dear. Though I do hope "waiting too long in line" never shows up in my guests' thoughts. Unthinkable.
 
 > sven | 3h
 > At The New Millennia our guests only have one thought: "why didn't I come here first?"
@@ -194,7 +212,7 @@ Kicked out and feeling forgotten? Uff. The New Millennia doors are open. We don'
 > only kick 'em if you gotta. most folks just need some water and a chill corner 🦆
 
 > mike | 2h
-> @NewMillenniaClub PRSM kicks out the riff-raff. Funny where they end up, huh?
+> @NewMillenniaClub PRSM kicks out the riff-raff. Funny where they end up, huh? @BartendingTricks has the water ready for everyone else.
 
 ## 2026-11-14 | Open tab, babe? Never heard of a budget
 Author: brtny
@@ -220,6 +238,12 @@ Pathfinding is smarter too, so nobody bumps into walls or furniture on the way t
 
 > mike | 1h
 > Clean transitions on the floor AND on the decks. That's the PRSM standard!
+
+> clara | 2h
+> "Clean transitions," she says. Darling, you still trip over your own cables. Love you, sis.
+
+> daisy | 3h
+> @ClaraBelleSwings at least my cables don't come with a velvet rope.
 
 ## 2026-11-14 | Groundwork for placeable furniture
 Author: owlhoot
@@ -276,7 +300,7 @@ Guests now arrive with **happiness**, darlings, and the more luxurious your club
 Waiting in line slowly wears it down, while a plush booth and a lovely drink lift it right back up. Keep them comfortable and they'll swing all night.
 
 > daisy | 1h
-> Comfort gets them in the mood, Clara, but the music keeps them there. Booths and drinks lift happiness for now. Wait until the decks get their turn.
+> Comfort gets them in the mood, sis, but the music keeps them there. Booths and drinks lift happiness for now. Wait until the decks get their turn.
 
 > sven | 2h
 > A luxury level? At PRSM? I'll believe it when I see one chandelier.
@@ -307,10 +331,10 @@ Happy guests now raise the club's POPULARITY when they leave! That's word of mou
 Run a great night and the next one brings in even MORE people. The line around the block? That's the dream, and now you can build it. LET'S GOOO!
 
 > brtny | 1h
-> Everybody's talking about PRSM because I mentioned it once. You're welcome.
+> Everybody's talking about PRSM? Cute. They talk about The New Millennia because I'm there.
 
 > sven | 2h
-> Popularity is easy when the bar is this low.
+> @BRTNYHere exactly. Popularity is easy when the bar is this low.
 
 > kts | 3h
 > the bar's not low, it's right where the drinks are 🦆
