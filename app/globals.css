@@ -9,7 +9,7 @@
   /* Background screenshot strip on the home page. */
   --animate-marquee: marquee 30s linear infinite;
 
-  /* Equalizer bars on PRSM Backstage. */
+  /* Equalizer bars on NightSpace. */
   --animate-eq: eq 1.1s ease-in-out infinite;
 
   @keyframes eq {

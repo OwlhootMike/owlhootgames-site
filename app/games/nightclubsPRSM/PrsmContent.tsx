@@ -7,7 +7,7 @@ import Link from "next/link";
 import nightclubImg from '../../PRSMPost.jpg';
 import type { UpdatePost } from "@/lib/prsm-updates";
 import { authors, fallbackAuthor } from "@/lib/prsm-authors";
-import { Avatar, formatDate, plainText } from "./updates/BackstageFeed";
+import { Avatar, formatDate, plainText } from "./updates/NightSpaceFeed";
 
 const UPDATES_URL = "/games/nightclubsPRSM/updates";
 
@@ -70,7 +70,7 @@ export default function PrsmContent({ latestUpdate }: { latestUpdate: UpdatePost
               className="group inline-flex items-center gap-2 rounded-full border border-fuchsia-500/60 bg-fuchsia-950/40 px-4 py-1.5 font-mono text-xs uppercase tracking-widest text-fuchsia-200 shadow-[0_0_15px_rgba(232,121,249,0.25)] transition-all hover:border-cyan-400 hover:text-cyan-200"
             >
               <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-red-500" aria-hidden="true" />
-              Dev Updates: PRSM Backstage
+              Dev Updates on NightSpace
               <span className="transition-transform group-hover:translate-x-1" aria-hidden="true">►</span>
             </Link>
           </div>
@@ -198,14 +198,14 @@ export default function PrsmContent({ latestUpdate }: { latestUpdate: UpdatePost
                </div>
             </div>
 
-            {/* Latest from PRSM Backstage */}
+            {/* Latest from NightSpace */}
             {latestUpdate && (
               <Link
                 href={UPDATES_URL}
                 className="group block border border-fuchsia-500/30 bg-[#0b0916] p-6 transition-colors hover:border-fuchsia-400/70"
               >
                 <div className="mb-4 flex items-center justify-between">
-                  <h3 className="font-bold uppercase tracking-widest text-fuchsia-300">Latest from the booth</h3>
+                  <h3 className="font-bold uppercase tracking-widest text-fuchsia-300">Latest on NightSpace</h3>
                   <span className="font-mono text-xs uppercase tracking-widest text-slate-500 transition-colors group-hover:text-cyan-400">
                     All updates ►
                   </span>

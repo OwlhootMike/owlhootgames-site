@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import { getPrsmUpdates } from "@/lib/prsm-updates";
-import BackstageFeed from "./BackstageFeed";
+import NightSpaceFeed from "./NightSpaceFeed";
 
 export const metadata: Metadata = {
-  title: { absolute: "PRSM Backstage | Owlhoot Games" },
-  description: "Dev updates for Nightclubs: PRSM, straight from the booth at Owlhoot Games.",
+  title: { absolute: "NightSpace · PRSM Updates | Owlhoot Games" },
+  description: "NightSpace, a place for the night: dev updates and nightlife chatter from the world of Nightclubs: PRSM.",
 };
 
-export default function PrsmBackstagePage() {
-  return <BackstageFeed posts={getPrsmUpdates()} />;
+export default function NightSpacePage() {
+  return <NightSpaceFeed posts={getPrsmUpdates()} />;
 }

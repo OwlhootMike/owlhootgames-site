@@ -65,7 +65,7 @@ export function Avatar({ author, size = 44 }: { author: Author; size?: number })
       {/* Vinyl grooves */}
       <div className="absolute inset-[3px] rounded-full border border-white/5" aria-hidden="true" />
       {author.avatar ? (
-        <Image src={author.avatar} alt="" width={size - 14} height={size - 14} className="rounded-full" />
+        <Image src={author.avatar} alt="" width={size - 8} height={size - 8} className="rounded-full object-cover" />
       ) : (
         <span>{author.initials}</span>
       )}
@@ -94,7 +94,15 @@ function Post({ post }: { post: UpdatePost }) {
       <Avatar author={author} />
       <div className="min-w-0 flex-1">
         <header className="mb-1.5 flex flex-wrap items-baseline gap-x-2">
-          <span className="font-bold text-slate-100">{author.name}</span>
+          <span className="flex items-center gap-1 font-bold text-slate-100">
+            {author.name}
+            {author.verified && (
+              <svg className="h-4 w-4 text-cyan-400" viewBox="0 0 24 24" fill="currentColor" aria-label="Official account">
+                <path d="M12 2l2.4 2.1 3.2-.4.9 3.1 2.9 1.5-1.2 3 1.2 3-2.9 1.5-.9 3.1-3.2-.4L12 22l-2.4-2.1-3.2.4-.9-3.1-2.9-1.5 1.2-3-1.2-3 2.9-1.5.9-3.1 3.2.4L12 2z" />
+                <path d="M10.5 15.2l-3-3 1.4-1.4 1.6 1.6 4.1-4.1 1.4 1.4-5.5 5.5z" fill="#07060d" />
+              </svg>
+            )}
+          </span>
           <span className="font-mono text-xs text-[#7d76b8]">
             {author.handle} · <time dateTime={post.date}>{formatDate(post.date)}</time>
           </span>
@@ -140,7 +148,7 @@ function WaveDivider() {
   );
 }
 
-export default function BackstageFeed({ posts }: { posts: UpdatePost[] }) {
+export default function NightSpaceFeed({ posts }: { posts: UpdatePost[] }) {
   const [filter, setFilter] = useState<string | null>(null);
 
   const tags = useMemo(() => {
@@ -184,9 +192,9 @@ export default function BackstageFeed({ posts }: { posts: UpdatePost[] }) {
             <div className="flex items-center justify-between">
               <div>
                 <h1 className="bg-linear-to-r from-fuchsia-300 via-purple-300 to-cyan-300 bg-clip-text text-2xl font-black uppercase tracking-wider text-transparent">
-                  PRSM Backstage
+                  NightSpace
                 </h1>
-                <p className="font-mono text-[11px] uppercase tracking-widest text-[#7d76b8]">Dev updates from the booth</p>
+                <p className="font-mono text-[11px] uppercase tracking-widest text-[#7d76b8]">A place for the night · PRSM updates</p>
               </div>
               <Equalizer />
             </div>

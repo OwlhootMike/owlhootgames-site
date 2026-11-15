@@ -1,9 +1,9 @@
-# PRSM Backstage posts
+# NightSpace posts (Nightclubs: PRSM updates)
 
 How to add a post (newest at the top, below this guide):
 
   ## YYYY-MM-DD | Post title
-  Author: owlhoot            (owlhoot or mike-a; senders live in lib/prsm-authors.ts)
+  Author: owlhoot            (owlhoot, mike, daisy, clara, sven, brtny; profiles live in lib/prsm-authors.ts)
   Tags: Studio, Audio        (comma separated: Studio, Gameplay, Audio, Music, Art, Tech, Fixes)
   Image: /updates/file.png   (optional; put the file in public/updates/)
   Image-Alt: What the image shows   (optional, recommended with Image)
@@ -12,21 +12,31 @@ How to add a post (newest at the top, below this guide):
   Write the post in plain language for players. Leave a blank line between
   paragraphs. **Bold text** and [links](https://example.com) are supported.
 
+Voices:
+  owlhoot  Owlhoot Games (@owlhootgames): official studio account. Professional, clear.
+  mike     Mike (@MikePRSM): runs PRSM. Hyped, all caps moments, loves his club.
+  daisy    Daisy (@DZ): top DJ in the scene. Electronic and synthwave, cool and confident.
+  clara    Clara (@ClaraBelleSwings): electroswing queen. Luxurious, warm, calls everyone "darling".
+  sven     Sven (@NewMillenniaClub): Norwegian owner of The New Millennia. Edgy, trash talks PRSM, invites players to his club.
+  brtny    BRTNY (@BRTNYHere): mirrors Sven, larger than life, LOVES attention.
+
+Every post must still explain the real change clearly, even in character.
+
 Everything above the first "## " line is ignored by the site.
 
 ## 2026-11-15 | First-timers are first-timers again
-Author: owlhoot
+Author: mike
 Tags: Fixes
 
-Small bug, big vibe killer: brand-new guests were getting tagged as **Returning visitors** the second they stepped inside. Awkward!
+OKAY so we caught a sneaky one. Brand-new guests were getting labeled **Returning visitors** the SECOND they walked through our doors. Love the enthusiasm, but no!
 
-That's fixed. New faces now stay **New visitors** for their whole first night, and the club only remembers them for next time if they leave reasonably happy. You have to earn that "welcome back."
+FIXED! New faces now stay **New visitors** for their entire first night. And they only get remembered as returning if they leave reasonably happy. You want that "welcome back"? You EARN it. Let's GO!
 
-## 2026-11-15 | A little spring cleaning
+## 2026-11-15 | Housekeeping
 Author: owlhoot
 Tags: Tech
 
-We swept out four old scripts left over from our earliest prototypes. Nothing changes on the dancefloor. It just keeps the project tidy so we can build faster.
+We removed four unused scripts left over from early prototypes. There are no gameplay changes; this keeps the project lean and easier to build on.
 
 ## 2026-11-15 | Phase 2 is live
 Author: owlhoot
@@ -34,130 +44,140 @@ Tags: Studio
 
 Owlhoot Games is officially an LLC, and Nightclubs: PRSM has entered **Phase 2: Alpha Testing**.
 
-Work-in-progress is being shared on our [Discord](https://discord.gg/GfQScUK9Dm) and Facebook, with Patreon coming soon. From now on, every new update for PRSM lands right here, straight from the booth.
+Work-in-progress is being shared on our [Discord](https://discord.gg/GfQScUK9Dm) and Facebook, with Patreon coming soon. All PRSM development updates will now be posted here on NightSpace.
 
-## 2026-11-14 | Meet your guests: the Guest Info panel
+## 2026-11-14 | New: the Guest Info panel
 Author: owlhoot
 Tags: Gameplay
 
-Ever wondered who's actually on your dancefloor? Click any guest to open their **Guest Info panel**: their name, whether they're a New visitor, Returning visitor or Regular, how much they've spent, their tip rate, their happiness and what's been on their mind.
+Click any guest to open their **Guest Info panel**. It shows their name, status (New visitor, Returning visitor or Regular), how much they've spent, their tip rate, their happiness and their recent thoughts.
 
-It stays out of the way during normal play. Close it with the close button, Escape, or a click anywhere else, and click another guest to switch to them.
+The panel stays hidden during normal play. Close it with its close button, the Escape key, or a click anywhere else, and click another guest to switch to them.
 
-## 2026-11-14 | Sneak peek: Gift Drink, Mic Boost and Kick
-Author: owlhoot
+## 2026-11-14 | Mic Boost?? Say less
+Author: brtny
 Tags: Gameplay
 
-Keen eyes will spot three new buttons on the Guest Info panel: **Gift Drink**, **Mic Boost** and **Kick**. They're on the panel now but not switched on yet. Consider this a teaser for how you'll be able to treat (or not treat) your crowd.
+Babes. BABES. The new Guest Info panel has three buttons: **Gift Drink**, **Mic Boost** and **Kick**. They're on the panel but not switched on yet, which is honestly so rude because I was BORN for a Mic Boost.
 
-## 2026-11-14 | Your crowd remembers you: Regulars are here
-Author: owlhoot
+Gift me a drink and hand me the mic and watch the whole room turn around. Just saying. xoxo
+
+## 2026-11-14 | Regulars, darlings
+Author: clara
 Tags: Gameplay
 
-Run a great night and guests will want to come back. When a returning guest makes it inside again, they become a **Regular**, and you can have up to 20 at a time.
+Darlings, a good evening is never forgotten. Guests who have a lovely night may now return, and a returning guest who makes it inside again becomes a **Regular**. A club may keep up to 20 of them at once.
 
-Regulars are loyal. It takes several miserable nights before they give up on you. Visitors who leave miserable, though, are forgotten. The club keeps up to 50 visitors in its memory, so every night counts.
+Regulars are wonderfully loyal; it takes several miserable nights before they drift away. Those who leave miserable, however, are simply forgotten. The club remembers up to 50 visitors, so treat each one like champagne.
 
-## 2026-11-14 | Every guest has a name now
-Author: owlhoot
+## 2026-11-14 | Names. Wow.
+Author: sven
 Tags: Gameplay
 
-No more anonymous partygoers. Every guest now walks in with a first and last name, and returning guests keep theirs, so you'll start recognizing your favorite faces night after night.
+PRSM gave every guest a first and last name now, and returning guests keep theirs. Very impressive. Truly groundbreaking.
 
-## 2026-11-14 | Tips are in the jar
-Author: owlhoot
+At The New Millennia, everybody already knows our name. Come by sometime. We have better music and nobody has to introduce themselves twice.
+
+## 2026-11-14 | TIPS ARE LIVE
+Author: mike
 Tags: Gameplay
 
-Every purchase can now earn you a tip. Each guest has their own tip rate: it goes up when they leave happy and drops when they leave unhappy.
+Every purchase can now earn a TIP! Each guest has their own tip rate. It goes UP when they leave happy and DOWN when they leave unhappy.
 
-Regulars tip more, and happier guests tip more. Treat people right and your tip jar shows it.
+Regulars tip more. Happier guests tip more. You see where I'm going with this? Make people happy and watch that tip jar FILL UP!
 
-## 2026-11-14 | What's on your guests' minds?
-Author: owlhoot
+## 2026-11-14 | Reading the room
+Author: daisy
 Tags: Gameplay
 
-Guests now have **thoughts**! They react to what happens to them: arriving, getting welcomed back, becoming a Regular, waiting too long in line, buying something, feeling great or feeling awful, and heading home.
+Any DJ worth their decks knows the real set happens in the crowd's head. Now you get to see it too: guests have **thoughts**.
 
-You'll find their thoughts in the Guest Info panel, and every so often one pops up in a bubble above their head. Listen to your crowd.
+They react to everything: arriving, getting welcomed back, becoming a Regular, waiting too long in line, buying something, feeling amazing or feeling awful, heading home. Check them in the Guest Info panel, and catch the odd bubble floating above their heads. Read the room, then drop the beat.
 
-## 2026-11-14 | Kicked out? They'll remember that
-Author: owlhoot
+## 2026-11-14 | Got kicked out of PRSM?
+Author: sven
 Tags: Gameplay
 
-Showing someone the door now comes with a cost: a kicked-out guest loses a big chunk of happiness on the way out. That can decide whether the club remembers them at all, so think twice before you call security.
+Fun fact: when PRSM kicks a guest out now, that guest loses a big chunk of happiness on the way out, and it can decide whether the club even remembers them.
 
-## 2026-11-14 | Open tabs for everyone
-Author: owlhoot
+Kicked out and feeling forgotten? Uff. The New Millennia doors are open. We don't do drama, we do style. Ha det.
+
+## 2026-11-14 | Open tab, babe? Never heard of a budget
+Author: brtny
 Tags: Gameplay
 
-We've gone arcade style: guests no longer carry a limited wallet. They can always afford whatever the club sells, so your focus stays on keeping them happy and the drinks flowing.
+Guests no longer carry a limited wallet. Arcade style, babe: they can always afford whatever the club sells.
 
-## 2026-11-14 | Smoother moves on the club floor
-Author: owlhoot
+Which means the only thing between a guest and the bar is how good the vibes are. And the vibes are always better when I'm in the room. Obviously.
+
+## 2026-11-14 | Smooth moves only
+Author: daisy
 Tags: Gameplay
 
-Guests and you now move tile to tile across the club floor, stepping cleanly from the center of one tile to the next in straight lines. Pathfinding is smarter too, so everyone finds their way around walls and furniture without the awkward shuffling.
+Movement on the floor just got a remix. Guests and the player now move tile to tile, stepping cleanly from the center of one tile to the next in straight lines.
 
-## 2026-11-14 | Laying the floor plan for furniture
+Pathfinding is smarter too, so nobody bumps into walls or furniture on the way to the dancefloor. Clean transitions. That's how I like my mixes.
+
+## 2026-11-14 | Groundwork for placeable furniture
 Author: owlhoot
 Tags: Gameplay, Tech
 
-We've laid the groundwork for placeable furniture. Pieces like the bar and the DJ booth can now mark their tiles as open, staff-only (behind the bar or the decks) or blocked.
+We've started the foundation for placeable furniture with tile layouts. Objects such as the bar and the DJ booth can mark their tiles as open, staff-only (behind the bar or the decks) or blocked.
 
-Guests politely walk around staff-only areas, while you can head right through. This sets the stage for designing your own club layout.
+Guests walk around staff-only areas, while the player can walk through them. This prepares the way for designing your own club layout.
 
-## 2026-11-14 | No more moonwalking at the door
-Author: owlhoot
+## 2026-11-14 | They were leaving already?
+Author: sven
 Tags: Fixes
 
-Some guests were turning the wrong way as they came in and slipping back out through the door before settling in. Smooth moves, wrong direction. Fixed: everyone now walks straight in and joins the party.
+Some PRSM guests were turning around at the entrance and walking right back out the door before settling in. Smart guests, I thought.
 
-## 2026-11-14 | Building our own toolbox
+PRSM "fixed" it, so now they walk straight in. Shame. My door is still open for anyone who wants to turn around. Skål.
+
+## 2026-11-14 | Building a shared code library
 Author: owlhoot
 Tags: Tech
 
-Behind the scenes, we've built a shared in-house code library for our core systems: grid movement, pathfinding, click handling and more. It keeps PRSM solid and gives future Owlhoot projects a head start.
+We've added an in-house code library for core systems such as grid movement, pathfinding and click handling. It keeps PRSM consistent and lets future Owlhoot projects reuse the same foundations.
 
-## 2026-11-14 | Robots checking our homework
+## 2026-11-14 | Automated testing
 Author: owlhoot
 Tags: Tech
 
-We added automated tests for pathfinding and tile layouts. Every time we change something, they make sure guests still find their way around the club, so fewer bugs make it onto your dancefloor.
+We've added automated tests for the pathfinding and tile-layout systems. They run whenever we make changes, helping us catch bugs before they reach players.
 
-## 2026-11-12 | Happy guests, happy club
-Author: owlhoot
+## 2026-11-12 | Happiness is the finest accessory
+Author: clara
 Tags: Gameplay
 
-Guests now have **happiness**! Everyone arrives with a starting mood that gets better the more luxurious your club is.
+Guests now arrive with **happiness**, darlings, and the more luxurious your club, the brighter their mood at the door.
 
-Waiting in line slowly wears it down, while booths and drinks lift it back up. Keep the line moving and the vibes high.
+Waiting in line slowly wears it down, while a plush booth and a lovely drink lift it right back up. Keep them comfortable and they'll swing all night.
 
-## 2026-11-12 | Good vibes sell drinks
-Author: owlhoot
+## 2026-11-12 | Drop the beat, fill the bar
+Author: daisy
 Tags: Gameplay
 
-Happier guests are now much more likely to buy drinks. A great mood is good for business, so keep your crowd smiling and the bar stays busy.
+Happier guests are now way more likely to buy drinks. I've seen it from the booth a thousand times: when the drop hits right, the bar gets busy. Keep the energy up and the drinks flow.
 
-## 2026-11-12 | Word of mouth is real
-Author: owlhoot
+## 2026-11-12 | Everybody's talking
+Author: brtny
 Tags: Gameplay
 
-Happy guests now spread the word. When they leave in a good mood, your club's popularity goes up, which means a well-run night brings even more people through the door next time.
+Happy guests now raise the club's popularity when they leave. Word of mouth, babes! A well-run night brings even more people through the door.
 
-## 2026-11-12 | The road to our first playable slice
+And when everybody's talking about a club, they're usually talking about who was there. Me. They're talking about me.
+
+## 2026-11-12 | Plan for the first playable slice
 Author: owlhoot
 Tags: Studio
 
-We've mapped out a full plan for the first playable slice of Nightclubs: PRSM, with a step-by-step build order. It's our checklist for getting a real, playable night at the club into your hands.
+We've written a full project plan for the first playable slice of Nightclubs: PRSM, including a step-by-step build order. This plan guides our work toward a playable night at the club.
 
-## 2026-11-12 | Backups locked in
-Author: owlhoot
+## 2026-11-12 | Backups? How cute.
+Author: sven
 Tags: Studio, Tech
 
-Not glamorous, but important: the project is now fully backed up and set up in a proper code repository. Your future nightclub is safe and sound.
-Author: owlhoot
-Tags: Studio
+PRSM finally set up project backups and a proper code repository. Congratulations, I suppose.
 
-Owlhoot Games is officially an LLC, and Nightclubs: PRSM has entered **Phase 2: Alpha Testing**.
-
-Work-in-progress is being shared on our [Discord](https://discord.gg/GfQScUK9Dm) and Facebook, with Patreon coming soon. From now on, every new update for PRSM lands right here, straight from the booth.
+The New Millennia has never needed a backup plan. Then again, we've never needed a comeback either.
