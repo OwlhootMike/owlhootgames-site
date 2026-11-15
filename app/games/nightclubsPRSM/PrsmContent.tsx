@@ -103,7 +103,7 @@ export default function PrsmContent({ latestUpdate }: { latestUpdate: UpdatePost
             className="object-cover opacity-80 transition-all duration-700 group-hover:scale-105 group-hover:opacity-100"
           />
           {/* Overlay Grid */}
-          <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay"></div>
+          <div className="absolute inset-0 bg-[url('/noise.svg')] opacity-20 mix-blend-overlay"></div>
         </motion.div>
 
         {/* --- GRID LAYOUT --- */}

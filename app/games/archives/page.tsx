@@ -8,7 +8,7 @@ export default function ArchivePage() {
     <div className="min-h-screen bg-neutral-950 text-slate-300 font-sans selection:bg-emerald-500 selection:text-black pt-24 pb-12">
       
       {/* Background Noise */}
-      <div className="fixed inset-0 z-0 opacity-5 pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
+      <div className="fixed inset-0 z-0 opacity-5 pointer-events-none bg-[url('/noise.svg')]"></div>
 
       {/* --- HEADER --- */}
       <div className="container mx-auto px-6 mb-12">

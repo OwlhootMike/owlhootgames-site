@@ -14,9 +14,9 @@ export default function NovaPage() {
       {/* --- DISTINCT BACKGROUND: PLANETARY HORIZON --- */}
       <div className="fixed inset-0 z-0 pointer-events-none bg-[radial-gradient(circle_at_50%_-20%,#1e3a8a_0%,#000000_60%)]"></div>
       
-      {/* Moving Stars Effect */}
-      <div className="fixed inset-0 z-0 opacity-40 pointer-events-none"
-           style={{ backgroundImage: "url('https://grainy-gradients.vercel.app/noise.svg')" }}
+      {/* Film grain (kept subtle with overlay blending) */}
+      <div className="fixed inset-0 z-0 opacity-15 mix-blend-overlay pointer-events-none"
+           style={{ backgroundImage: "url('/noise.svg')" }}
       />
       
       {/* CRT Scanline Overlay - Gives it a retro-futuristic screen look */}
