@@ -41,6 +41,7 @@ export const tagStyles: Record<string, string> = {
   gameplay: "bg-amber-950/70 text-amber-300 border-amber-500/40",
   art: "bg-pink-950/70 text-pink-300 border-pink-500/40",
   tech: "bg-emerald-950/70 text-emerald-300 border-emerald-500/40",
+  fixes: "bg-rose-950/70 text-rose-300 border-rose-500/40",
 };
 
 export const defaultTagStyle = "bg-slate-900 text-slate-300 border-slate-600/50";
