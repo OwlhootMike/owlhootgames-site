@@ -185,7 +185,7 @@ export default function Home() {
           </div>
 
           <p className="mb-10 text-base md:text-lg leading-relaxed text-slate-300 max-w-2xl mx-auto">
-            Creating local experiences first, server based experienced second to bring back the soul of gaming. You buy, you own FOREVER! 
+            We build local experiences first and online features second, to bring back the soul of gaming. You buy it, you own it. Forever.
           </p>
           
           <motion.div 
@@ -281,7 +281,7 @@ export default function Home() {
              <div className="bg-slate-900/80 p-6 md:p-8 border-l-4 border-purple-500 shadow-lg relative backdrop-blur-sm" style={techPanelStyle}>
                <h3 className="mb-2 md:mb-4 text-2xl md:text-4xl font-black uppercase text-white">Active Systems</h3>
                <p className="text-base md:text-lg leading-relaxed text-slate-400">
-                 Using FMOD systems to help us create better audio systems that are dynamic for our projects, especially for Nightclubs PRSM. AI Navmeshes helps us create dynamic and better AI NPCs for their behaviors and movements.
+                 We use FMOD to build dynamic audio that reacts to gameplay, especially in Nightclubs: PRSM. Unity&apos;s NavMesh AI drives smarter, more lifelike NPC movement and behavior.
                </p>
              </div>
           </div>
@@ -311,7 +311,7 @@ export default function Home() {
              <div className="bg-slate-900/80 p-6 md:p-8 border-l-4 border-emerald-500 shadow-lg relative backdrop-blur-sm" style={techPanelStyle}>
                <h3 className="mb-2 md:mb-4 text-2xl md:text-4xl font-black uppercase text-white">Modular Architecture</h3>
                <p className="text-base md:text-lg leading-relaxed text-slate-400">
-                 We engineer reusable C# libraries and middleware tools before we build the game. By developing standalone parsing engines and proprietary toolsets, we ensure our games are built on rock-solid, bug-free foundations.
+                 We engineer reusable C# libraries and middleware tools before we build the game. By developing standalone parsing engines and proprietary toolsets, we ensure our games are built on rock-solid, well-tested foundations.
                </p>
              </div>
           </div>

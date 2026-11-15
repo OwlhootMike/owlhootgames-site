@@ -114,10 +114,10 @@ export default function AboutPage() {
                 Michael brings a highly unique, multidisciplinary background to independent game development. With formal education in IT, game design and computer engineering, he approaches software architecture with a deeply technical mindset. 
               </p>
               <p>
-                However, his true edge in building management simulation games comes from his real-world career. Initially, he has worked in studios as QA Tester starting in 2015 as well as being part of the local game developer chapter's secretary chair in Puerto Rico. Later, he moved to Florida to work for big companies, holding 5 jobs at a time, while pursuing his degree at Full Sail University. Later, moves to Texas where he currently resides and works, has found work in the industry as a QA Lead and Designer, as well as the location where he establishes his first studio, Owlhoot Games LLC. Having managed complex physical assets, logistics, and guest experiences at massive scale in his previous jobs, he translates actual operational logistics directly into the authentic management mechanics found in titles like <span className="text-white font-semibold italic">Nightclubs: PRSM</span>.
+                However, his true edge in building management simulation games comes from his real-world career. He began working in studios as a QA Tester in 2015 and served as secretary of the local game developer chapter in Puerto Rico. He then moved to Florida, where he worked for major companies, at times holding five jobs at once, while earning his degree at Full Sail University. Today he lives and works in Texas as a QA Lead and Designer, and it's where he founded his first studio, Owlhoot Games LLC. Having managed complex physical assets, logistics, and guest experiences at massive scale in his previous jobs, he translates actual operational logistics directly into the authentic management mechanics found in titles like <span className="text-white font-semibold italic">Nightclubs: PRSM</span>.
               </p>
               <p>
-                He still supports a spanish gaming website as webmaster and content creator & writer for Tu Zona Gamer, an opportunity that approached him after working as a collaborator with Yo Soy Un Gamer. As a single-member studio head, Michael architects everything from Unity C# frameworks and dynamic FMOD audio integration to UI/UX web deployment and narrative design, ensuring a singular, uncompromised creative vision.
+                He still supports a Spanish-language gaming website as webmaster and content creator & writer for Tu Zona Gamer, an opportunity that approached him after working as a collaborator with Yo Soy Un Gamer. As a single-member studio head, Michael architects everything from Unity C# frameworks and dynamic FMOD audio integration to UI/UX web deployment and narrative design, ensuring a singular, uncompromised creative vision.
               </p>
 
               {/* NEW: The Engine History Block */}
@@ -131,11 +131,11 @@ export default function AboutPage() {
                 </p>
                 <div className="flex flex-wrap gap-2 text-sm font-mono">
                   {[
-                    "RPG Maker XP -> MZ", 
+                    "RPG Maker XP → MZ", 
                     "Clickteam Fusion", 
                     "Construct", 
                     "Cocos 2D", 
-                    "GameMaker 1.4 -> LTS", 
+                    "GameMaker 1.4 → LTS", 
                     "Unity", 
                     "DragonRuby", 
                     "Unreal Engine 5"
@@ -182,13 +182,13 @@ export default function AboutPage() {
               A Trial by Fire: The Road to Launch
             </h3>
             <p className="text-slate-400 max-w-2xl">
-              While the conceptual framework for our flagship project traces its roots back to 2019, the timeline to a formal commercial launch spanned nearly a decade due to an extraordinary series of personal, financial, and technical crises.
+              While the conceptual framework for our flagship project traces its roots back to 2019, the road to a formal commercial launch has already spanned seven years and some change due to an extraordinary series of personal, financial, and technical crises.
             </p>
           </motion.div>
 
           <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid grid-cols-1 md:grid-cols-4 gap-6">
             {[
-              { year: "2019", title: "The Overwork Phase", desc: "Managed five simultaneous jobs across, severely restricting active dev sprint windows to midnight hours." },
+              { year: "2019", title: "The Overwork Phase", desc: "Managed five simultaneous jobs, severely restricting active dev sprint windows to midnight hours." },
               { year: "2020", title: "The Displacement", desc: "Contracted COVID-19 on Day 1 of regional lockdown. The resulting financial crisis and housing instability halted all pipelines." },
               { year: "2023", title: "Texas & Data Loss", desc: "Relocated to Texas. A catastrophic hard drive failure during the move erased all historical source code." },
               { year: "2026", title: "Recovery & Shield", desc: "Rebooted the codebase entirely. Formed Owlhoot Games LLC to shield the IP, modernized the stack with Unity, and achieved stabilization." }

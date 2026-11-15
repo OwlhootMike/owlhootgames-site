@@ -95,12 +95,12 @@ export default function DetectiveJanePage() {
                    Incident Report
                 </h2>
                 <p className="text-slate-400 leading-relaxed mb-4">
-                   Players take on the role of Jane Davies, a woman in the force at the Precinct 13 with a unique talent for reconstructing crime scenes. 
+                   Players take on the role of Jane Davies, an officer at Precinct 13 with a unique talent for reconstructing crime scenes. 
                    The game focuses on <strong>deductive reasoning</strong> rather than combat.
                 </p>
                 <p className="text-slate-400 leading-relaxed">
                    Every object tells a story. Use your toolkit to analyze ballistics, hack digital locks, and cross-reference witness testimonies.
-                   Making the wrong accusation has permanent consequences on the narrative branch.
+                   Making the wrong accusation has permanent consequences for the story.
                 </p>
              </section>
 
