@@ -31,7 +31,7 @@ export default function Footer() {
         </div>
         <h2 className="mb-6 text-2xl md:text-3xl font-black uppercase text-white">Join the Network</h2>
         <p className="mb-10 text-slate-400">
-          Phase 2 is active. Owlhoot Games is officially an LLC, and we&apos;re sharing work-in-progress on the VIP Discord, with Patreon and Facebook updates coming soon. Join in and help shape the future of PRSM.
+          Phase 2 is active. Owlhoot Games is officially an LLC. Follow along on Discord and Facebook, with Patreon updates coming soon. Join in and help shape the future of PRSM.
         </p>
         <div className="flex justify-center gap-4 md:gap-6 flex-wrap">
           

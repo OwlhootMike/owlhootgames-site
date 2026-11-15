@@ -340,7 +340,7 @@ export default function Home() {
                </div>
                <div className="space-y-2 border-l-2 border-cyan-500 pl-4">
                  <div className="font-bold text-white uppercase text-sm">Phase 2: Alpha Testing (Active)</div>
-                 <p className="text-slate-400 text-sm">Game previews for Nightclubs PRSM, technical Unity/FMOD dev logs, and closed alpha testing of proprietary systems. Work-in-progress is being shared on Discord now, with Patreon and Facebook coming soon.</p>
+                 <p className="text-slate-400 text-sm">Game previews for Nightclubs PRSM, technical Unity/FMOD dev logs, and closed alpha testing of proprietary systems. Work-in-progress is being shared on Discord and Facebook now, with Patreon coming soon.</p>
                </div>
                <div className="space-y-2 border-l-2 border-slate-700 pl-4 opacity-70">
                  <div className="font-bold text-white uppercase text-sm">Phase 3: Season 0</div>
