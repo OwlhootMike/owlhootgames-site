@@ -20,12 +20,18 @@ Voices:
   sven     Sven (@NewMillenniaClub): Norwegian owner of The New Millennia. Edgy, trash talks PRSM, invites players to his club.
   brtny    BRTNY (@BRTNYHere): mirrors Sven, larger than life, LOVES attention.
   kts      KTS (@BartendingTricks): very laid back and chill, loves ducks (uses duck emojis), all about bars, drinks and good vibes.
+  rhv      RHV (@redhotempress): REPLIES ONLY, never her own post (character for later). Talks about luxury.
+           Has a bone to pick with Mike and Daisy (cold, never violent), always praises Clara,
+           friendly with Sven and BRTNY, generic with KTS. Nobody treats her as a rival.
 
 Relationships (lore):
   Clara and Daisy are twin sisters with a rivalry. They talk to each other as sisters ("sis").
+  They do NOT work at PRSM: Daisy owns the SynthDeck, Clara owns the Brass Palace.
   Mike is secretly their father: he never mentions or hints at it, and they never call him dad.
-  Mike and KTS work together at PRSM. Sven and BRTNY work together at The New Millennia,
-  so they back each other up against PRSM.
+  Daisy and Clara are friendly with Mike but keep a business rivalry with him where it fits.
+  They're close with KTS, like family.
+  Mike and KTS work together at PRSM. Mike's rival is Sven, and they go back and forth.
+  Sven and BRTNY work together at The New Millennia, so they back each other up against PRSM.
 
 Who reacts to what (not exclusive; mix it up):
   Luxury levels, club looks, customization -> clara (shows off, caring but a bit self-centered);
@@ -92,6 +98,12 @@ Work-in-progress is being shared on our [Discord](https://discord.gg/GfQScUK9Dm)
 > sven | 3h
 > Enjoy your alpha. Some of us are already the final version.
 
+> mike | 4h
+> @NewMillenniaClub final version of what, Sven? Last decade's playlist?
+
+> sven | 5h
+> @MikePRSM at least our playlist has a dancefloor that doesn't need patching.
+
 ## 2026-11-14 | New: the Guest Info panel
 Author: owlhoot
 Tags: Gameplay
@@ -101,7 +113,7 @@ Click any guest to open their **Guest Info panel**. It shows their name, status 
 The panel stays hidden during normal play. Close it with its close button, the Escape key, or a click anywhere else, and click another guest to switch to them.
 
 > daisy | 1h
-> This is the stuff I love. Knowing who's on your floor and how they feel is half of a great set. Check their happiness, then pick the next track.
+> This is the stuff I love. Knowing who's on your floor and how they feel is half of a great set. We've read the crowd like that at the SynthDeck since day one. Check their happiness, then pick the next track.
 
 > clara | 3h
 > Darling, a proper hostess always knows her guests' names. Now everyone gets to be a proper hostess. Almost as good as me.
@@ -135,10 +147,10 @@ Tags: Gameplay
 
 Darlings, a good evening is never forgotten. Guests who have a lovely night may now return, and a returning guest who makes it inside again becomes a **Regular**. A club may keep up to 20 of them at once.
 
-Regulars are wonderfully loyal; it takes several miserable nights before they drift away. Those who leave miserable, however, are simply forgotten. The club remembers up to 50 visitors, so treat each one like champagne.
+Regulars are wonderfully loyal; it takes several miserable nights before they drift away. Those who leave miserable, however, are simply forgotten. The club remembers up to 50 visitors, so treat each one like champagne. At the Brass Palace, I know every Regular by their favorite glass.
 
 > mike | 2h
-> Up to 20 Regulars! I want a wall of fame with EVERY single name on it!
+> Up to 20 Regulars! I want a wall of fame with EVERY single name on it! The Brass Palace can keep its champagne list.
 
 > sven | 4h
 > Loyal through several miserable nights? At PRSM, they'll need that loyalty.
@@ -151,6 +163,9 @@ Regulars are wonderfully loyal; it takes several miserable nights before they dr
 
 > clara | 7h
 > @DZ and yet they always ask for me by name, darling sister.
+
+> rhv | 9h
+> @DZ spoken like someone who's never owned a decent chair. Clara is right, as always.
 
 ## 2026-11-14 | Names. Wow.
 Author: sven
@@ -166,6 +181,9 @@ At The New Millennia, everybody already knows our name. Come by sometime. We hav
 > brtny | 2h
 > Everyone already knows my name. Just saying.
 
+> rhv | 3h
+> @NewMillenniaClub ha. Save me the corner table, Sven. The one with the good lighting.
+
 ## 2026-11-14 | Tip jar's open 🦆
 Author: kts
 Tags: Gameplay
@@ -177,11 +195,17 @@ Each guest has their own tip rate. It goes up when they leave happy and drops wh
 > clara | 2h
 > The finest rooms earn the finest tips, darling. Generous guests reward a beautiful club, and I do so love being rewarded.
 
+> rhv | 3h
+> Fine rooms, fine tips. Exactly, Clara. @BartendingTricks nice update.
+
 > mike | 3h
 > TIP JAR FULL OR BUST! @BartendingTricks keep those pours coming!
 
 > kts | 4h
 > @MikePRSM always, boss 🦆
+
+> daisy | 5h
+> @BartendingTricks proud of you, KTS. Save me a seat at the bar after my set at the SynthDeck.
 
 ## 2026-11-14 | Reading the room
 Author: daisy
@@ -228,6 +252,9 @@ Which means the only thing between a guest and the bar is how good the vibes are
 > sven | 2h
 > Arcade style. Fitting, for a club that feels like a game.
 
+> rhv | 4h
+> @BRTNYHere an open tab and a spotlight? That's a proper night out. Count me in.
+
 ## 2026-11-14 | Smooth moves only
 Author: daisy
 Tags: Gameplay
@@ -239,10 +266,13 @@ Pathfinding is smarter too, so nobody bumps into walls or furniture on the way t
 > mike | 1h
 > Clean transitions on the floor AND on the decks. That's the PRSM standard!
 
-> clara | 2h
+> daisy | 2h
+> @MikePRSM cute. That's been the SynthDeck standard since opening night. Good to see PRSM catching up.
+
+> clara | 3h
 > "Clean transitions," she says. Darling, you still trip over your own cables. Love you, sis.
 
-> daisy | 3h
+> daisy | 4h
 > @ClaraBelleSwings at least my cables don't come with a velvet rope.
 
 ## 2026-11-14 | Groundwork for placeable furniture
@@ -255,6 +285,9 @@ Guests walk around staff-only areas, while the player can walk through them. Thi
 
 > clara | 1h
 > Placeable furniture, darlings? Now we're talking. A club is only as lovely as its booths, and I have opinions about velvet.
+
+> rhv | 2h
+> Finally, someone in this thread with taste. @ClaraBelleSwings, velvet is the bare minimum. @MikePRSM, try to keep up this time.
 
 > kts | 2h
 > staff-only behind the bar. finally, my own little pond 🦆
@@ -308,6 +341,9 @@ Waiting in line slowly wears it down, while a plush booth and a lovely drink lif
 > clara | 3h
 > @NewMillenniaClub patience, darling. Good taste takes time. Yours is still loading.
 
+> rhv | 4h
+> Luxury at the door is how you set the tone. Clara has always understood that. @DZ, the music can't fix a cheap room, and @MikePRSM is still learning what the word luxury means.
+
 ## 2026-11-12 | Good vibes, good pours 🦆
 Author: kts
 Tags: Gameplay
@@ -318,6 +354,9 @@ Good vibes on the floor means a busy bar. Keep everybody smiling and I'll keep t
 
 > daisy | 1h
 > Happy floor, busy bar. That's the whole equation.
+
+> clara | 2h
+> @BartendingTricks my favorite bartender in the whole city. There's always a seat for you at the Brass Palace, sweetheart.
 
 > brtny | 3h
 > Drinks are on whoever's standing next to me.

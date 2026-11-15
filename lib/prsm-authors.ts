@@ -40,6 +40,13 @@ export const authors: Record<string, Author> = {
     initials: "CB",
     ring: "border-amber-300 text-amber-200 shadow-[0_0_12px_rgba(252,211,77,0.45)]",
   },
+  // Reply-only for now: RHV never makes her own posts yet.
+  rhv: {
+    name: "RHV",
+    handle: "@redhotempress",
+    initials: "RH",
+    ring: "border-orange-500 text-orange-300 shadow-[0_0_14px_rgba(249,115,22,0.55)]",
+  },
   sven: {
     name: "Sven",
     handle: "@NewMillenniaClub",
