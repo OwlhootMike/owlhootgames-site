@@ -52,6 +52,12 @@ export const authors: Record<string, Author> = {
     initials: "BR",
     ring: "border-lime-300 text-lime-200 shadow-[0_0_14px_rgba(190,242,100,0.5)]",
   },
+  kts: {
+    name: "KTS",
+    handle: "@BartendingTricks",
+    initials: "KT",
+    ring: "border-teal-300 text-teal-200 shadow-[0_0_12px_rgba(94,234,212,0.45)]",
+  },
 };
 
 // Older posts used "mike-a"; keep them working.

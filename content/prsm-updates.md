@@ -3,7 +3,7 @@
 How to add a post (newest at the top, below this guide):
 
   ## YYYY-MM-DD | Post title
-  Author: owlhoot            (owlhoot, mike, daisy, clara, sven, brtny; profiles live in lib/prsm-authors.ts)
+  Author: owlhoot            (owlhoot, mike, daisy, clara, sven, brtny, kts; profiles live in lib/prsm-authors.ts)
   Tags: Studio, Audio        (comma separated: Studio, Gameplay, Audio, Music, Art, Tech, Fixes)
   Image: /updates/file.png   (optional; put the file in public/updates/)
   Image-Alt: What the image shows   (optional, recommended with Image)
@@ -19,6 +19,7 @@ Voices:
   clara    Clara (@ClaraBelleSwings): electroswing queen. Luxurious, warm, calls everyone "darling".
   sven     Sven (@NewMillenniaClub): Norwegian owner of The New Millennia. Edgy, trash talks PRSM, invites players to his club.
   brtny    BRTNY (@BRTNYHere): mirrors Sven, larger than life, LOVES attention.
+  kts      KTS (@BartendingTricks): very laid back and chill, loves ducks (uses duck emojis), all about bars, drinks and good vibes.
 
 Every post must still explain the real change clearly, even in character.
 
@@ -78,13 +79,13 @@ PRSM gave every guest a first and last name now, and returning guests keep their
 
 At The New Millennia, everybody already knows our name. Come by sometime. We have better music and nobody has to introduce themselves twice.
 
-## 2026-11-14 | TIPS ARE LIVE
-Author: mike
+## 2026-11-14 | Tip jar's open 🦆
+Author: kts
 Tags: Gameplay
 
-Every purchase can now earn a TIP! Each guest has their own tip rate. It goes UP when they leave happy and DOWN when they leave unhappy.
+Ayy, good news from behind the bar. Every purchase can earn a tip now 🦆
 
-Regulars tip more. Happier guests tip more. You see where I'm going with this? Make people happy and watch that tip jar FILL UP!
+Each guest has their own tip rate. It goes up when they leave happy and drops when they leave unhappy. Regulars tip more, happy folks tip more. Pour 'em right, keep it chill, and the jar fills itself 🦆🦆
 
 ## 2026-11-14 | Reading the room
 Author: daisy
@@ -154,19 +155,21 @@ Guests now arrive with **happiness**, darlings, and the more luxurious your club
 
 Waiting in line slowly wears it down, while a plush booth and a lovely drink lift it right back up. Keep them comfortable and they'll swing all night.
 
-## 2026-11-12 | Drop the beat, fill the bar
-Author: daisy
+## 2026-11-12 | Good vibes, good pours 🦆
+Author: kts
 Tags: Gameplay
 
-Happier guests are now way more likely to buy drinks. I've seen it from the booth a thousand times: when the drop hits right, the bar gets busy. Keep the energy up and the drinks flow.
+No rush, no stress. Just know this: happier guests are way more likely to buy drinks now 🦆
 
-## 2026-11-12 | Everybody's talking
-Author: brtny
+Good vibes on the floor means a busy bar. Keep everybody smiling and I'll keep the glasses moving. Easy 🦆
+
+## 2026-11-12 | EVERYBODY'S TALKING ABOUT PRSM
+Author: mike
 Tags: Gameplay
 
-Happy guests now raise the club's popularity when they leave. Word of mouth, babes! A well-run night brings even more people through the door.
+Happy guests now raise the club's POPULARITY when they leave! That's word of mouth, baby!
 
-And when everybody's talking about a club, they're usually talking about who was there. Me. They're talking about me.
+Run a great night and the next one brings in even MORE people. The line around the block? That's the dream, and now you can build it. LET'S GOOO!
 
 ## 2026-11-12 | Plan for the first playable slice
 Author: owlhoot
