@@ -3,7 +3,7 @@
 import { useMemo, useState, type ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import type { UpdatePost } from "@/lib/prsm-updates";
+import type { UpdatePost, UpdateReply } from "@/lib/prsm-updates";
 import { authors, fallbackAuthor, tagStyles, defaultTagStyle, type Author } from "@/lib/prsm-authors";
 
 const DISCORD_URL = "https://discord.gg/GfQScUK9Dm";
@@ -18,16 +18,18 @@ export function formatDate(date: string) {
   });
 }
 
-// Supports **bold** and [label](https://link) inside post text, nothing else.
+// Supports **bold**, [label](https://link) and @handles inside post text, nothing else.
 export function renderInline(text: string): ReactNode[] {
   const parts: ReactNode[] = [];
-  const pattern = /\*\*(.+?)\*\*|\[([^\]]+)\]\(((?:https?:\/\/|\/)[^)\s]+)\)/g;
+  const pattern = /\*\*(.+?)\*\*|\[([^\]]+)\]\(((?:https?:\/\/|\/)[^)\s]+)\)|(?<![\w@])@([A-Za-z0-9_]+)/g;
   let last = 0;
   let match: RegExpExecArray | null;
   while ((match = pattern.exec(text))) {
     if (match.index > last) parts.push(text.slice(last, match.index));
     if (match[1]) {
       parts.push(<strong key={match.index} className="font-bold text-white">{match[1]}</strong>);
+    } else if (match[4]) {
+      parts.push(<span key={match.index} className="font-semibold text-cyan-300">@{match[4]}</span>);
     } else {
       const external = match[3].startsWith("http");
       parts.push(
@@ -87,6 +89,77 @@ function Equalizer() {
   );
 }
 
+function VerifiedBadge() {
+  return (
+    <svg className="h-4 w-4 shrink-0 text-cyan-400" viewBox="0 0 24 24" fill="currentColor" aria-label="Official account">
+      <path d="M12 2l2.4 2.1 3.2-.4.9 3.1 2.9 1.5-1.2 3 1.2 3-2.9 1.5-.9 3.1-3.2-.4L12 22l-2.4-2.1-3.2.4-.9-3.1-2.9-1.5 1.2-3-1.2-3 2.9-1.5.9-3.1 3.2.4L12 2z" />
+      <path d="M10.5 15.2l-3-3 1.4-1.4 1.6 1.6 4.1-4.1 1.4 1.4-5.5 5.5z" fill="#07060d" />
+    </svg>
+  );
+}
+
+const compact = (n: number) => (n >= 1000 ? `${(n / 1000).toFixed(1).replace(/\.0$/, "")}k` : String(n));
+
+// A tappable reaction count. Tapping adds the visitor's own reaction (not saved).
+function Reaction({ kind, count, small = false }: { kind: "love" | "like"; count: number; small?: boolean }) {
+  const [on, setOn] = useState(false);
+  const label = kind === "love" ? "Love" : "Like";
+  const activeColor = kind === "love" ? "text-pink-400" : "text-cyan-300";
+  const icon = small ? "h-3.5 w-3.5" : "h-4 w-4";
+  return (
+    <button
+      type="button"
+      onClick={() => setOn((v) => !v)}
+      aria-pressed={on}
+      aria-label={`${label} (${count + (on ? 1 : 0)})`}
+      className={`group flex items-center gap-1 rounded-full px-2 py-0.5 font-mono transition-colors hover:bg-white/5 ${
+        small ? "text-[11px]" : "text-xs"
+      } ${on ? activeColor : "text-[#8a83c4] hover:text-slate-200"}`}
+    >
+      {kind === "love" ? (
+        <svg className={`${icon} transition-transform group-active:scale-125`} viewBox="0 0 24 24" fill={on ? "currentColor" : "none"} stroke="currentColor" strokeWidth={2} aria-hidden="true">
+          <path strokeLinejoin="round" d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.7 1.1 5 2.8 1.3-1.7 3-2.8 5-2.8 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z" />
+        </svg>
+      ) : (
+        <svg className={`${icon} transition-transform group-active:scale-125`} viewBox="0 0 24 24" fill={on ? "currentColor" : "none"} stroke="currentColor" strokeWidth={2} aria-hidden="true">
+          <path strokeLinejoin="round" d="M7 10v10H4V10h3zm0 0l4-7c1.7 0 2.6 1.3 2.2 3L12.5 9H19c1.2 0 2.1 1.1 1.9 2.3l-1.4 7c-.2 1-1 1.7-2 1.7H7" />
+        </svg>
+      )}
+      <span>{compact(count + (on ? 1 : 0))}</span>
+    </button>
+  );
+}
+
+function Reply({ reply }: { reply: UpdateReply }) {
+  const author = authors[reply.author] ?? fallbackAuthor;
+  return (
+    <div className="flex gap-2.5">
+      <Avatar author={author} size={32} />
+      <div className="min-w-0 flex-1">
+        <div className="mb-1 flex flex-wrap items-center gap-x-1.5">
+          <span className="flex items-center gap-1 text-[13px] font-bold text-slate-100">
+            {author.name}
+            {author.verified && <VerifiedBadge />}
+          </span>
+          <span className="font-mono text-[11px] text-[#7d76b8]">
+            {author.handle} · {reply.after}
+          </span>
+        </div>
+        <div className="rounded-[4px_14px_14px_14px] border border-[#221d40] bg-[#0e0b1b] px-3 py-2">
+          <div className="space-y-1.5 text-[13px] leading-relaxed text-[#bdb7e6]">
+            {reply.paragraphs.map((p, i) => (
+              <p key={i}>{renderInline(p)}</p>
+            ))}
+          </div>
+        </div>
+        <div className="-ml-2 mt-0.5">
+          <Reaction kind="like" count={reply.likes} small />
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function Post({ post }: { post: UpdatePost }) {
   const author = authors[post.author] ?? fallbackAuthor;
   return (
@@ -96,12 +169,7 @@ function Post({ post }: { post: UpdatePost }) {
         <header className="mb-1.5 flex flex-wrap items-baseline gap-x-2">
           <span className="flex items-center gap-1 font-bold text-slate-100">
             {author.name}
-            {author.verified && (
-              <svg className="h-4 w-4 text-cyan-400" viewBox="0 0 24 24" fill="currentColor" aria-label="Official account">
-                <path d="M12 2l2.4 2.1 3.2-.4.9 3.1 2.9 1.5-1.2 3 1.2 3-2.9 1.5-.9 3.1-3.2-.4L12 22l-2.4-2.1-3.2.4-.9-3.1-2.9-1.5 1.2-3-1.2-3 2.9-1.5.9-3.1 3.2.4L12 2z" />
-                <path d="M10.5 15.2l-3-3 1.4-1.4 1.6 1.6 4.1-4.1 1.4 1.4-5.5 5.5z" fill="#07060d" />
-              </svg>
-            )}
+            {author.verified && <VerifiedBadge />}
           </span>
           <span className="font-mono text-xs text-[#7d76b8]">
             {author.handle} · <time dateTime={post.date}>{formatDate(post.date)}</time>
@@ -129,6 +197,29 @@ function Post({ post }: { post: UpdatePost }) {
               <span key={tag} className={`rounded-full border px-2.5 py-0.5 font-mono text-[11px] uppercase tracking-wider ${tagClass(tag)}`}>
                 #{tag}
               </span>
+            ))}
+          </div>
+        )}
+
+        {/* Reactions */}
+        <div className="-ml-2 mt-2 flex items-center gap-1 border-t border-[#1b1830] pt-1.5">
+          <Reaction kind="love" count={post.loves} />
+          <Reaction kind="like" count={post.likes} />
+          {post.replies.length > 0 && (
+            <span className="ml-auto flex items-center gap-1 font-mono text-xs text-[#7d76b8]">
+              <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+                <path strokeLinejoin="round" d="M4 5h16v11H9l-5 4V5z" />
+              </svg>
+              {post.replies.length} {post.replies.length === 1 ? "reply" : "replies"}
+            </span>
+          )}
+        </div>
+
+        {/* Reply thread */}
+        {post.replies.length > 0 && (
+          <div className="mt-3 space-y-3 border-l-2 border-[#2a2450] pl-3">
+            {post.replies.map((reply) => (
+              <Reply key={reply.id} reply={reply} />
             ))}
           </div>
         )}

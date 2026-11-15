@@ -1,6 +1,14 @@
 import fs from "node:fs";
 import path from "node:path";
 
+export type UpdateReply = {
+  id: string;
+  author: string;
+  after: string; // how long after the post, e.g. "3h", "1d"
+  paragraphs: string[];
+  likes: number;
+};
+
 export type UpdatePost = {
   id: string;
   date: string; // YYYY-MM-DD
@@ -10,9 +18,29 @@ export type UpdatePost = {
   image?: string;
   imageAlt?: string;
   paragraphs: string[];
+  replies: UpdateReply[];
+  likes: number;
+  loves: number;
 };
 
 const FILE = path.join(process.cwd(), "content", "prsm-updates.md");
+
+// Stable "random" number from a string, so counts never change between page loads.
+function seeded(text: string, min: number, max: number) {
+  let hash = 2166136261;
+  for (let i = 0; i < text.length; i++) {
+    hash ^= text.charCodeAt(i);
+    hash = Math.imul(hash, 16777619);
+  }
+  return min + ((hash >>> 0) % (max - min + 1));
+}
+
+function toParagraphs(text: string) {
+  return text
+    .split(/\n\s*\n/)
+    .map((p) => p.replace(/\s*\n\s*/g, " ").trim())
+    .filter(Boolean);
+}
 
 // Reads content/prsm-updates.md at build time and returns posts, newest first.
 export function getPrsmUpdates(): UpdatePost[] {
@@ -37,22 +65,52 @@ export function getPrsmUpdates(): UpdatePost[] {
     }
     if (fields.visibility?.toLowerCase() === "internal") return;
 
-    const paragraphs = lines
-      .slice(i)
-      .join("\n")
-      .split(/\n\s*\n/)
-      .map((p) => p.replace(/\s*\n\s*/g, " ").trim())
-      .filter(Boolean);
+    // Body lines vs reply blocks (lines starting with ">").
+    const bodyLines: string[] = [];
+    const replyBlocks: string[][] = [];
+    let current: string[] | null = null;
+    for (const line of lines.slice(i)) {
+      if (line.startsWith(">")) {
+        const text = line.replace(/^>\s?/, "");
+        if (/^[a-z0-9-]+\s*\|\s*\S+\s*$/i.test(text)) {
+          current = [text]; // "> author | 3h" starts a new reply
+          replyBlocks.push(current);
+        } else if (current) {
+          current.push(text);
+        }
+      } else {
+        current = null; // any non-">" line ends the current reply
+        bodyLines.push(line);
+      }
+    }
+
+    const id = `${match[1]}-${index}`;
+    const title = match[2].trim();
+
+    const replies: UpdateReply[] = replyBlocks.map((block, r) => {
+      const [, author, after] = block[0].match(/^([a-z0-9-]+)\s*\|\s*(\S+)/i)!;
+      const text = block.slice(1).join("\n");
+      return {
+        id: `${id}-r${r}`,
+        author: author.toLowerCase(),
+        after,
+        paragraphs: toParagraphs(text),
+        likes: seeded(`${title}|${r}|${text}`, 3, 140),
+      };
+    });
 
     posts.push({
-      id: `${match[1]}-${index}`,
+      id,
       date: match[1],
-      title: match[2].trim(),
+      title,
       author: (fields.author || "owlhoot").toLowerCase(),
       tags: (fields.tags || "").split(",").map((t) => t.trim()).filter(Boolean),
       image: fields.image || undefined,
       imageAlt: fields["image-alt"] || undefined,
-      paragraphs,
+      paragraphs: toParagraphs(bodyLines.join("\n")),
+      replies,
+      likes: Number(fields.likes) || seeded(`likes|${title}`, 40, 420),
+      loves: Number(fields.loves) || seeded(`loves|${title}`, 12, 180),
     });
   });
 
