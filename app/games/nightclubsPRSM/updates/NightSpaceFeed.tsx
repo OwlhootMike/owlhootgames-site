@@ -160,7 +160,7 @@ function Reply({ reply }: { reply: UpdateReply }) {
             {author.vip && <VipBadge />}
           </span>
           <span className="font-mono text-[11px] text-[#7d76b8]">
-            {author.handle} · {reply.after}
+            {author.handle} · {reply.at}
           </span>
         </div>
         <div className="rounded-[4px_14px_14px_14px] border border-[#221d40] bg-[#0e0b1b] px-3 py-2">
@@ -191,7 +191,7 @@ function Post({ post }: { post: UpdatePost }) {
             {author.vip && <VipBadge />}
           </span>
           <span className="font-mono text-xs text-[#7d76b8]">
-            {author.handle} · <time dateTime={post.date}>{formatDate(post.date)}</time>
+            {author.handle} · <time dateTime={post.date}>{formatDate(post.date)} · {post.time}</time>
           </span>
         </header>
 

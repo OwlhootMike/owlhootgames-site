@@ -55,6 +55,9 @@ Who reacts to what (not exclusive; mix it up):
 
 Replies go under a post. Start each reply with "> who | when" (when = time after
 the post, like 20m, 3h or 1d), then the text on the following ">" lines.
+Each reply's "when" must be the same as or later than the reply above it. The site
+turns it into a clock time (each post gets a time between 7:00 PM and 11:45 PM),
+so the thread reads in order. The build warns if a reply is out of order.
 @handles in replies are highlighted. Example:
 
   > clara | 3h
