@@ -10,6 +10,7 @@ export type Author = {
   initials: string;
   avatar?: StaticImageData | string;
   verified?: boolean;
+  vip?: boolean; // VIP badge and much bigger reaction counts
   ring: string; // Tailwind classes for the avatar ring and initials color
 };
 
@@ -64,6 +65,13 @@ export const authors: Record<string, Author> = {
     handle: "@BartendingTricks",
     initials: "KT",
     ring: "border-teal-300 text-teal-200 shadow-[0_0_12px_rgba(94,234,212,0.45)]",
+  },
+  davie: {
+    name: "Davie",
+    handle: "@GoliathGangCrew",
+    initials: "DV",
+    vip: true,
+    ring: "border-violet-300 text-violet-200 shadow-[0_0_18px_rgba(196,181,253,0.6)]",
   },
 };
 

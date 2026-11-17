@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import { authors } from "./prsm-authors";
 
 export type UpdateReply = {
   id: string;
@@ -33,6 +34,11 @@ function seeded(text: string, min: number, max: number) {
     hash = Math.imul(hash, 16777619);
   }
   return min + ((hash >>> 0) % (max - min + 1));
+}
+
+// VIP accounts (like Davie) pull in far bigger reaction counts.
+function isVip(author: string) {
+  return authors[author.toLowerCase()]?.vip === true;
 }
 
 function toParagraphs(text: string) {
@@ -95,22 +101,27 @@ export function getPrsmUpdates(): UpdatePost[] {
         author: author.toLowerCase(),
         after,
         paragraphs: toParagraphs(text),
-        likes: seeded(`${title}|${r}|${text}`, 3, 140),
+        likes: isVip(author)
+          ? seeded(`${title}|${r}|${text}`, 180_000, 950_000)
+          : seeded(`${title}|${r}|${text}`, 1_200, 88_000),
       };
     });
+
+    const author = (fields.author || "owlhoot").toLowerCase();
+    const vip = isVip(author);
 
     posts.push({
       id,
       date: match[1],
       title,
-      author: (fields.author || "owlhoot").toLowerCase(),
+      author,
       tags: (fields.tags || "").split(",").map((t) => t.trim()).filter(Boolean),
       image: fields.image || undefined,
       imageAlt: fields["image-alt"] || undefined,
       paragraphs: toParagraphs(bodyLines.join("\n")),
       replies,
-      likes: Number(fields.likes) || seeded(`likes|${title}`, 40, 420),
-      loves: Number(fields.loves) || seeded(`loves|${title}`, 12, 180),
+      likes: Number(fields.likes) || (vip ? seeded(`likes|${title}`, 1_400_000, 4_800_000) : seeded(`likes|${title}`, 120_000, 880_000)),
+      loves: Number(fields.loves) || (vip ? seeded(`loves|${title}`, 900_000, 3_600_000) : seeded(`loves|${title}`, 100_000, 640_000)),
     });
   });
 

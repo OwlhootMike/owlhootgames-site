@@ -100,7 +100,22 @@ function VerifiedBadge() {
   );
 }
 
-const compact = (n: number) => (n >= 1000 ? `${(n / 1000).toFixed(1).replace(/\.0$/, "")}k` : String(n));
+// 1234 -> "1.2k", 452318 -> "452k", 2400000 -> "2.4M"
+function compact(n: number) {
+  const trim = (v: number) => v.toFixed(1).replace(/\.0$/, "");
+  if (n >= 1_000_000) return `${trim(n / 1_000_000)}M`;
+  if (n >= 100_000) return `${Math.round(n / 1000)}k`;
+  if (n >= 1000) return `${trim(n / 1000)}k`;
+  return String(n);
+}
+
+function VipBadge() {
+  return (
+    <span className="rounded-sm bg-linear-to-r from-amber-300 to-yellow-200 px-1 py-px font-mono text-[9px] font-black leading-none tracking-widest text-slate-950">
+      VIP
+    </span>
+  );
+}
 
 // A tappable reaction count. Tapping adds the visitor's own reaction (not saved).
 function Reaction({ kind, count, small = false }: { kind: "love" | "like"; count: number; small?: boolean }) {
@@ -142,6 +157,7 @@ function Reply({ reply }: { reply: UpdateReply }) {
           <span className="flex items-center gap-1 text-[13px] font-bold text-slate-100">
             {author.name}
             {author.verified && <VerifiedBadge />}
+            {author.vip && <VipBadge />}
           </span>
           <span className="font-mono text-[11px] text-[#7d76b8]">
             {author.handle} · {reply.after}
@@ -172,6 +188,7 @@ function Post({ post }: { post: UpdatePost }) {
           <span className="flex items-center gap-1 font-bold text-slate-100">
             {author.name}
             {author.verified && <VerifiedBadge />}
+            {author.vip && <VipBadge />}
           </span>
           <span className="font-mono text-xs text-[#7d76b8]">
             {author.handle} · <time dateTime={post.date}>{formatDate(post.date)}</time>
