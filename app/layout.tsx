@@ -18,7 +18,12 @@ export const metadata: Metadata = {
     template: "%s | Owlhoot Games" 
   },
   description: "Crafting high-fidelity simulations, active rhythm systems, and local-first experiences. You buy it, you own it. Forever.",
-  
+
+  // Shown as the author by LinkedIn and other link previews.
+  authors: [{ name: "Owlhoot Games", url: "https://owlhootgames.com" }],
+  creator: "Owlhoot Games",
+  publisher: "Owlhoot Games LLC",
+
   // 3. Open Graph (Facebook, Discord, LinkedIn, iMessage)
   openGraph: {
     title: "Owlhoot Games Studio",
