@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   // 3. Open Graph (Facebook, Discord, LinkedIn, iMessage)
   openGraph: {
     title: "Owlhoot Games Studio",
-    description: "Independent Game Development & Tools Lab. Creators of Nightclubs: PRSM.",
+    description: "Independent game studio and tools lab. Creators of Nightclubs: PRSM, a nightlife management sim where you run the club and play the music.",
     url: 'https://owlhootgames.com',
     siteName: 'Owlhoot Games',
     locale: 'en_US',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: "Owlhoot Games Studio",
-    description: "Independent Game Development & Tools Lab. Creators of Nightclubs: PRSM.",
+    description: "Independent game studio and tools lab. Creators of Nightclubs: PRSM, a nightlife management sim where you run the club and play the music.",
     creator: '@OwlhootGames', 
   },
 };
